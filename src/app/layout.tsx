@@ -9,8 +9,11 @@ import AppNavigation from '@/views/Layout/AppNavigation';
 
 
 export const metadata = {
-  title: 'Price-Pulse App',
-  description: 'Information about the lowest prices available in retail chains of Ukraine.',
+  title: 'Янгол ЗСУ',
+  description: 'Благодійний фонд Янгол Збройних Сил України.',
+  keywords: 'благодійний фонд, Янгол ЗСУ, благодійність, Україна',
+  author: 'SKindij',
+  viewport: 'width=device-width, initial-scale=1.0',
 };
 
 export default function RootLayout({ children }:{ children:React.ReactNode }) {

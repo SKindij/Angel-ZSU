@@ -9,32 +9,13 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Typography variant="h1">
-        Ваш помічник у виборі товарів з найкращою ціною.
+        Благодійний фонд Янгол Збройних Сил України.
       </Typography>
       <Typography variant="h2">
-        А також до вашої уваги добірки рецептів та коктейлів.
+        Благодійний фонд Янгол Збройних Сил України.
       </Typography>
       {/*  */}
-      <Grid container spacing={2} className={styles.gridContainer}>
-        <Grid item xs={12} md={4}>
-          <Image alt="Coctails Palitre"
-            src="/images/cocktails-palitre.jpg"
-            width={400} height={400}
-          />
-        </Grid>
-        <Grid item xs={12} md={4}>
-          <Image alt="Picture of Price-Pulse"
-            src="/images/main-page.jpg"
-            width={400} height={400}
-          />
-        </Grid>
-        <Grid item xs={12} md={4}>
-          <Image alt="Receipes Palitre"
-            src="/images/receipes-palitre.jpg"
-            width={400} height={400}
-          />
-        </Grid>
-      </Grid>
+
     </main>
   );
 }
