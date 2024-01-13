@@ -1,0 +1,17 @@
+.main {
+  color: darkgreen;
+}
+
+.gridContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  /* images settings */
+  .gridContainer img {
+    max-width: 100%;
+    height: auto;
+  }
+  
