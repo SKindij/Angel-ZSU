@@ -3,22 +3,19 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
-import qrCode from '../../../public/images/qr-pb-donate.webp';
+import qrCode from '../../../../public/images/qr-pb-donate.webp';
 
 export default function DonatePage() {
   return (
     <Box
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        padding: '20px',
+        display: 'flex', flexDirection: 'column',
+        alignItems: 'center', padding: '5px',
       }}
     >
       <Paper
         sx={{
-          padding: '20px',
-          maxWidth: '600px',
+          padding: '20px', maxWidth: '600px',
           textAlign: 'center',
         }}
       >
@@ -26,10 +23,8 @@ export default function DonatePage() {
           Важливо!!! Отримувач тільки Крутоголов Юлія Сергіївна
         </Typography>
         <Image
-          src={qrCode}
-          alt="QR Code"
-          width={300}
-          height={300}
+          src={qrCode} alt="ПриватБанк QR Code"
+          width={300} height={300}
         />
         <Typography paragraph>
           <strong>АТ КБ Приватбанк</strong>

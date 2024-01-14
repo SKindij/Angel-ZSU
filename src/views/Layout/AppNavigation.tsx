@@ -31,6 +31,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import ContactsIcon from '@mui/icons-material/Contacts';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 // Social Media Icons
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
@@ -41,9 +42,9 @@ import { Drawer } from '@/views/Layout/Drawer';
 // data for site navigation elements
 const MenuItems = [
   { label: 'Головна', href: '/', icon: <HomeIcon /> },
-  { label: 'Збори', href: '/campaigns', icon: <DonateIcon /> },
-  { label: 'Реквізити', href: '/donate', icon: <AccountBalanceIcon /> },
-  { label: 'Звіти', href: '/reports', icon: <ReportsIcon /> },
+  { label: 'Збори', href: '/fund/campaigns', icon: <DonateIcon /> },
+  { label: 'Реквізити', href: '/fund/donate', icon: <AccountBalanceIcon /> },
+  { label: 'Звіти', href: '/fund/reports', icon: <ReportsIcon /> },
 
 ];
 const PlaceholderLinks = [
@@ -98,10 +99,8 @@ const AppNavigation:React.FC = () => {
 		      <SecurityIcon sx={{ mr: 1, color: 'blue' }} />
           <Typography variant="h5" noWrap component="div"
 		        sx={{
-			        mr: 2,
-              fontWeight: 700,
-              letterSpacing: '0.3rem',
-              color: 'blue',
+			        mr: 2, fontWeight: 700,
+              letterSpacing: '0.3rem', color: 'blue',
 			        // additional styling for mobile phones
 			        '@media screen and (max-width: 600px)': {
                 fontSize: '1.2rem',
@@ -112,19 +111,19 @@ const AppNavigation:React.FC = () => {
             БФ &ldquo;Янгол ЗСУ&rdquo;
           </Typography>
           {/* Social Media Icons */}
+          <Link href="https://t.me/angel_zsu" rel="noopener noreferrer" target="_blank" passHref>
+            <IconButton color="inherit" size='medium'>
+              <TelegramIcon sx={{ color: '#1DA1F2' }} />
+            </IconButton>
+          </Link>
           <Link href="https://www.facebook.com/groups/1383290902438768/?ref=share" rel="noopener noreferrer" target="_blank" passHref>
-            <IconButton color="inherit">
-              <FacebookIcon />
+            <IconButton color="inherit" size='medium'>
+              <FacebookIcon fontSize="medium" sx={{ color: 'blue' }} />
             </IconButton>
           </Link>
           <Link href="https://www.instagram.com" rel="noopener noreferrer" target="_blank" passHref>
-            <IconButton color="inherit">
-              <InstagramIcon />
-            </IconButton>
-          </Link>
-          <Link href="https://t.me/angel_zsu" rel="noopener noreferrer" target="_blank" passHref>
-            <IconButton color="inherit">
-              <TelegramIcon />
+            <IconButton color="inherit" size='medium'>
+              <InstagramIcon sx={{ color: '#E1306C' }} />
             </IconButton>
           </Link>
 		      {/* Menu User Settings */}
