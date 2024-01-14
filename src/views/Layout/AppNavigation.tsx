@@ -18,16 +18,18 @@ import Typography from '@mui/material/Typography';
 import Toolbar from '@mui/material/Toolbar';
 import MenuIcon from '@mui/icons-material/Menu';
 // icons for navigation elements
-import AdbIcon from '@mui/icons-material/Adb';
+import SecurityIcon from '@mui/icons-material/Security';
 import Avatar from '@mui/material/Avatar';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+// icons for site-menu items
 import HomeIcon from '@mui/icons-material/Home';
-import CategoryIcon from '@mui/icons-material/Category';
-import LocalBarIcon from '@mui/icons-material/LocalBar';
-import RestaurantIcon from '@mui/icons-material/Restaurant';
+import DonateIcon from '@mui/icons-material/MonetizationOn';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import ReportsIcon from '@mui/icons-material/Assignment';
 import InfoIcon from '@mui/icons-material/Info';
-import LoginIcon from '@mui/icons-material/Login';
+import ContactsIcon from '@mui/icons-material/Contacts';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 // design elements
 import { AppBar } from '@/views/Layout/AppBar';
 import { DrawerHeader } from '@/views/Layout/DrawerHeader';
@@ -35,13 +37,15 @@ import { Drawer } from '@/views/Layout/Drawer';
 // data for site navigation elements
 const MenuItems = [
   { label: 'Головна', href: '/', icon: <HomeIcon /> },
-  { label: 'Price-Pulse', href: '/categories', icon: <CategoryIcon /> },
-  { label: 'Коктейлі', href: '/cocktails', icon: <LocalBarIcon /> },
-  { label: 'Рецепти', href: '/recipes', icon: <RestaurantIcon /> },
+  { label: 'Збори', href: '/campaigns', icon: <DonateIcon /> },
+  { label: 'Реквізити', href: '/donate', icon: <AccountBalanceIcon /> },
+  { label: 'Звіти', href: '/reports', icon: <ReportsIcon /> },
+
 ];
 const PlaceholderLinks = [
-  { label: 'About', href: '/about', icon: <InfoIcon /> },
-  { label: 'LogIn', href: '/auth/signin', icon: <LoginIcon /> },
+  { label: 'Про нас', href: '/about', icon: <InfoIcon /> },
+  { label: 'Контакти', href: '/contacts', icon: <ContactsIcon /> },
+  { label: 'Admin', href: '/auth/signin', icon: <AdminPanelSettingsIcon /> },
 ];
 const UserSettings = ['Profile', 'Logout'];
 const UserSettingsLinks = [
@@ -87,13 +91,13 @@ const AppNavigation:React.FC = () => {
             <MenuIcon />
           </IconButton>
 		  {/* App Icon and Logo */}
-		  <AdbIcon sx={{ mr: 1 }} />
-          <Typography variant="h6" noWrap component="div"
+		  <SecurityIcon sx={{ mr: 1, color: 'blue' }} />
+          <Typography variant="h5" noWrap component="div"
 		        sx={{
 			        mr: 2,
               fontWeight: 700,
               letterSpacing: '0.3rem',
-              color: 'inherit',
+              color: 'blue',
 			        // additional styling for mobile phones
 			        '@media screen and (max-width: 600px)': {
                 fontSize: '1.2rem',
@@ -101,7 +105,7 @@ const AppNavigation:React.FC = () => {
               },
             }}
 		  >
-            Price-Pulse App
+            БФ Янгол ЗСУ
           </Typography>
 		  {/* Menu User Settings */}
 		  <Box sx={{ flexGrow: 0, marginLeft: 'auto' }}>
