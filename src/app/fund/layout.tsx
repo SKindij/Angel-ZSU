@@ -1,7 +1,7 @@
-// @/app/categories/layout.tsx
+// @/app/fund/layout.tsx
 import Box from '@mui/material/Box';
 // views (design) elements
-import CategoriesBottomNavigation from '@/views/Fund/FundBottomNavigation';
+import FundBottomNavigation from '@/views/Fund/FundBottomNavigation';
 
 export default function CategoriesLayout({
   children,
@@ -13,7 +13,7 @@ export default function CategoriesLayout({
         {/*  */}
         {children}
       </Box>
-      <CategoriesBottomNavigation />
+      <FundBottomNavigation />
 	  </Box>
   );
 }
