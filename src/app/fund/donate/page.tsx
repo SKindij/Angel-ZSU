@@ -15,7 +15,7 @@ export default function DonatePage() {
     >
       <Paper
         sx={{
-          padding: '20px', maxWidth: '600px',
+          padding: '20px', maxWidth: '1000px',
           textAlign: 'center',
         }}
       >
