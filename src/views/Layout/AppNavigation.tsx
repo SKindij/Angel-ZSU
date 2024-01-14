@@ -30,6 +30,10 @@ import ReportsIcon from '@mui/icons-material/Assignment';
 import InfoIcon from '@mui/icons-material/Info';
 import ContactsIcon from '@mui/icons-material/Contacts';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+// Social Media Icons
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TelegramIcon from '@mui/icons-material/Telegram';
 // design elements
 import { AppBar } from '@/views/Layout/AppBar';
 import { DrawerHeader } from '@/views/Layout/DrawerHeader';
@@ -77,7 +81,7 @@ const AppNavigation:React.FC = () => {
       {/* Site AppBar */}
       <AppBar position="fixed" open={open} >
         <Toolbar>
-		  {/* Open Side Menu */}
+		      {/* Open Side Menu */}
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -90,8 +94,8 @@ const AppNavigation:React.FC = () => {
           >
             <MenuIcon />
           </IconButton>
-		  {/* App Icon and Logo */}
-		  <SecurityIcon sx={{ mr: 1, color: 'blue' }} />
+		      {/* App Icon and Logo */}
+		      <SecurityIcon sx={{ mr: 1, color: 'blue' }} />
           <Typography variant="h5" noWrap component="div"
 		        sx={{
 			        mr: 2,
@@ -104,11 +108,27 @@ const AppNavigation:React.FC = () => {
                 letterSpacing: '0.1rem',
               },
             }}
-		  >
+		      >
             БФ &ldquo;Янгол ЗСУ&rdquo;
           </Typography>
-		  {/* Menu User Settings */}
-		  <Box sx={{ flexGrow: 0, marginLeft: 'auto' }}>
+          {/* Social Media Icons */}
+          <Link href="https://www.facebook.com/groups/1383290902438768/?ref=share" rel="noopener noreferrer" target="_blank" passHref>
+            <IconButton color="inherit">
+              <FacebookIcon />
+            </IconButton>
+          </Link>
+          <Link href="https://www.instagram.com" rel="noopener noreferrer" target="_blank" passHref>
+            <IconButton color="inherit">
+              <InstagramIcon />
+            </IconButton>
+          </Link>
+          <Link href="https://t.me/angel_zsu" rel="noopener noreferrer" target="_blank" passHref>
+            <IconButton color="inherit">
+              <TelegramIcon />
+            </IconButton>
+          </Link>
+		      {/* Menu User Settings */}
+		      <Box sx={{ flexGrow: 0, marginLeft: 'auto' }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/images/avatars/defoultAvatar.jpg" />
