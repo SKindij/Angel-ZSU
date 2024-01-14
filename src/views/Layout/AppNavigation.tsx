@@ -105,7 +105,7 @@ const AppNavigation:React.FC = () => {
               },
             }}
 		  >
-            БФ Янгол ЗСУ
+            БФ &ldquo;Янгол ЗСУ&rdquo;
           </Typography>
 		  {/* Menu User Settings */}
 		  <Box sx={{ flexGrow: 0, marginLeft: 'auto' }}>
