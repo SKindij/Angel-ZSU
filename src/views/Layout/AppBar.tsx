@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 
-const drawerWidth = process.env.DRAWER_WIDTH ? parseInt(process.env.DRAWER_WIDTH, 10) : 200;
+const drawerWidth = 200;
 
 interface AppBarProps extends MuiAppBarProps {
   open?:boolean;

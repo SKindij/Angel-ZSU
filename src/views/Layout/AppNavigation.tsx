@@ -35,7 +35,7 @@ import { Drawer } from '@/views/Layout/Drawer';
 // data for site navigation elements
 const MenuItems = [
   { label: 'Головна', href: '/', icon: <HomeIcon /> },
-  { label: 'Price-Pulse', href: '/categories/beverages', icon: <CategoryIcon /> },
+  { label: 'Price-Pulse', href: '/categories', icon: <CategoryIcon /> },
   { label: 'Коктейлі', href: '/cocktails', icon: <LocalBarIcon /> },
   { label: 'Рецепти', href: '/recipes', icon: <RestaurantIcon /> },
 ];
