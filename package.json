@@ -1,6 +1,6 @@
 {
   "name": "angel-zsu",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": true,
   "author": "SKindij",
   "description": "Website of the 'Angel of the Armed Forces of Ukraine' charity fund",
@@ -35,9 +35,5 @@
     "eslint-config-prettier": "^9.1.0",
     "prettier": "3.1.0",
     "typescript": "5.2.2"
-  },
-  "engines": {
-    "node": ">=20.9.0",
-    "npm": ">=9.6.7"
   }
 }
