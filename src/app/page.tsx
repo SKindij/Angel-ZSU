@@ -49,7 +49,7 @@ export default function Home() {
             }}
           />
           <Typography paragraph>
-            Прохання уважно перевіряти <Link href="/donate"><span className={styles.linkHighlight}>реквізити</span></Link> при перерахунку коштів.
+            Прохання уважно перевіряти <Link href="/fund/donate"><span className={styles.linkHighlight}>реквізити</span></Link> при перерахунку коштів.
           </Typography>
           <Typography
             sx={{ fontSize: '1.5rem', fontWeight: 'bold', }}
