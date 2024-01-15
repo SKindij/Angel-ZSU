@@ -18,7 +18,9 @@ export default function Home() {
         alignItems="center" direction="column"
         pt={4}
       >
-        <Grid container item justifyContent="center" alignItems="center">
+        <Grid container item justifyContent="center" alignItems="center"
+          className={styles.type}
+        >
           <MainTypowriter />
         </Grid>
         <Grid container item mb={5} justifyContent="center" alignItems="flex-start">

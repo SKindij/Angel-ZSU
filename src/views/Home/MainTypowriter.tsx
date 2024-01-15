@@ -3,7 +3,6 @@
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
 
-
 const typeVariants = {
   initial: { x: '-100vw' },
   animate: {
