@@ -121,6 +121,14 @@ A library to help you hash passwords.
   - weekly downloads: 1 400 000
 * home-page: https://github.com/kelektiv/node.bcrypt.js#readme
 
+### typewriter-effect
+
+* npm-site: https://www.npmjs.com/package/typewriter-effect
+  - version: 2.21.0
+  - install: `npm i typewriter-effect`
+  - weekly downloads: 38 000
+* home-page: https://github.com/tameemsafi/typewriterjs#readme
+
 ### 
 
 * npm-site:
@@ -128,6 +136,15 @@ A library to help you hash passwords.
   - install: ``
   - weekly downloads:
 * home-page:
+
+### 
+
+* npm-site:
+  - version:
+  - install: ``
+  - weekly downloads:
+* home-page:
+
 
 - - -
 
