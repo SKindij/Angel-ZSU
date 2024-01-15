@@ -21,7 +21,7 @@ export default function RootLayout({ children }:{ children:React.ReactNode }) {
     <html lang="en">
       <body>
         <ThemeRegistry>
-          <Box sx={{ display: 'flex' }}>
+          <Box sx={{ display: 'flex', backgroundColor: '#F3F3F3' }}>
             {/* menu and site navigation */}
             <AppNavigation />
             {/* the main content of the site */}
@@ -29,7 +29,6 @@ export default function RootLayout({ children }:{ children:React.ReactNode }) {
               <DrawerHeader />
               {children}
             </Box>
-
           </Box>
         </ThemeRegistry>
       </body>

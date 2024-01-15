@@ -1,7 +1,8 @@
 // @/views/Home/MainTypowriter.tsx
+'use client';
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
-import { TypographyHeader } from '@/views/Common/TypographyVariants';
+
 
 const typeVariants = {
   initial: { x: '-100vw' },
@@ -15,9 +16,7 @@ const typeVariants = {
 
 export default function MainTypowriter() {
   return (
-    <TypographyHeader
-      paragraph
-      component={motion.div}
+    <motion.div
       variants={typeVariants}
       animate="animate"
       initial="initial"
@@ -26,19 +25,19 @@ export default function MainTypowriter() {
         onInit={(typewriter) => {
           typewriter
             .pauseFor(500)
-            .typeString('Компанія <strong>"Тех-Рішення"</strong>')
+            .typeString('БО БФ <strong>"Янгол Збройних Сил України"</strong>')
             .pauseFor(1000)
             .deleteAll()
-            .typeString('Багаторічний практичний досвід!')
+            .typeString('Angel Zbroinykh Syl Ukrayiny')
             .pauseFor(1000)
             .deleteAll()
-            .typeString('<strong>RVA -</strong> Ролети. Ворота. Автоматика.')
+            .typeString('Благодійний фонд “Янгол ЗСУ”')
             .pauseFor(1000)
             .deleteAll()
-            .typeString('Індивідуальний підхід до кожного!')
+            .typeString('Charitable Fund <strong>"Angel ZSU"</strong>')
             .pauseFor(1000)
             .deleteAll()
-            .typeString('<strong>RVA.expert -</strong> Якість гарантовано!')
+            .typeString('Angel of the Armed Forces of Ukraine')
             .pauseFor(1000)
             .start();
         }}
@@ -47,6 +46,6 @@ export default function MainTypowriter() {
           loop: true,
         }}
       />
-    </TypographyHeader>
+    </motion.div>
   );
 }

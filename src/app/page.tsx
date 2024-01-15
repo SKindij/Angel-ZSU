@@ -1,28 +1,27 @@
 // @/app/page.tsc
 import styles from './page.module.css';
 import Container from '@mui/material/Container';
+import { Grid } from '@mui/material';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import MainTypowriter from '@/views/Home/MainTypowriter';
 import mainPic from '../../public/images/angels.jpg';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Container>
-        {/* home page */}
-        <Box
-          sx={{
-            display: 'flex', flexDirection: 'column',
-            alignItems: 'center',
-            textAlign: 'center',
-          }}
-        >
-          <Typography variant="h2" gutterBottom>
-            Благодійний фонд &ldquo;Янгол ЗСУ&rdquo;
-          </Typography>
+      {/* home page */}
+      <Grid container justifyContent="center"
+        alignItems="center" direction="column"
+        pt={4}
+      >
+        <Grid container item justifyContent="center" alignItems="center">
+          <MainTypowriter />
+        </Grid>
+        <Grid container item mb={5} justifyContent="center" alignItems="flex-start">
           <Typography paragraph>
             Вже тривалий час ми активно беремо участь у підтримці військових та цивільного населення. Наша команда
             закриває запити у досить короткі терміни та відвозить все необхідне у найгарячіші точки України. На рахунку
@@ -56,8 +55,8 @@ export default function Home() {
           >
             Разом до перемоги!
           </Typography>
-        </Box>
-      </Container>
+        </Grid>
+      </Grid>
     </main>
   );
 }
