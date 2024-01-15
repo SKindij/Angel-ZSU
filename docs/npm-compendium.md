@@ -129,13 +129,14 @@ A library to help you hash passwords.
   - weekly downloads: 38 000
 * home-page: https://github.com/tameemsafi/typewriterjs#readme
 
-### 
+### framer-motion
+_It is an open source, production-ready library that’s designed for all creative developers._
 
-* npm-site:
-  - version:
-  - install: ``
-  - weekly downloads:
-* home-page:
+* npm-site: https://www.npmjs.com/package/framer-motion
+  - version: 10.18.0
+  - install: `npm install framer-motion`
+  - weekly downloads: 2 370 000
+* home-page: https://github.com/framer/motion#readme
 
 ### 
 
