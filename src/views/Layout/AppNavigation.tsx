@@ -108,24 +108,26 @@ const AppNavigation:React.FC = () => {
               },
             }}
 		      >
-            БФ &ldquo;Янгол ЗСУ&rdquo;
+            БО БФ &ldquo;Янгол ЗСУ&rdquo;
           </Typography>
           {/* Social Media Icons */}
-          <Link href="https://t.me/angel_zsu" rel="noopener noreferrer" target="_blank" passHref>
-            <IconButton color="inherit" size='medium'>
-              <TelegramIcon sx={{ color: '#1DA1F2' }} />
-            </IconButton>
-          </Link>
-          <Link href="https://www.facebook.com/groups/1383290902438768/?ref=share" rel="noopener noreferrer" target="_blank" passHref>
-            <IconButton color="inherit" size='medium'>
-              <FacebookIcon fontSize="medium" sx={{ color: 'blue' }} />
-            </IconButton>
-          </Link>
-          <Link href="https://www.instagram.com" rel="noopener noreferrer" target="_blank" passHref>
-            <IconButton color="inherit" size='medium'>
-              <InstagramIcon sx={{ color: '#E1306C' }} />
-            </IconButton>
-          </Link>
+          <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'none', lg: 'flex' } }}>
+            <Link href="https://t.me/angel_zsu" rel="noopener noreferrer" target="_blank" passHref>
+              <IconButton color="inherit" size='medium'>
+                <TelegramIcon sx={{ color: '#1DA1F2' }} />
+              </IconButton>
+            </Link>
+            <Link href="https://www.facebook.com/groups/1383290902438768/?ref=share" rel="noopener noreferrer" target="_blank" passHref>
+              <IconButton color="inherit" size='medium'>
+                <FacebookIcon fontSize="medium" sx={{ color: 'blue' }} />
+              </IconButton>
+            </Link>
+            <Link href="https://www.instagram.com" rel="noopener noreferrer" target="_blank" passHref>
+              <IconButton color="inherit" size='medium'>
+                <InstagramIcon sx={{ color: '#E1306C' }} />
+              </IconButton>
+            </Link>
+          </Box>
 		      {/* Menu User Settings */}
 		      <Box sx={{ flexGrow: 0, marginLeft: 'auto' }}>
             <Tooltip title="Open settings">
