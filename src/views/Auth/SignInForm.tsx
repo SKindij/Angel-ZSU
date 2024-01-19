@@ -14,7 +14,7 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 
-import backPic from '../../public/images/backsingin.jpg';
+import backPic from '../../../public/images/backsingin.jpg';
 
 export default function SignInForm() {
   const handleSubmit = (event:React.FormEvent<HTMLFormElement>) => {
