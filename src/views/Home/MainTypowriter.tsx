@@ -17,8 +17,7 @@ export default function MainTypowriter() {
   return (
     <motion.div
       variants={typeVariants}
-      animate="animate"
-      initial="initial"
+      animate="animate" initial="initial"
     >
       <Typewriter
         onInit={(typewriter) => {
