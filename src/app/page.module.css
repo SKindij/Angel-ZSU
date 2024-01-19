@@ -1,8 +1,4 @@
 /* @/app/MainPage.css */
-.main {
-  color: darkgreen;
-}
-
 .linkHighlight {
   color: #4800ff;
   font-weight: bold;
@@ -10,6 +6,6 @@
 
 .type {
   font-size: 30px;
-  color: darkorange;
+  color: darkgreen;
   padding-bottom: 15px;
 }
