@@ -1,12 +1,12 @@
 // @/app/layout.tsx
-import './globals.css';
 import ThemeRegistry from '@/views/ThemeRegistry/ThemeRegistry';
+import './globals.css';
 // MUI components
 import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 // views (design) elements
-import { DrawerHeader } from '@/views/Layout/DrawerHeader';
-import AppNavigation from '@/views/Layout/AppNavigation';
-
+import ResponsiveHeader from '@/views/Layout/ResponsiveHeader';
+import StickyFooter from '@/views/Layout/StickyFooter';
 
 export const metadata = {
   title: 'Янгол ЗСУ',
@@ -16,19 +16,23 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }:{ children:React.ReactNode }) {
-
   return (
-    <html lang="en">
+    <html lang="uk">
       <body>
         <ThemeRegistry>
-          <Box sx={{ display: 'flex', backgroundColor: '#F3F3F3' }}>
-            {/* menu and site navigation */}
-            <AppNavigation />
+          <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+
+            {/* menu and app site navigation */}
+            <ResponsiveHeader />
+
             {/* the main content of the site */}
-            <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-              <DrawerHeader />
+            <Container component="main" sx={{ flexGrow: 1, p: 1 }}>
               {children}
-            </Box>
+            </Container>
+
+            {/* bottom content of site */}
+			      <StickyFooter />
+
           </Box>
         </ThemeRegistry>
       </body>
