@@ -1,5 +1,5 @@
 // @/app/auth/signin/page.tsx
-import SignInForm from '@/views/SignInForm';
+import SignInForm from '@/views/Auth/SignInForm';
 
 
 export default function SignInPage() {
