@@ -36,8 +36,8 @@ _Material UI integration with the Next.js App Router_
 - Built with TypeScript
 - Implement [Material You](https://m3.material.io/) (Material Design 3)
 
-* npm-site: https://www.npmjs.com/package/@mui/material-next
-  - version: 6.0.0-alpha.115
+* npm-site: https://www.npmjs.com/package/@mui/material-nextjs
+  - version: 5.15.5
   - install: `npm install @mui/material-nextjs`
   - weekly downloads: 2 700
 * home-page: https://mui.com/material-ui/guides/nextjs/
