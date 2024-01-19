@@ -1,4 +1,5 @@
 // @/views/ThemeRegistry/theme.jsx
+'use client';
 import { Roboto } from 'next/font/google';
 import { createTheme } from '@mui/material/styles';
 
@@ -13,12 +14,7 @@ const roboto = Roboto({
 const theme = createTheme({
   palette: {
     mode: 'light',
-    primary: {
-      main: '#f0c000', // mainly orange color
-    },
-    secondary: {
-      main: purple[500], // purple shade
-    },
+
   },
   typography: {
     fontFamily: roboto.style.fontFamily,
@@ -43,7 +39,17 @@ const theme = createTheme({
       margin: '1rem 0',
     },
   },
-
+  components: {
+    MuiAlert: {
+      styleOverrides: {
+        root: ({ ownerState }) => ({
+          ...(ownerState.severity === 'info' && {
+            backgroundColor: '#60a5fa',
+          }),
+        }),
+      },
+    },
+  },
 });
 
 export default theme;
