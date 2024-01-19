@@ -19,16 +19,16 @@ function Copyright() {
 
 const StickyFooter = () => {
   return (
-      <Box component="footer"
-        sx={{ py: 3, px: 2, mt: 'auto', backgroundColor: '#f5f5f5' }}
-      >
-        <Container maxWidth="sm">
-          <Typography variant="body1">
+    <Box component="footer"
+      sx={{ py: 3, px: 2, mt: 'auto', backgroundColor: '#f5f5f5' }}
+    >
+      <Container maxWidth="sm">
+        <Typography variant="body1">
             My sticky footer can be found here.
-          </Typography>
-          <Copyright />
-        </Container>
-      </Box>
+        </Typography>
+        <Copyright />
+      </Container>
+    </Box>
   );
-}
+};
 export default StickyFooter;
