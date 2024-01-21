@@ -17,8 +17,6 @@ export default function ThemeRegistry({ children }:{ children:React.ReactNode })
     </AppRouterCacheProvider>
   );
 }
-
 /*
 This code is courtesy of MUI’s documentation — you shouldn’t have to touch it at all.
-
 */
