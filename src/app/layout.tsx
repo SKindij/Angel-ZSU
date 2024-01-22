@@ -5,8 +5,8 @@ import './globals.css';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 // views (design) elements
-import ResponsiveHeader from '@/views/Layout/ResponsiveHeader';
-import StickyFooter from '@/views/Layout/StickyFooter';
+import AppHeader from '@/views/Common/AppHeader';
+import AppFooter from '@/views/Common/AppFooter';
 
 export const metadata = {
   title: 'Янгол ЗСУ',
@@ -23,7 +23,7 @@ export default function RootLayout({ children }:{ children:React.ReactNode }) {
           <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
 
             {/* menu and app site navigation */}
-            <ResponsiveHeader />
+            <AppHeader />
 
             {/* the main content of the site */}
             <Container component="main" sx={{ flexGrow: 1, p: 1 }}>
@@ -31,7 +31,7 @@ export default function RootLayout({ children }:{ children:React.ReactNode }) {
             </Container>
 
             {/* bottom content of site */}
-			      <StickyFooter />
+			      <AppFooter />
 
           </Box>
         </ThemeRegistry>

@@ -1,4 +1,4 @@
-// @/views/Layout/ResponsiveHeader.tsx
+// @/views/Common/AppHeader.tsx
 'use client';
 import * as React from 'react';
 import Link from 'next/link';
@@ -45,30 +45,20 @@ const socialMediaLinks = [
   { href: 'https://www.instagram.com/angel_zsu?igsh=OGVmMjZkZmE2dDA3', color: '#E1306C', icon: <InstagramIcon /> },
   { href: 'https://www.facebook.com/groups/1383290902438768/?ref=share', color: 'blue', icon: <FacebookIcon fontSize="medium" /> },
 ];
-const UserSettings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-const isLogin = false;
+
 // menu and app site navigation
-const ResponsiveHeader = () => {
+const AppHeader = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
   // functions of showing and hiding menu elemetts
   const handleOpenNavMenu = (event:React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event:React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
 
   return (
-    <AppBar position="static" color="transparent"
-      sx = {{mt: '11px', borderBottom: '1px solid #e5e5e5', boxShadow: 0}}
-    >
+    <AppBar position="static">
       <Container maxWidth="xl" sx={{pl: {sm: 10}, pr: {sm: 10}}} disableGutters>
         <Toolbar disableGutters>
           {/* mobile header */}
@@ -128,7 +118,7 @@ const ResponsiveHeader = () => {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, ml: 6 }}>
             {MenuItems.map(({ label, href }) => (
               <Link href={href} passHref key={label}>
-                <Button  sx={{ my: 2, display: 'block', textTransform: 'none', pl: 2, pr: 2 }}>
+                <Button  sx={{ my: 2, color: 'white', display: 'block', pl: 2, pr: 2 }}>
                   {label}
                 </Button>
               </Link>
@@ -144,37 +134,9 @@ const ResponsiveHeader = () => {
               </Link>
             ))}
           </Box>
-
-          {/* logged in User Settings */}
-          {!isLogin && <Box>
-            <Button variant="outlined">
-              Login
-            </Button>
-          </Box>}
-          {isLogin && <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/images/avatars/defoultAvatar.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu id="menu-appbar" keepMounted
-              sx={{ mt: '45px' }}
-              anchorEl={anchorElUser}
-              anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-              transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {UserSettings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>}
         </Toolbar>
       </Container>
     </AppBar>
   );
 };
-export default ResponsiveHeader;
+export default AppHeader;
