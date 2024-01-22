@@ -6,7 +6,7 @@ import Link from '@mui/material/Link';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary">
+    <Typography variant="body2">
       {'Copyright © '}
       <Link color="inherit" href="https://angelzsu.com/">
         Angel ZSU
@@ -20,7 +20,7 @@ function Copyright() {
 const AppFooter = () => {
   return (
     <Box component="footer"
-      sx={{ py: 3, px: 2, mt: 'auto', backgroundColor: '#f5f5f5' }}
+      sx={{ py: 3, px: 2, mt: 'auto', backgroundColor: 'primary.main' }}
     >
       <Container maxWidth="sm">
         <Typography variant="body1">
