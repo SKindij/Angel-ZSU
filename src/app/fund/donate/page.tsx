@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
-import qrCode from '../../../../public/images/qr-pb-donate.webp';
+import qrCode from '../../../../public/images/donate/qr-pb-donate.webp';
 
 export default function DonatePage() {
   return (

@@ -11,6 +11,7 @@ import Link from 'next/link';
 // views components
 import MainTypowriter from '@/views/Home/MainTypowriter';
 import mainPic from '../../public/images/angels.jpg';
+import OurTeam from '@/views/Home/OurTeam';
 
 export default function Home() {
   return (
@@ -20,6 +21,9 @@ export default function Home() {
         sx={{display: 'flex', justifyContent: 'center'}}>
         {/* several run-on sentences */}
         <MainTypowriter />
+
+        {/* members of our fund */}
+
       </Box>
     </Fragment>
   );
