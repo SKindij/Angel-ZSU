@@ -1,9 +1,8 @@
 // @/views/ThemeRegistry/theme.ts
 'use client';
 import { Roboto } from 'next/font/google';
-import { createTheme } from '@mui/material/styles';
-import { purple } from '@mui/material/colors';
-import { red } from '@mui/material/colors';
+import { createTheme, Palette, Theme } from '@mui/material/styles';
+import { purple, red } from '@mui/material/colors';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -11,25 +10,41 @@ const roboto = Roboto({
   display: 'swap',
 });
 
+interface CustomPaletteOptions {
+  customBackground:string;
+  lostLavender:string;
+  deepWater:string;
+  fadedLilac:string;
+  bakeryBox:string;
+  polliwog:string;
+  sassyYellow:string;
+}
+interface CustomTheme extends Theme {
+  palette:Palette & CustomPaletteOptions;
+}
+
 const theme = createTheme({
   palette: {
     primary: {
       light: '#9FF1D2',
-    main: '#127C71',
-    dark: '#0D6A69',
-    contrastText: '#fbfbfb',
+      main: '#127C71',
+      dark: '#0D6A69',
+      contrastText: '#fbfbfb',
     },
     secondary: {
       light: '#FDE6A8',
-    main: '#ffaf35',
-    dark: '#D0821C',
-    contrastText: '#fbfbfb',
+      main: '#ffaf35',
+      dark: '#D0821C',
+      contrastText: '#fbfbfb',
     },
-	background: {
+    background: {
       default: '#f7f7f7', // Gray97
       paper: '#f1f1f1', // White Smoke
     },
     customBackground: '#343331', // Sinister Minister
+    lostLavender: '#8E7F8E',
+    deepWater: '#254A8C',
+    fadedLilac: '#92A3BD',
   },
   typography: {
     fontFamily: roboto.style.fontFamily,
@@ -53,7 +68,7 @@ const theme = createTheme({
       fontWeight: 600,
       lineHeight: 1.3
     },
-	h5: {
+    h5: {
       fontSize: '1.6rem',
       fontWeight: 500,
       lineHeight: 1.3
@@ -85,9 +100,6 @@ const theme = createTheme({
       },
     },
   },
-});
+} as CustomTheme);
 
 export default theme;
-/*
-
-*/
