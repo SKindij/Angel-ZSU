@@ -24,12 +24,8 @@ export default function RootLayout({ children }:{ children:React.ReactNode }) {
 
             {/* menu and app site navigation */}
             <AppHeader />
-
             {/* the main content of the site */}
-            <Container component="main" sx={{ flexGrow: 1, p: 1 }}>
-              {children}
-            </Container>
-
+            {children}
             {/* bottom content of site */}
 			      <AppFooter />
 
