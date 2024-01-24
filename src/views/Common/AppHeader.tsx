@@ -19,32 +19,10 @@ import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-// icons for navigation elements
-import SecurityIcon from '@mui/icons-material/Security';
-import HomeIcon from '@mui/icons-material/Home';
-import DonateIcon from '@mui/icons-material/MonetizationOn';
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-import ReportsIcon from '@mui/icons-material/Assignment';
-import InfoIcon from '@mui/icons-material/Info';
-import ContactsIcon from '@mui/icons-material/Contacts';
-// Social Media Icons
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import TelegramIcon from '@mui/icons-material/Telegram';
 // data for site navigation elements
-const MenuItems = [
-  { label: 'Головна', href: '/', icon: <HomeIcon /> },
-  { label: 'Збори', href: '/fund/campaigns', icon: <DonateIcon /> },
-  { label: 'Реквізити', href: '/fund/donate', icon: <AccountBalanceIcon /> },
-  { label: 'Звіти', href: '/fund/reports', icon: <ReportsIcon /> },
-  { label: 'Про нас', href: '/about', icon: <InfoIcon /> },
-  { label: 'Контакти', href: '/contacts', icon: <ContactsIcon /> },
-];
-const socialMediaLinks = [
-  { href: 'https://t.me/angel_zsu', color: '#1DA1F2', icon: <TelegramIcon /> },
-  { href: 'https://www.instagram.com/angel_zsu?igsh=OGVmMjZkZmE2dDA3', color: '#E1306C', icon: <InstagramIcon /> },
-  { href: 'https://www.facebook.com/groups/1383290902438768/?ref=share', color: 'blue', icon: <FacebookIcon fontSize="medium" /> },
-];
+import SecurityIcon from '@mui/icons-material/Security';
+import { HeaderSocialLinks } from '@/views/Common/SocialLinks';
+import AppNavLinks from '@/views/Common/AppNavLinks';
 
 // menu and app site navigation
 const AppHeader = () => {
@@ -59,7 +37,7 @@ const AppHeader = () => {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl" sx={{pl: {sm: 10}, pr: {sm: 10}}} disableGutters>
+      <Container maxWidth="xl" sx={{pl: {sm: 10}, pr: {sm: 10}, bgcolor:'customBackground'}} disableGutters>
         <Toolbar disableGutters>
           {/* mobile header */}
           <Box sx={{ flexGrow: 1, display: {xs: 'flex', md: 'none'} }}>
@@ -77,9 +55,9 @@ const AppHeader = () => {
               onClose={handleCloseNavMenu}
               sx={{display: {xs: 'block', md: 'none'} }}
             >
-			        {/* mobile site navigation */}
+			  {/* mobile site navigation */}
               <List>
-                {MenuItems.map((item) => (
+                {AppNavLinks.map((item) => (
                   <Link key={item.label} href={item.href} passHref>
                     <ListItemButton sx={{ minHeight: 48, px: 2.5, justifyContent: 'initial' }}>
                       <ListItemIcon sx={{ minWidth: 0, justifyContent: 'center', mr: 1 }}>
@@ -116,24 +94,18 @@ const AppHeader = () => {
           </Typography>
           {/* desktop site navigation */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, ml: 6 }}>
-            {MenuItems.map(({ label, href }) => (
+            {AppNavLinks.map(({ label, href }) => (
               <Link href={href} passHref key={label}>
-                <Button  sx={{ my: 2, color: 'white', display: 'block', pl: 2, pr: 2 }}>
+                <Button  sx={{ my: 2, color: 'white', display: 'block', pl: 2, pr: 2,
+                  '&:hover': { color: 'secondary.main'}	
+				}}>
                   {label}
                 </Button>
               </Link>
             ))}
           </Box>
           {/* desktop Social Media Icons */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {socialMediaLinks.map(({ href, color, icon }, index) => (
-              <Link key={index} href={href} rel="noopener noreferrer" target="_blank" passHref>
-                <IconButton color="inherit" size='medium' sx={{ marginRight: 2 }}>
-                  {React.cloneElement(icon, { sx: { color } })}
-                </IconButton>
-              </Link>
-            ))}
-          </Box>
+          <HeaderSocialLinks />
         </Toolbar>
       </Container>
     </AppBar>
