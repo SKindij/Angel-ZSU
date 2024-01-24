@@ -1,9 +1,9 @@
-// @/views/ThemeRegistry/theme.jsx
+// @/views/ThemeRegistry/theme.ts
 'use client';
 import { Roboto } from 'next/font/google';
 import { createTheme } from '@mui/material/styles';
-
 import { purple } from '@mui/material/colors';
+import { red } from '@mui/material/colors';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -13,39 +13,65 @@ const roboto = Roboto({
 
 const theme = createTheme({
   palette: {
-    mode: 'light',
     primary: {
-      light: '#69696a',
-      main: '#28282a',
-      dark: '#1e1e1f',
+      light: '#9FF1D2',
+    main: '#127C71',
+    dark: '#0D6A69',
+    contrastText: '#fbfbfb',
     },
     secondary: {
-      light: '#fff5f8',
-      main: '#ff3366',
-      dark: '#e62958',
+      light: '#FDE6A8',
+    main: '#ffaf35',
+    dark: '#D0821C',
+    contrastText: '#fbfbfb',
     },
+	background: {
+      default: '#f7f7f7', // Gray97
+      paper: '#f1f1f1', // White Smoke
+    },
+    customBackground: '#343331', // Sinister Minister
   },
   typography: {
     fontFamily: roboto.style.fontFamily,
     h1: {
-      fontSize: '1.8rem',
+      fontSize: '2.4rem',
       fontWeight: 800,
-      margin: '1rem 0',
+      lineHeight: 1.3
     },
     h2: {
-      fontSize: '1.6rem',
-      fontWeight: 600,
-      margin: '1rem 0',
+      fontSize: '2.2rem',
+      fontWeight: 700,
+      lineHeight: 1.3
     },
     h3: {
-      fontSize: '1.4rem',
-      fontWeight: 400,
-      margin: '1rem 0',
+      fontSize: '2.0rem',
+      fontWeight: 600,
+      lineHeight: 1.3
     },
     h4: {
-      fontSize: '1.2rem',
-      fontWeight: 400,
-      margin: '1rem 0',
+      fontSize: '1.8rem',
+      fontWeight: 600,
+      lineHeight: 1.3
+    },
+	h5: {
+      fontSize: '1.6rem',
+      fontWeight: 500,
+      lineHeight: 1.3
+    },
+    h6: {
+      fontSize: '1.4rem',
+      fontWeight: 500,
+      lineHeight: 1.3
+    },
+    subtitle1: {
+      fontSize: '1.25rem', // 20px
+      fontWeight: 500,
+	  lineHeight: 1.3
+    },
+    subtitle2: {
+      fontSize: '1.15rem', // 18px
+      fontWeight: 500,
+      lineHeight: 1.3
     },
   },
   components: {
