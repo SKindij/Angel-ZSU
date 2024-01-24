@@ -12,9 +12,6 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import Avatar from '@mui/material/Avatar';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -55,7 +52,7 @@ const AppHeader = () => {
               onClose={handleCloseNavMenu}
               sx={{display: {xs: 'block', md: 'none'} }}
             >
-			  {/* mobile site navigation */}
+			        {/* mobile site navigation */}
               <List>
                 {AppNavLinks.map((item) => (
                   <Link key={item.label} href={item.href} passHref>
@@ -97,8 +94,8 @@ const AppHeader = () => {
             {AppNavLinks.map(({ label, href }) => (
               <Link href={href} passHref key={label}>
                 <Button  sx={{ my: 2, color: 'white', display: 'block', pl: 2, pr: 2,
-                  '&:hover': { color: 'secondary.main'}	
-				}}>
+                  '&:hover': { color: 'secondary.main'}
+                }}>
                   {label}
                 </Button>
               </Link>

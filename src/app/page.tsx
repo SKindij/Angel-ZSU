@@ -16,7 +16,7 @@ import OurTeam from '@/views/Home/OurTeam';
 
 export default function Home() {
   return (
-    <Box component="main">
+    <div>
       {/* home page */}
       <Container sx={{
 		  marginBottom:3, padding:1, textAlign:'center',
@@ -28,7 +28,6 @@ export default function Home() {
       {/* members of our fund */}
 
 
-
-    </Box>
+    </div>
   );
 }

@@ -15,10 +15,10 @@ export default function TestPage() {
     <>
       {/* test page */}
       <Box>
-		<Container sx={{ 
-		  marginBottom:3, padding:1, textAlign:'center', 
-		  color:'darkgreen', letterSpacing:3, fontSize: '1.6rem'
-		}}>
+        <Container sx={{
+		      marginBottom:2, padding:1, textAlign:'center',
+		      color:'fadedLilac', letterSpacing:3, fontSize: { xs:'1.2rem', md:'1.6rem' }
+        }}>
           {/* several run-on sentences */}
           <MainTypowriter />
         </Container>

@@ -1,6 +1,4 @@
 // @/views/Common/SocialLinks.tsx
-import * as React from 'react';
-import { SvgIcon } from '@mui/material';
 import Link from 'next/link';
 // MUI components
 import Box from '@mui/material/Box';
@@ -14,7 +12,7 @@ interface SocialLink {
   name:string;
   href:string;
   color:string;
-  icon:typeof SvgIcon;
+  icon:React.ReactNode;
 }
 const socialMediaLinks:SocialLink[] = [
   { name: 'Telegram', href: 'https://t.me/angel_zsu', color: '#1DA1F2', icon: <TelegramIcon /> },
@@ -24,13 +22,13 @@ const socialMediaLinks:SocialLink[] = [
 
 const SocialLinkButton:React.FC<{ link:SocialLink }> = ({ link }) => (
   <Link href={link.href} rel="noopener noreferrer" target="_blank" passHref>
-    <IconButton color="inherit" size='medium' 
-      sx={{ 
+    <IconButton size='medium'
+      sx={{
         marginRight: 2,
         '&:hover': { backgroundColor: 'secondary.main'}
       }}
     >
-      <link.icon sx={{ color: link.color }} />
+      {link.icon}
     </IconButton>
   </Link>
 );
@@ -38,37 +36,37 @@ const SocialLinkButton:React.FC<{ link:SocialLink }> = ({ link }) => (
 const HeaderSocialLinks = () => {
   return (
     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-        {socialMediaLinks.map(({ name, href, color, icon }, index) => (
-            <Link key={name} href={href} rel="noopener noreferrer" target="_blank" passHref>
-              <IconButton color="inherit" size='medium' 
-			    sx={{ 
+      {socialMediaLinks.map(({ name, href, color, icon }, index) => (
+        <Link key={name} href={href} rel="noopener noreferrer" target="_blank" passHref>
+          <IconButton color="inherit" size='medium'
+			    sx={{
 				  marginRight:2,
 				  '&:hover': { backgroundColor: 'secondary.main'}
-				}}
+            }}
 			  >
-                {React.cloneElement(icon, { sx: { color } })}
-              </IconButton>
-            </Link>
-        ))}
+            {icon}
+          </IconButton>
+        </Link>
+      ))}
     </Box>
   );
 };
 
 const FooterSocialLinks = () => {
   return (
-    <Box sx={{ flexGrow: 1, display: 'flex' }}>
-        {socialMediaLinks.map(({ name, href, color, icon }, index) => (
-            <Link key={name} href={href} rel="noopener noreferrer" target="_blank" passHref>
-              <IconButton color="inherit" size='medium' 
-			    sx={{ 
+    <Box sx={{ flexGrow: 1, display: 'flex', mb: 3 }}>
+      {socialMediaLinks.map(({ name, href, color, icon }, index) => (
+        <Link key={name} href={href} rel="noopener noreferrer" target="_blank" passHref>
+          <IconButton color="inherit" size='medium'
+			    sx={{
 				  marginRight:2,
 				  '&:hover': { backgroundColor: 'secondary.main'}
-				}}
+            }}
 			  >
-                {React.cloneElement(icon, { sx: { color } })}
-              </IconButton>
-            </Link>
-        ))}
+            {icon}
+          </IconButton>
+        </Link>
+      ))}
     </Box>
   );
 };

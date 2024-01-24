@@ -21,14 +21,14 @@ export default function RootLayout({ children }:{ children:React.ReactNode }) {
       <body>
         <ThemeRegistry>
           <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-
             {/* menu and app site navigation */}
             <AppHeader />
-            {/* the main content of the site */}
-            {children}
+            <Box component="main">
+              {/* the main content of the site */}
+              {children}
+            </Box>
             {/* bottom content of site */}
 			      <AppFooter />
-
           </Box>
         </ThemeRegistry>
       </body>
