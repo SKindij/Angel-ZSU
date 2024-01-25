@@ -1,6 +1,8 @@
 // @/views/Home/OurTeam.tsx
-import Box from '@mui/material/Box';
+import React from 'react';
 import Slider, { Settings } from 'react-slick';
+// MUI components
+import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
@@ -11,6 +13,7 @@ import IconArrowForward from '@mui/icons-material/ArrowForward';
 // information about fund participants
 import TeamMemberCard from '@/views/Components/TeamMemberCard';
 import { MembersData } from '@/services/app-data';
+
 
 interface SliderArrowProps {
   onClick?:()=>void;
@@ -23,21 +26,18 @@ const SliderArrow = ({onClick, type, className}:SliderArrowProps) => {
   const matchMobileView = useMediaQuery(breakpoints.down('md'));
 
   return (
-    <IconButton
+    <IconButton className={className} onClick={onClick}
       sx={{
         backgroundColor: 'background.paper',
         color: 'primary.main',
-        '&:hover': { backgroundColor: 'primary.main', color: 'primary.contrastText' },
+        '&:hover': { backgroundColor:'primary.main', color:'primary.contrastText' },
         bottom: '-28px !important',
         left: 'unset !important',
         right: type === 'prev' ? '60px !important' : '0 !important',
         zIndex: 10,
         boxShadow: 1,
       }}
-      disableRipple
-      color="inherit"
-      onClick={onClick}
-      className={className}
+      disableRipple color="inherit"
     >
       {type === 'next' ? <IconArrowForward sx={{ fontSize: 22 }} /> : <IconArrowBack sx={{ fontSize: 22 }} />}
     </IconButton>
@@ -70,21 +70,15 @@ const OurTeam = () => {
     dots: true,
     appendDots: (dots) => <StyledDots>{dots}</StyledDots>,
     customPaging: () => (
-      <Box sx={{ height: 8, width: 30, backgroundColor: 'divider', display: 'inline-block', borderRadius: 4 }} />
+      <Box sx={{ height:8, width:30, backgroundColor:'divider', display:'inline-block', borderRadius:4 }} />
     ),
   };
 
   return (
-    <Box
-      id="mentors"
+    <Box id="members"
       sx={{
-        pt: {
-          xs: 6,
-          md: 8,
-        },
-        pb: {
-          xs: 8,
-          md: 12,
+        pt: { xs: 6, md: 8 },
+        pb: { xs: 8, md: 12,
         },
         backgroundColor: '#ecf3f3',
       }}
@@ -95,8 +89,8 @@ const OurTeam = () => {
         </Typography>
 
         <Slider {...sliderConfig}>
-          {data.map((item) => (
-            <MentorCardItem key={String(item.id)} item={item} />
+          {MembersData.map((member) => (
+            <TeamMemberCard key={String(member.id)} member={member} />
           ))}
         </Slider>
       </Container>
@@ -104,18 +98,4 @@ const OurTeam = () => {
   );
 };
 
-export default OurTeam;
-
-
-
-
-
-
-const OurTeam = (props:any) => {
-  return (
-    <Box>
-
-    </Box>
-  );
-};
 export default OurTeam;

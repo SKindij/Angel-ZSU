@@ -147,6 +147,16 @@ _It is an open source, production-ready library that’s designed for all creati
   - weekly downloads: 17 200 000
 * home-page: https://github.com/Qix-/color#readme
 
+### react-slick
+
+* npm-site: https://www.npmjs.com/package/react-slick
+  - version: 0.30.0
+  - install: `npm install react-slick --save`
+  - install: `npm install --save-dev @types/react-slick`
+  - install: `npm install slick-carousel`
+  - weekly downloads: 965 000
+* home-page: https://react-slick.neostack.com/
+
 ### 
 
 * npm-site:
