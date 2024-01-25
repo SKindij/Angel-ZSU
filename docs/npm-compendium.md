@@ -138,6 +138,15 @@ _It is an open source, production-ready library that’s designed for all creati
   - weekly downloads: 2 370 000
 * home-page: https://github.com/framer/motion#readme
 
+### color
+
+* npm-site: https://www.npmjs.com/package/color
+  - version: 4.2.3
+  - install: `npm i color`
+  - install: `npm install --save-dev @types/color`
+  - weekly downloads: 17 200 000
+* home-page: https://github.com/Qix-/color#readme
+
 ### 
 
 * npm-site:
@@ -145,7 +154,6 @@ _It is an open source, production-ready library that’s designed for all creati
   - install: ``
   - weekly downloads:
 * home-page:
-
 
 - - -
 
