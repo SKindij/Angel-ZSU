@@ -1,9 +1,11 @@
 // @/app/layout.tsx
 import ThemeRegistry from '@/views/ThemeRegistry/ThemeRegistry';
 import './globals.css';
+import './react-slick.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 // MUI components
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 // views (design) elements
 import AppHeader from '@/views/Common/AppHeader';
 import AppFooter from '@/views/Common/AppFooter';

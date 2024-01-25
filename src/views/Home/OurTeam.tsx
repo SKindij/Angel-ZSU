@@ -1,5 +1,7 @@
 // @/views/Home/OurTeam.tsx
+'use client';
 import React from 'react';
+import { useState, useEffect } from 'react';
 import Slider, { Settings } from 'react-slick';
 // MUI components
 import Box from '@mui/material/Box';
@@ -14,7 +16,6 @@ import IconArrowForward from '@mui/icons-material/ArrowForward';
 import TeamMemberCard from '@/views/Components/TeamMemberCard';
 import { MembersData } from '@/services/app-data';
 
-
 interface SliderArrowProps {
   onClick?:()=>void;
   type:'next' | 'prev';
@@ -22,29 +23,36 @@ interface SliderArrowProps {
 }
 
 const SliderArrow = ({onClick, type, className}:SliderArrowProps) => {
+  const [isClient, setIsClient] = useState(false);
   const { breakpoints } = useTheme();
   const matchMobileView = useMediaQuery(breakpoints.down('md'));
 
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
-    <IconButton className={className} onClick={onClick}
-      sx={{
-        backgroundColor: 'background.paper',
-        color: 'primary.main',
-        '&:hover': { backgroundColor:'primary.main', color:'primary.contrastText' },
-        bottom: '-28px !important',
-        left: 'unset !important',
-        right: type === 'prev' ? '60px !important' : '0 !important',
-        zIndex: 10,
-        boxShadow: 1,
-      }}
-      disableRipple color="inherit"
-    >
-      {type === 'next' ? <IconArrowForward sx={{ fontSize: 22 }} /> : <IconArrowBack sx={{ fontSize: 22 }} />}
-    </IconButton>
+    isClient && (
+      <IconButton className={className} onClick={onClick}
+        sx={{
+          backgroundColor: 'background.paper',
+          color: 'primary.main',
+          '&:hover': { backgroundColor:'primary.main', color:'primary.contrastText' },
+          bottom: '-28px !important',
+          left: 'unset !important',
+          right: type === 'prev' ? '60px !important' : '0 !important',
+          zIndex: 10,
+          boxShadow: 1,
+        }}
+        disableRipple color="inherit"
+      >
+        {type === 'next' ? <IconArrowForward sx={{ fontSize: 22 }} /> : <IconArrowBack sx={{ fontSize: 22 }} />}
+      </IconButton>
+    )
   );
 };
 
-const StyledDots = ({ children }) => (
+const StyledDots = ({ children }:any) => (
   <ul className="slick-dots">
     {React.Children.map(children, (dot) => (
       <li>

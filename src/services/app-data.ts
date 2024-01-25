@@ -4,7 +4,7 @@ import { TeamMember } from '@/models/interfaces';
 export const MembersData:Array<TeamMember> = [
   {
     id: 1,
-    photo: '/images/mentors/christian-buehner-DItYlc26zVI-unsplash.jpg',
+    photo: '/images/members/christian-buehner.jpg',
     name: 'Jhon Dwirian',
     category: 'UI/UX Design',
     description:
@@ -16,7 +16,7 @@ export const MembersData:Array<TeamMember> = [
   },
   {
     id: 2,
-    photo: '/images/mentors/jonas-kakaroto-KIPqvvTOC1s-unsplash.jpg',
+    photo: '/images/members/jonas-kakaroto.jpg',
     name: 'Leon S Kennedy',
     category: 'Machine Learning',
     description:
@@ -28,7 +28,7 @@ export const MembersData:Array<TeamMember> = [
   },
   {
     id: 3,
-    photo: '/images/mentors/noah-buscher-8A7fD6Y5VF8-unsplash.jpg',
+    photo: '/images/members/noah-buscher.jpg',
     name: 'Nguyễn Thuy',
     category: 'Android Development',
     description:
@@ -40,7 +40,7 @@ export const MembersData:Array<TeamMember> = [
   },
   {
     id: 4,
-    photo: '/images/mentors/philip-martin-5aGUyCW_PJw-unsplash.jpg',
+    photo: '/images/members/philip-martin.jpg',
     name: 'Rizki Known',
     category: 'Fullstack Development',
     description:

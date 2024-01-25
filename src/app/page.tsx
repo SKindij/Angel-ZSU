@@ -26,7 +26,7 @@ export default function Home() {
         <MainTypowriter />
       </Container>
       {/* members of our fund */}
-
+      <OurTeam />
 
     </div>
   );
