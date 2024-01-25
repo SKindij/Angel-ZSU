@@ -2,30 +2,48 @@
 import Link from 'next/link';
 // MUI components
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
 // Social Media Icons
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
 
 interface SocialLink {
-  name:string;
-  href:string;
-  color:string;
-  icon:React.ReactNode;
+  name: string;
+  href: string;
+  color: string;
+  icon: React.ReactNode;
 }
-const socialMediaLinks:SocialLink[] = [
-  { name: 'Telegram', href: 'https://t.me/angel_zsu', color: '#1DA1F2', icon: <TelegramIcon /> },
-  { name: 'Instagram', href: 'https://www.instagram.com/angel_zsu?igsh=OGVmMjZkZmE2dDA3', color: '#E1306C', icon: <InstagramIcon /> },
-  { name: 'Facebook', href: 'https://www.facebook.com/groups/1383290902438768/?ref=share', color: 'blue', icon: <FacebookIcon /> }
+const socialMediaLinks: SocialLink[] = [
+  {
+    name: 'Telegram',
+    href: 'https://t.me/angel_zsu',
+    color: '#1DA1F2',
+    icon: <TelegramIcon />,
+  },
+  {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/angel_zsu?igsh=OGVmMjZkZmE2dDA3',
+    color: '#E1306C',
+    icon: <InstagramIcon />,
+  },
+  {
+    name: 'Facebook',
+    href: 'https://www.facebook.com/groups/1383290902438768/?ref=share',
+    color: 'blue',
+    icon: <FacebookIcon />,
+  },
 ];
 
-const SocialLinkButton:React.FC<{ link:SocialLink }> = ({ link }) => (
+const SocialLinkButton: React.FC<{ link: SocialLink }> = ({ link }) => (
   <Link href={link.href} rel="noopener noreferrer" target="_blank" passHref>
-    <IconButton size='medium'
+    <IconButton
+      size="medium"
       sx={{
         marginRight: 2,
-        '&:hover': { backgroundColor: 'secondary.main'}
+        '&:hover': { backgroundColor: 'secondary.main' },
       }}
     >
       {link.icon}
@@ -38,12 +56,14 @@ const HeaderSocialLinks = () => {
     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
       {socialMediaLinks.map(({ name, href, color, icon }, index) => (
         <Link key={name} href={href} rel="noopener noreferrer" target="_blank" passHref>
-          <IconButton color="inherit" size='medium'
-			    sx={{
-				  marginRight:2,
-				  '&:hover': { backgroundColor: 'secondary.main'}
+          <IconButton
+            color="inherit"
+            size="medium"
+            sx={{
+              marginRight: 2,
+              '&:hover': { backgroundColor: 'secondary.main' },
             }}
-			  >
+          >
             {icon}
           </IconButton>
         </Link>
@@ -54,21 +74,21 @@ const HeaderSocialLinks = () => {
 
 const FooterSocialLinks = () => {
   return (
-    <Box sx={{ flexGrow: 1, display: 'flex', mb: 3 }}>
-      {socialMediaLinks.map(({ name, href, color, icon }, index) => (
-        <Link key={name} href={href} rel="noopener noreferrer" target="_blank" passHref>
-          <IconButton color="inherit" size='medium'
-			    sx={{
-				  marginRight:2,
-				  '&:hover': { backgroundColor: 'secondary.main'}
-            }}
-			  >
-            {icon}
-          </IconButton>
-        </Link>
-      ))}
-    </Box>
+    <Grid item xs={4} md={4}>
+      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+        <Typography variant="subtitle1" sx={{ color: 'primary.contrastText' }}>
+          Ми в:
+        </Typography>
+        {socialMediaLinks.map(({ name, href, color, icon }, index) => (
+          <Link key={name} href={href} rel="noopener noreferrer" target="_blank" passHref>
+            <IconButton color="inherit" size="medium" sx={{ '&:hover': { backgroundColor: 'secondary.main' } }}>
+              {icon}
+            </IconButton>
+            {name}
+          </Link>
+        ))}
+      </Box>
+    </Grid>
   );
 };
-
 export { HeaderSocialLinks, FooterSocialLinks };

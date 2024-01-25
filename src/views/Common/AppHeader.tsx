@@ -19,13 +19,13 @@ import ListItemText from '@mui/material/ListItemText';
 // data for site navigation elements
 import SecurityIcon from '@mui/icons-material/Security';
 import { HeaderSocialLinks } from '@/views/Common/SocialLinks';
-import AppNavLinks from '@/views/Common/AppNavLinks';
+import { HeaderNavLinks } from '@/views/Common/AppNavLinks';
 
 // menu and app site navigation
 const AppHeader = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   // functions of showing and hiding menu elemetts
-  const handleOpenNavMenu = (event:React.MouseEvent<HTMLElement>) => {
+  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
   const handleCloseNavMenu = () => {
@@ -34,33 +34,37 @@ const AppHeader = () => {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl" sx={{pl: {sm: 10}, pr: {sm: 10}, bgcolor:'customBackground'}} disableGutters>
+      <Container maxWidth="xl" sx={{ pl: { sm: 10 }, pr: { sm: 10 }, bgcolor: 'customBackground' }} disableGutters>
         <Toolbar disableGutters>
           {/* mobile header */}
-          <Box sx={{ flexGrow: 1, display: {xs: 'flex', md: 'none'} }}>
-            <IconButton aria-controls="menu-appbar" size="large" color="inherit"
-              aria-label="account of current user" aria-haspopup="true"
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              aria-controls="menu-appbar"
+              size="large"
+              color="inherit"
+              aria-label="account of current user"
+              aria-haspopup="true"
               onClick={handleOpenNavMenu}
             >
               <MenuIcon />
             </IconButton>
-            <Menu id="menu-appbar" keepMounted
+            <Menu
+              id="menu-appbar"
+              keepMounted
               anchorEl={anchorElNav}
               anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
               transformOrigin={{ vertical: 'top', horizontal: 'left' }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{display: {xs: 'block', md: 'none'} }}
+              sx={{ display: { xs: 'block', md: 'none' } }}
             >
-			        {/* mobile site navigation */}
+              {/* mobile site navigation */}
               <List>
-                {AppNavLinks.map((item) => (
+                {HeaderNavLinks.map(item => (
                   <Link key={item.label} href={item.href} passHref>
                     <ListItemButton sx={{ minHeight: 48, px: 2.5, justifyContent: 'initial' }}>
-                      <ListItemIcon sx={{ minWidth: 0, justifyContent: 'center', mr: 1 }}>
-                        {item.icon}
-                      </ListItemIcon>
-                      <ListItemText primary={item.label} sx={{ opacity:  1 }} />
+                      <ListItemIcon sx={{ minWidth: 0, justifyContent: 'center', mr: 1 }}>{item.icon}</ListItemIcon>
+                      <ListItemText primary={item.label} sx={{ opacity: 1 }} />
                     </ListItemButton>
                   </Link>
                 ))}
@@ -68,34 +72,65 @@ const AppHeader = () => {
             </Menu>
           </Box>
           {/* mobile App Icon and Logo */}
-		      <SecurityIcon sx={{ mr: 1, color: 'inherit', display: {xs: 'flex', md: 'none'} }} />
-		      <Typography variant="h4" noWrap component="div"
-		        sx={{
-			        display: { xs: 'flex', md: 'none' },
-			        mr: 2, flexGrow: 1, fontWeight: 700,
-              letterSpacing: '0.3rem', color: 'inherit',
+          <SecurityIcon
+            sx={{
+              mr: 1,
+              color: 'inherit',
+              display: { xs: 'flex', md: 'none' },
             }}
-		      >
-		        <Link href="/">БФ &ldquo;Янгол ЗСУ&rdquo;</Link>
+          />
+          <Typography
+            variant="h4"
+            noWrap
+            component="div"
+            sx={{
+              display: { xs: 'flex', md: 'none' },
+              mr: 2,
+              flexGrow: 1,
+              fontWeight: 700,
+              letterSpacing: '0.3rem',
+              color: 'inherit',
+            }}
+          >
+            <Link href="/">БФ &ldquo;Янгол ЗСУ&rdquo;</Link>
           </Typography>
           {/* desktop App Icon and Logo */}
-		      <SecurityIcon sx={{ mr: 1, color: 'inherit', display: { xs: 'none', md: 'flex' } }} />
-		      <Typography variant="h5" noWrap component="div"
-		        sx={{
-			        display: { xs: 'none', md: 'flex' },
-			        mr: 2, fontWeight: 700, textDecoration: 'none',
-              letterSpacing: '0.3rem', color: 'inherit',
+          <SecurityIcon
+            sx={{
+              mr: 1,
+              color: 'inherit',
+              display: { xs: 'none', md: 'flex' },
             }}
-		      >
+          />
+          <Typography
+            variant="h5"
+            noWrap
+            component="div"
+            sx={{
+              display: { xs: 'none', md: 'flex' },
+              mr: 2,
+              fontWeight: 700,
+              textDecoration: 'none',
+              letterSpacing: '0.3rem',
+              color: 'inherit',
+            }}
+          >
             <Link href="/">БО БФ &ldquo;Янгол ЗСУ&rdquo;</Link>
           </Typography>
           {/* desktop site navigation */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, ml: 6 }}>
-            {AppNavLinks.map(({ label, href }) => (
+            {HeaderNavLinks.map(({ label, href }) => (
               <Link href={href} passHref key={label}>
-                <Button  sx={{ my: 2, color: 'white', display: 'block', pl: 2, pr: 2,
-                  '&:hover': { color: 'secondary.main'}
-                }}>
+                <Button
+                  sx={{
+                    my: 2,
+                    color: 'white',
+                    display: 'block',
+                    pl: 2,
+                    pr: 2,
+                    '&:hover': { color: 'secondary.main' },
+                  }}
+                >
                   {label}
                 </Button>
               </Link>
