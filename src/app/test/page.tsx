@@ -32,10 +32,10 @@ export default function TestPage() {
 
         {/* color palette settings */}
         <Tester />
-		
-		{/* https://mui-treasury.com/?path=/story/card-solidgame--solid-game */}
-		<SxCardsSolid />
-		
+
+        {/* https://mui-treasury.com/?path=/story/card-solidgame--solid-game */}
+        <SxCardsSolid />
+
       </Box>
     </>
   );

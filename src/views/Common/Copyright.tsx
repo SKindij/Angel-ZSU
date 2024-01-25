@@ -22,13 +22,13 @@ const Copyright = () => {
       <Typography variant="body2" sx={{ color: 'fadedLilac' }}>
         {'Copyright © '}
         <Link href="https://angelzsu.com/">Angel ZSU</Link>
-		{' '}{new Date().getFullYear()}
+        {' '}{new Date().getFullYear()}
       </Typography>
       <Typography variant="body2" color="fadedLilac" sx={{ marginTop: { xs: '10px', md: '0' } }}>
         {'Site designed '}
         <Link href="https://github.com/SKindij" rel="noopener noreferrer" target="_blank">
 		  by SKindij
-		</Link>
+        </Link>
       </Typography>
     </Box>
   );

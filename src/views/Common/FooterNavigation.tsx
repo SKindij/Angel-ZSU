@@ -7,9 +7,9 @@ import Typography from '@mui/material/Typography';
 // data for site navigation elements
 import { FooterSocialLinks } from '@/views/Common/SocialLinks';
 import { CompanyNavLinks, FundNavLinks } from '@/views/Common/AppNavLinks';
-import FooterNavLink from '@/views/Common/AppNavLinks';
+import { FooterNavLink } from '@/views/Common/AppNavLinks';
 
-const NavItem = ({ label, href }: FooterNavLink) => {
+const NavItem = ({ label, href }:FooterNavLink) => {
   return (
     <Link href={href} passHref key={label}>
       <Button

@@ -11,12 +11,12 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
 
 interface SocialLink {
-  name: string;
-  href: string;
-  color: string;
-  icon: React.ReactNode;
+  name:string;
+  href:string;
+  color:string;
+  icon:React.ReactNode;
 }
-const socialMediaLinks: SocialLink[] = [
+const socialMediaLinks:SocialLink[] = [
   {
     name: 'Telegram',
     href: 'https://t.me/angel_zsu',
@@ -37,7 +37,7 @@ const socialMediaLinks: SocialLink[] = [
   },
 ];
 
-const SocialLinkButton: React.FC<{ link: SocialLink }> = ({ link }) => (
+const SocialLinkButton:React.FC<{ link:SocialLink }> = ({ link }) => (
   <Link href={link.href} rel="noopener noreferrer" target="_blank" passHref>
     <IconButton
       size="medium"
