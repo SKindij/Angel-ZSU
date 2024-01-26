@@ -1,12 +1,16 @@
 // @/views/Home/FundHero.tsx
-import React, { FC } from 'react';
+'use client';
+import { Link as ScrollLink } from 'react-scroll';
+// MUI components
+import React from 'react';
 import Image from 'next/image';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import { Link as ScrollLink } from 'react-scroll';
 import Button from '@mui/material/Button';
+// MUI icons
+import SendIcon from '@mui/icons-material/Send';
 // information from the database
 import { IOurAchievement } from '@/models/interfaces';
 import { ourAchievements } from '@/services/fund-data';
@@ -48,17 +52,16 @@ const FundHero = () => {
               <Box sx={{ mb: 3 }}>
                 <Typography component="h2"
                   sx={{ position: 'relative',
-                    fontSize: { xs: 40, md: 72 }, lineHeight: 1.3,
+                    fontSize: { xs: 30, md: 48 }, lineHeight: 1.3,
                     letterSpacing: 1.5, fontWeight: 'bold',
                   }}
                 >
                   <Typography component="mark"
-                    sx={{ position:'relative',
+                    sx={{ position:'relative', backgroundColor: 'unset',
                       color:'primary.main', fontSize:'inherit', fontWeight:'inherit',
-                      backgroundColor: 'unset',
                     }}
                   >
-                    Головний{' '}
+                    Збройні{' '}
                     <Box
                       sx={{ position:'absolute',
                         top: { xs:24, md:34 }, left: 2,
@@ -70,7 +73,7 @@ const FundHero = () => {
                       <img src="/images/layout/headline-curve.svg" alt="Headline curve" />
                     </Box>
                   </Typography>
-                  наш{' '}
+                  сили{' '}
                   <Typography component="span"
                     sx={{ position: 'relative',
                       fontSize: 'inherit', fontWeight: 'inherit',
@@ -80,7 +83,7 @@ const FundHero = () => {
                       },
                     }}
                   >
-                    пріоритет
+                    України
                     <svg version="1.1" viewBox="0 0 3183 3072">
                       <g id="Layer_x0020_1">
                         <path fill="#127C71"
@@ -95,20 +98,16 @@ const FundHero = () => {
                       </g>
                     </svg>
                   </Typography>{' '}
-                  <br /> це допомога армії!
+                  <br /> наш головний пріоритет
                 </Typography>
               </Box>
-			  {/* eslint-disable-next-line */}
+			        {/* eslint-disable-next-line */}
               <Box sx={{ mb: 4, width: { xs:'100%', md:'70%' } }}>
                 <Typography sx={{ color:'text.secondary', lineHeight:1.6 }}>
-                  {
-                    `At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-					voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, 
-					similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.`
-                  }
+                  {'Наша команда закриває запити у досить короткі терміни та відвозить все необхідне у найгарячіші точки України.'}
                 </Typography>
               </Box>
-			  {/* scrolling buttons */}
+			        {/* scrolling buttons */}
               <Box sx={{ '& button': { mr: 2 } }}>
                 <ScrollLink to="fund-campaigns" spy={true} smooth={true} offset={0} duration={350}>
                   <Button color="primary" variant="contained">
@@ -116,7 +115,7 @@ const FundHero = () => {
                   </Button>
                 </ScrollLink>
                 <ScrollLink to="fund-blog" spy={true} smooth={true} offset={0} duration={350}>
-                  <Button color="secondary" variant="outlined">
+                  <Button color="primary" variant="outlined" startIcon={<SendIcon/>}>
                     Наш блог
                   </Button>
                 </ScrollLink>
@@ -138,25 +137,24 @@ const FundHero = () => {
               <Box
                 sx={{ display: 'flex',
                   boxShadow: 1, borderRadius: '50%',
-                  width: 44, height: 44,
+                  width: 44, height: 44, mr: 2,
                   alignItems: 'center', justifyContent: 'center',
-                  mr: 2,
                   '& img': { width:'32px !important', height:'auto' },
                 }}
               >
                 <Image src="/images/layout/certificate.png" alt="Certificate icon" width={50} height={50} quality={97} />
               </Box>
               <Box>
-                <Typography component="h6" sx={{ color:'secondary.main', fontSize:'1.1rem', fontWeight:700, mb:0.5 }}>
-                  Україна
+                <Typography variant="subtitle1" sx={{ color:'secondary.main', fontWeight:700 }}>
+                  Слава нації
                 </Typography>
-                <Typography variant="subtitle1" sx={{ color: 'text.secondary', lineHeight: 1.3 }}>
-                  понад усе
+                <Typography variant="subtitle2" sx={{ color:'primary.main', fontWeight:700 }}>
+                  Смерть ворогам
                 </Typography>
               </Box>
             </Box>
-            <Box sx={{ lineHeight: 0 }}>
-              <Image src="/images/layout/home-hero.jpg" width={775} height={787} alt="Hero img" />
+            <Box sx={{ position: 'relative', maxWidth: '100%', margin: '0 auto' }}>
+              <Image src="/images/layout/angel-zsu-brend.png" width={480} height={487} alt="Angel zsu brend" />
             </Box>
           </Grid>
         </Grid>
