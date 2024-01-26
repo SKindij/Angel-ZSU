@@ -17,7 +17,7 @@ interface AchievItemProps {
 };
 
 const AchievItem = ({ item }:AchievItemProps) => {
-  const { value, label } = item
+  const { value, label } = item;
   return (
     <Box sx={{ textAlign: 'center', mb: { xs: 1, md: 0 } }}>
       <Typography
@@ -29,14 +29,14 @@ const AchievItem = ({ item }:AchievItemProps) => {
         {label}
       </Typography>
     </Box>
-  )
-}
+  );
+};
 
 const FundHero = () => {
   return (
     <Box id="fund-hero" sx={{ bgcolor:'background.paper', position:'relative', pt:4, pb: { xs:8, md:10 } }}>
       <Container maxWidth="lg">
-	    
+
         <Grid container spacing={0} sx={{ flexDirection: { xs:'column', md:'unset' } }}>
           <Grid item xs={12} md={7}>
             <Box
@@ -49,7 +49,7 @@ const FundHero = () => {
                 <Typography component="h2"
                   sx={{ position: 'relative',
                     fontSize: { xs: 40, md: 72 }, lineHeight: 1.3,
-                    letterSpacing: 1.5, fontWeight: 'bold', 
+                    letterSpacing: 1.5, fontWeight: 'bold',
                   }}
                 >
                   <Typography component="mark"
@@ -66,7 +66,7 @@ const FundHero = () => {
                         '& img': { width: { xs:146, md:210 }, height:'auto' },
                       }}
                     >
-                      
+                      {/* eslint-disable-next-line */}
                       <img src="/images/layout/headline-curve.svg" alt="Headline curve" />
                     </Box>
                   </Typography>
@@ -89,7 +89,7 @@ const FundHero = () => {
                         <path fill="#127C71"
                           d="M3166 2190c0,0 0,0 0,0 64,210 -58,443 -270,516 -260,90 -1848,585 -1948,252 -104,-230 1262,-860 1718,-1018 212,-73 437,39 500,250z"
                         />
-                        <pathfill="#127C71"
+                        <path fill="#127C71"
                           d="M566 3c0,0 0,0 0,0 -219,-26 -427,134 -462,356 -44,271 -255,1921 90,1962 245,62 628,-1392 704,-1869 36,-221 -114,-424 -332,-449z"
                         />
                       </g>
@@ -123,7 +123,7 @@ const FundHero = () => {
               </Box>
             </Box>
           </Grid>
-		  
+
           <Grid item xs={12} md={5} sx={{ position: 'relative' }}>
             {/* Sertificate badge */}
             <Box
@@ -169,11 +169,11 @@ const FundHero = () => {
                 <AchievItem item={item} />
               </Grid>
             ))}
-          </Grid> 
+          </Grid>
         </Box>
-		
+
       </Container>
     </Box>
-  )
+  );
 };
 export default FundHero;

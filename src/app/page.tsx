@@ -10,7 +10,7 @@ import Link from 'next/link';
 // views components
 import MainTypowriter from '@/views/Home/MainTypowriter';
 import mainPic from '../../public/images/angels.jpg';
-import FundHeroTest from '@/views/Home/FundHeroTest';
+import FundHero from '@/views/Home/FundHero';
 import FundCampaigns from '@/views/Home/FundCampaigns';
 import FundTeam from '@/views/Home/FundTeam';
 import FundBlog from '@/views/Home/FundBlog';
@@ -33,7 +33,7 @@ export default function Home() {
         <MainTypowriter />
       </Container>
 	  {/* welcome content block */}
-	  <FundHeroTest />
+	  <FundHero />
 	  {/* actual cash fees */}
 	  <FundCampaigns />
       {/* members of our fund */}
