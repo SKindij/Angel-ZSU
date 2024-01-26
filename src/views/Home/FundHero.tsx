@@ -25,11 +25,11 @@ const AchievItem = ({ item }:AchievItemProps) => {
   return (
     <Box sx={{ textAlign: 'center', mb: { xs: 1, md: 0 } }}>
       <Typography
-        sx={{ color:'secondary.main', mb: { xs:1, md:2 }, fontSize: { xs:34, md:44 }, fontWeight:'bold' }}
+        sx={{ color:'secondary.main', mb:1, fontSize: { xs:30, md:40 }, fontWeight:'bold' }}
       >
         {value}
       </Typography>
-      <Typography color="text.secondary" variant="h5">
+      <Typography color="text.secondary" variant="subtitle2">
         {label}
       </Typography>
     </Box>
@@ -38,7 +38,7 @@ const AchievItem = ({ item }:AchievItemProps) => {
 
 const FundHero = () => {
   return (
-    <Box id="fund-hero" sx={{ bgcolor:'background.paper', position:'relative', pt:4, pb: { xs:8, md:10 } }}>
+    <Box id="fund-hero" sx={{ bgcolor:'background.paper', position:'relative', pt:1, pb: { xs:8, md:10 } }}>
       <Container maxWidth="lg">
 
         <Grid container spacing={0} sx={{ flexDirection: { xs:'column', md:'unset' } }}>
@@ -124,7 +124,7 @@ const FundHero = () => {
           </Grid>
 
           <Grid item xs={12} md={5} sx={{ position: 'relative' }}>
-            {/* Sertificate badge */}
+            {/* Ukrainian Trident */}
             <Box
               sx={{ position: 'absolute', display: 'flex',
                 bottom: 30, left: { xs: 0, md: -150 },
@@ -142,7 +142,7 @@ const FundHero = () => {
                   '& img': { width:'32px !important', height:'auto' },
                 }}
               >
-                <Image src="/images/layout/certificate.png" alt="Certificate icon" width={50} height={50} quality={97} />
+                <Image src="/images/layout/trident.png" alt="Ukrainian Trident" width={50} height={50} quality={97} />
               </Box>
               <Box>
                 <Typography variant="subtitle1" sx={{ color:'secondary.main', fontWeight:700 }}>

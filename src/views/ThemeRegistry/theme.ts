@@ -2,7 +2,7 @@
 'use client';
 import { Roboto } from 'next/font/google';
 import { createTheme, Palette, Theme } from '@mui/material/styles';
-import { indigo, deepOrange } from '@mui/material/colors';
+import { indigo, amber } from '@mui/material/colors';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -29,7 +29,7 @@ const theme = createTheme({
       contrastText: '#fbfbfb',
     },
     secondary: {
-      main: deepOrange[800],
+      main: amber[700],
       contrastText: '#fbfbfb',
     },
     background: {

@@ -10,7 +10,7 @@ export const ourAchievements:IOurAchievement[] = [
   },
   {
     id: 112,
-    label: 'Зібрано з вашою допомогою з 24.02.2022.',
+    label: 'Зібрано з вашою допомогою.',
     value: '300 000 +',
   },
   {
