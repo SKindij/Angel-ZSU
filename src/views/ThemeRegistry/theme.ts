@@ -2,7 +2,7 @@
 'use client';
 import { Roboto } from 'next/font/google';
 import { createTheme, Palette, Theme } from '@mui/material/styles';
-import { purple, red } from '@mui/material/colors';
+import { indigo, deepOrange } from '@mui/material/colors';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -13,7 +13,6 @@ const roboto = Roboto({
 interface CustomPaletteOptions {
   customBackground:string;
   lostLavender:string;
-  deepWater:string;
   fadedLilac:string;
   bakeryBox:string;
   polliwog:string;
@@ -26,15 +25,11 @@ interface CustomTheme extends Theme {
 const theme = createTheme({
   palette: {
     primary: {
-      light: '#9FF1D2',
-      main: '#127C71',
-      dark: '#0D6A69',
+      main: indigo[800],
       contrastText: '#fbfbfb',
     },
     secondary: {
-      light: '#FDE6A8',
-      main: '#ffaf35',
-      dark: '#D0821C',
+      main: deepOrange[800],
       contrastText: '#fbfbfb',
     },
     background: {
@@ -43,7 +38,6 @@ const theme = createTheme({
     },
     customBackground: '#343331', // Sinister Minister
     lostLavender: '#8E7F8E',
-    deepWater: '#254A8C',
     fadedLilac: '#92A3BD',
   },
   typography: {

@@ -18,28 +18,28 @@ import FundBlog from '@/views/Home/FundBlog';
 export default function Home() {
   return (
     <div>
-      {/* home page */}
+      {/* welcome content block */}
+      <FundHero />
+
+      {/* several run-on sentences */}
       <Container
         sx={{
-          marginBottom: 3,
-          padding: 1,
-          textAlign: 'center',
-          color: 'darkgreen',
-          letterSpacing: 3,
-          fontSize: '1.6rem',
+          mb: 3, padding: 1, textAlign: 'center',
+          color: 'darkgreen', letterSpacing: 3, fontSize: '1.6rem',
         }}
       >
-        {/* several run-on sentences */}
         <MainTypowriter />
       </Container>
-	  {/* welcome content block */}
-	  <FundHero />
+
 	  {/* actual cash fees */}
 	  <FundCampaigns />
+
       {/* members of our fund */}
 	  <FundTeam />
+
 	  {/* some more information */}
 	  <FundBlog />
+
     </div>
   );
 }

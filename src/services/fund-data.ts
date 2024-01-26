@@ -5,7 +5,7 @@ import { IOurAchievement } from '@/models/interfaces';
 export const ourAchievements:IOurAchievement[] = [
   {
     id: 111,
-    label: 'Донарів долучилося до зборів.',
+    label: 'Донарів вже долучилося до зборів.',
     value: '1 000 +',
   },
   {
@@ -15,7 +15,7 @@ export const ourAchievements:IOurAchievement[] = [
   },
   {
     id: 113,
-    label: 'Звітів з військовослужбовцями, що дякують нам за допомогу.',
+    label: 'Подяк від ЗСУ за допомогу.',
     value: '50 +',
   },
 ];
