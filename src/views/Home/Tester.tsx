@@ -1,10 +1,8 @@
 // @/views/Home/Tester.tsx
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-
 
 const Tester = () => {
   return (
@@ -77,10 +75,3 @@ const Tester = () => {
 };
 
 export default Tester;
-
-
-
-
-
-
-

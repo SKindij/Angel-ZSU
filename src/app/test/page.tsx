@@ -9,7 +9,6 @@ import Link from 'next/link';
 // views components
 import MainTypowriter from '@/views/Home/MainTypowriter';
 import Tester from '@/views/Home/Tester';
-import SxCardsSolid from '@/views/Components/SxCardsSolid';
 
 export default function TestPage() {
   return (
@@ -32,9 +31,6 @@ export default function TestPage() {
 
         {/* color palette settings */}
         <Tester />
-
-        {/* https://mui-treasury.com/?path=/story/card-solidgame--solid-game */}
-        <SxCardsSolid />
 
       </Box>
     </>
