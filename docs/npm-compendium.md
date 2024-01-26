@@ -139,6 +139,7 @@ _It is an open source, production-ready library that’s designed for all creati
 * home-page: https://github.com/framer/motion#readme
 
 ### color
+_JavaScript library for immutable color conversion and manipulation with support for CSS color strings._
 
 * npm-site: https://www.npmjs.com/package/color
   - version: 4.2.3
@@ -148,6 +149,7 @@ _It is an open source, production-ready library that’s designed for all creati
 * home-page: https://github.com/Qix-/color#readme
 
 ### react-slick
+_Carousel component built with React. It is a react port of slick carousel._
 
 * npm-site: https://www.npmjs.com/package/react-slick
   - version: 0.30.0
@@ -156,6 +158,16 @@ _It is an open source, production-ready library that’s designed for all creati
   - install: `npm install slick-carousel`
   - weekly downloads: 965 000
 * home-page: https://react-slick.neostack.com/
+
+### react-scroll
+_React component for animating vertical scrolling_
+
+* npm-site: https://www.npmjs.com/package/react-scroll
+  - version: 1.9.0
+  - install: `npm install react-scroll`
+  - install: `npm install --save-dev @types/react-scroll`
+  - weekly downloads: 430 000
+* home-page: https://github.com/fisshy/react-scroll
 
 ### 
 
