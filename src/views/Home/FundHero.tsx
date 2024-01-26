@@ -110,12 +110,12 @@ const FundHero = () => {
 			        {/* scrolling buttons */}
               <Box sx={{ '& button': { mr: 2 } }}>
                 <ScrollLink to="fund-campaigns" spy={true} smooth={true} offset={0} duration={350}>
-                  <Button color="primary" variant="contained">
+                  <Button color="primary" variant="contained" size="large">
                     Актуальні збори
                   </Button>
                 </ScrollLink>
                 <ScrollLink to="fund-blog" spy={true} smooth={true} offset={0} duration={350}>
-                  <Button color="primary" variant="outlined" startIcon={<SendIcon/>}>
+                  <Button color="primary" variant="outlined" startIcon={<SendIcon/>} size="large">
                     Наш блог
                   </Button>
                 </ScrollLink>
@@ -154,13 +154,13 @@ const FundHero = () => {
               </Box>
             </Box>
             <Box sx={{ position: 'relative', maxWidth: '100%', margin: '0 auto' }}>
-              <Image src="/images/layout/angel-zsu-brend.png" width={480} height={487} alt="Angel zsu brend" />
+              <Image src="/images/layout/angel-zsu-brend.png" width={480} height={480} alt="Angel zsu brend" />
             </Box>
           </Grid>
         </Grid>
 
         {/* Experience */}
-        <Box sx={{ boxShadow: 2, py: 4, px: 7, borderRadius: 4 }}>
+        <Box sx={{ boxShadow: 2, py: 3, px: 7, borderRadius: 4 }}>
           <Grid container spacing={2}>
             {ourAchievements.map((item) => (
               <Grid key={item.id} item xs={12} md={4}>
