@@ -1,20 +1,20 @@
 // @/views/Home/FundHero.tsx
 'use client';
-import { Link as ScrollLink } from 'react-scroll';
-// MUI components
 import React from 'react';
 import Image from 'next/image';
+// MUI components
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-// MUI icons
-import SendIcon from '@mui/icons-material/Send';
+// use local images
+import angelBrendPic from '../../../public/images/layout/angel-zsu-brend-480.png';
+// views content components
+import ScrollingButtons from '@/views/Home/hero/ScrollingButtons';
+
 // information from the database
 import { IOurAchievement } from '@/models/interfaces';
 import { ourAchievements } from '@/services/fund-data';
-
 
 interface AchievItemProps {
   item:IOurAchievement;
@@ -107,31 +107,22 @@ const FundHero = () => {
                   {'Наша команда закриває запити у досить короткі терміни та відвозить все необхідне у найгарячіші точки України.'}
                 </Typography>
               </Box>
-			        {/* scrolling buttons */}
-              <Box sx={{ '& button': { mr: 2 } }}>
-                <ScrollLink to="fund-campaigns" spy={true} smooth={true} offset={0} duration={350}>
-                  <Button color="primary" variant="contained" size="large">
-                    Актуальні збори
-                  </Button>
-                </ScrollLink>
-                <ScrollLink to="fund-blog" spy={true} smooth={true} offset={0} duration={350}>
-                  <Button color="primary" variant="outlined" startIcon={<SendIcon/>} size="large">
-                    Наш блог
-                  </Button>
-                </ScrollLink>
-              </Box>
+
+			        {/* scroll to  */}
+              <ScrollingButtons />
+
             </Box>
           </Grid>
 
           <Grid item xs={12} md={5} sx={{ position: 'relative' }}>
             {/* Ukrainian Trident */}
             <Box
-              sx={{ position: 'absolute', display: 'flex',
-                bottom: 30, left: { xs: 0, md: -150 },
+              sx={{ position: 'absolute', zIndex: 1,
+                bottom: { xs: -50, md: 30 }, left: { xs: 50, md: -250 },
                 boxShadow: 1, borderRadius: 3,
-                px: 2,  py: 1.4, zIndex: 1,
+                px: 2,  py: 1.4, width: 280,
                 backgroundColor: 'background.paper',
-                alignItems: 'flex-start', width: 280,
+                display: 'flex', alignItems: 'flex-start'
               }}
             >
               <Box
@@ -153,14 +144,20 @@ const FundHero = () => {
                 </Typography>
               </Box>
             </Box>
-            <Box sx={{ position: 'relative', maxWidth: '100%', margin: '0 auto' }}>
-              <Image src="/images/layout/angel-zsu-brend.png" width={480} height={480} alt="Angel zsu brend" />
+            {/* Angel ZSU brend */}
+            <Box sx={{ position: 'relative', height:{ xs:'420px', md:'540px'} }}>
+              <Image alt="Angel zsu brend"
+                src={angelBrendPic} fill
+                style={{
+                  objectFit: 'contain', // cover, contain, none
+                }}
+              />
             </Box>
           </Grid>
         </Grid>
 
-        {/* Experience */}
-        <Box sx={{ boxShadow: 2, py: 3, px: 7, borderRadius: 4 }}>
+        {/* Fund Achievements */}
+        <Box sx={{ boxShadow: 2, mt:{ xs: 8, md: 0 }, py: 3, px: 7, borderRadius: 4 }}>
           <Grid container spacing={2}>
             {ourAchievements.map((item) => (
               <Grid key={item.id} item xs={12} md={4}>
