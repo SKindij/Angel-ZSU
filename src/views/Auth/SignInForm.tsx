@@ -27,10 +27,10 @@ export default function SignInForm() {
   };
 
   return (
-    <Grid container component="main" sx={{ height: '100vh' }}>
+    <Grid container sx={{ height: '100vh' }}>
       <CssBaseline />
       <Grid item
-		  xs={false} sm={4} md={7}
+		    xs={false} sm={4} md={7}
         sx={{
           backgroundImage: `url(${backPic.src})`,
           backgroundRepeat: 'no-repeat',

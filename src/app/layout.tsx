@@ -7,8 +7,8 @@ import 'slick-carousel/slick/slick-theme.css';
 // MUI components
 import Box from '@mui/material/Box';
 // views (design) elements
-import AppHeader from '@/views/Common/AppHeader';
-import AppFooter from '@/views/Common/AppFooter';
+import AppHeader from '@/views/RootLayout/AppHeader';
+import AppFooter from '@/views/RootLayout/AppFooter';
 
 export const metadata = {
   title: 'Янгол ЗСУ',

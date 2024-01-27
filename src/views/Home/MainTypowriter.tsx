@@ -32,7 +32,7 @@ export default function MainTypowriter() {
             .typeString('Благодійний фонд “Янгол ЗСУ”')
             .pauseFor(1000)
             .deleteAll()
-            .typeString('Charity Fund <strong>"Angel ZSU"</strong>')
+            .typeString('Charity Fund <strong>"Angel AFU"</strong>')
             .pauseFor(1000)
             .deleteAll()
             .typeString('Angel of the Armed Forces of Ukraine')

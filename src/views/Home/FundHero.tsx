@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 // use local images
 import angelBrendPic from '../../../public/images/layout/angel-zsu-brend-480.png';
 // views content components
+import Slogan from '@/views/Home/hero/Slogan';
 import ScrollingButtons from '@/views/Home/hero/ScrollingButtons';
 import Achievements from '@/views/Home/hero/Achievements';
 
@@ -25,68 +26,16 @@ const FundHero = () => {
                 flexDirection:'column', justifyContent:'center',
               }}
             >
-              <Box sx={{ mb: 3 }}>
-                <Typography component="h2"
-                  sx={{ position: 'relative',
-                    fontSize: { xs: 30, md: 48 }, lineHeight: 1.3,
-                    letterSpacing: 1.5, fontWeight: 'bold',
-                  }}
-                >
-                  <Typography component="mark"
-                    sx={{ position:'relative', backgroundColor: 'unset',
-                      color:'primary.main', fontSize:'inherit', fontWeight:'inherit',
-                    }}
-                  >
-                    Збройні{' '}
-                    <Box
-                      sx={{ position:'absolute',
-                        top: { xs:24, md:34 }, left: 2,
-                        transform: 'rotate(3deg)',
-                        '& img': { width: { xs:146, md:210 }, height:'auto' },
-                      }}
-                    >
-                      {/* eslint-disable-next-line */}
-                      <img src="/images/layout/headline-curve.svg" alt="Headline curve" />
-                    </Box>
-                  </Typography>
-                  сили{' '}
-                  <Typography component="span"
-                    sx={{ position: 'relative',
-                      fontSize: 'inherit', fontWeight: 'inherit',
-                      '& svg': {
-                        position:'absolute', top: -16, right: -21,
-                        width: { xs: 22, md: 30 }, height: 'auto',
-                      },
-                    }}
-                  >
-                    України
-                    <svg version="1.1" viewBox="0 0 3183 3072">
-                      <g id="Layer_x0020_1">
-                        <path fill="#127C71"
-                          d="M2600 224c0,0 0,0 0,0 236,198 259,562 52,809 -254,303 -1849,2089 -2221,1776 -301,-190 917,-1964 1363,-2496 207,-247 570,-287 806,-89z"
-                        />
-                        <path fill="#127C71"
-                          d="M3166 2190c0,0 0,0 0,0 64,210 -58,443 -270,516 -260,90 -1848,585 -1948,252 -104,-230 1262,-860 1718,-1018 212,-73 437,39 500,250z"
-                        />
-                        <path fill="#127C71"
-                          d="M566 3c0,0 0,0 0,0 -219,-26 -427,134 -462,356 -44,271 -255,1921 90,1962 245,62 628,-1392 704,-1869 36,-221 -114,-424 -332,-449z"
-                        />
-                      </g>
-                    </svg>
-                  </Typography>{' '}
-                  <br /> наш головний пріоритет
-                </Typography>
-              </Box>
+              {/* motivational motto */}
+              <Slogan />
 			        {/* eslint-disable-next-line */}
               <Box sx={{ mb: 4, width: { xs:'100%', md:'70%' } }}>
-                <Typography sx={{ color:'text.secondary', lineHeight:1.6 }}>
+                <Typography sx={{ color:'text.secondary', lineHeight:1.6, fontWeight:'medium' }}>
                   {'Наша команда закриває запити у досить короткі терміни та відвозить все необхідне у найгарячіші точки України.'}
                 </Typography>
               </Box>
-
 			        {/* scroll to fund-campaigns or fund-blog */}
               <ScrollingButtons />
-
             </Box>
           </Grid>
 
@@ -109,7 +58,10 @@ const FundHero = () => {
                   '& img': { width:'32px !important', height:'auto' },
                 }}
               >
-                <Image src="/images/layout/trident.png" alt="Ukrainian Trident" width={50} height={50} quality={97} />
+                <Image alt="Ukrainian Trident"
+                  src="/images/layout/trident.png" quality={97}
+                  width={50} height={50}
+                />
               </Box>
               <Box>
                 <Typography variant="subtitle1" sx={{ color:'secondary.main', fontWeight:700 }}>
@@ -122,12 +74,12 @@ const FundHero = () => {
             </Box>
             {/* Angel ZSU brend */}
             <Box sx={{ position: 'relative', height:{ xs:'420px', md:'540px'} }}>
-              <Image alt="Angel zsu brend"
+              <Image alt="Angel zsu brend" priority={true}
                 src={angelBrendPic} fill
                 // full-width on mobile, in 2-column layout on tablet, in 3-column layout on desktop
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 style={{
-                  objectFit: 'contain', // cover, contain, none
+                  objectFit: 'contain', // cover, none
                 }}
               />
             </Box>
