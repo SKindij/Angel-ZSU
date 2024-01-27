@@ -10,7 +10,6 @@ import Link from 'next/link';
 // views components
 import FundHero from '@/views/Home/FundHero';
 import MainTypowriter from '@/views/Home/MainTypowriter';
-import angelsDefendersPic from '../../public/images/angels-defend-cars.jpg';
 import angelOnSUVPic from '../../public/images/angel-on-SUV.jpg';
 
 import FundCampaigns from '@/views/Home/FundCampaigns';
