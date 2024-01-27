@@ -1,5 +1,4 @@
 // @/views/Home/FundHero.tsx
-'use client';
 import React from 'react';
 import Image from 'next/image';
 // MUI components
@@ -11,30 +10,7 @@ import Typography from '@mui/material/Typography';
 import angelBrendPic from '../../../public/images/layout/angel-zsu-brend-480.png';
 // views content components
 import ScrollingButtons from '@/views/Home/hero/ScrollingButtons';
-
-// information from the database
-import { IOurAchievement } from '@/models/interfaces';
-import { ourAchievements } from '@/services/fund-data';
-
-interface AchievItemProps {
-  item:IOurAchievement;
-};
-
-const AchievItem = ({ item }:AchievItemProps) => {
-  const { value, label } = item;
-  return (
-    <Box sx={{ textAlign: 'center', mb: { xs: 1, md: 0 } }}>
-      <Typography
-        sx={{ color:'secondary.main', mb:1, fontSize: { xs:30, md:40 }, fontWeight:'bold' }}
-      >
-        {value}
-      </Typography>
-      <Typography color="text.secondary" variant="subtitle2">
-        {label}
-      </Typography>
-    </Box>
-  );
-};
+import Achievements from '@/views/Home/hero/Achievements';
 
 const FundHero = () => {
   return (
@@ -108,7 +84,7 @@ const FundHero = () => {
                 </Typography>
               </Box>
 
-			        {/* scroll to  */}
+			        {/* scroll to fund-campaigns or fund-blog */}
               <ScrollingButtons />
 
             </Box>
@@ -148,6 +124,8 @@ const FundHero = () => {
             <Box sx={{ position: 'relative', height:{ xs:'420px', md:'540px'} }}>
               <Image alt="Angel zsu brend"
                 src={angelBrendPic} fill
+                // full-width on mobile, in 2-column layout on tablet, in 3-column layout on desktop
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 style={{
                   objectFit: 'contain', // cover, contain, none
                 }}
@@ -157,15 +135,7 @@ const FundHero = () => {
         </Grid>
 
         {/* Fund Achievements */}
-        <Box sx={{ boxShadow: 2, mt:{ xs: 8, md: 0 }, py: 3, px: 7, borderRadius: 4 }}>
-          <Grid container spacing={2}>
-            {ourAchievements.map((item) => (
-              <Grid key={item.id} item xs={12} md={4}>
-                <AchievItem item={item} />
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
+        <Achievements />
 
       </Container>
     </Box>
