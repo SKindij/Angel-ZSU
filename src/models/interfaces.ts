@@ -7,7 +7,12 @@ export interface IOurAchievement {
   value:string;
 };
 
-
+export interface IOurAward {
+  id:number;
+  title:string;
+  image:string;
+  body:string;
+};
 
 
 

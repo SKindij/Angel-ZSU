@@ -39,7 +39,8 @@ const theme = createTheme({
     customBackground: '#343331', // Sinister Minister
     lostLavender: '#8E7F8E',
     fadedLilac: '#92A3BD',
-    bakeryBox: '#F7F9F8'
+    bakeryBox: '#F7F9F8',
+    polliwog: '#e3c71f'
   },
   typography: {
     fontFamily: roboto.style.fontFamily,
