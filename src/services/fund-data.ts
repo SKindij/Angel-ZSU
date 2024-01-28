@@ -1,5 +1,5 @@
 // @/services/fund-data.ts
-import { IOurAchievement } from '@/models/interfaces';
+import { IOurAchievement, IOurVideos, IOurAward } from '@/models/interfaces';
 
 /* ----- НАШІ З ВАМИ ДОСЯГНЕННЯ ----- */
 export const ourAchievements:IOurAchievement[] = [
@@ -23,7 +23,7 @@ export const ourAchievements:IOurAchievement[] = [
 
 
 /* ----- Відео з YouTube ----- */
-const ourVideo = [
+const ourVideo:IOurVideos[] = [
   {
     id: 211,
     title: 'Обмануті волонтери і військові: як відрізнити шахраїв від чесних продавців',
@@ -57,7 +57,62 @@ const ourVideo = [
 ];
 
 /* ----- Подяки нам від військових ----- */
-
+export const ourAwards:IOurAward[] = [
+  {
+    id: 311,
+    title: 'ОРДП KRAKEN',
+    image: 'images/blog/Gratitude-Kraken.jpg',
+    body: 'Окремий розвідувально-диверсійний підрозділ Головного управління розвідки'
+  },
+  {
+    id: 312,
+    title: '61 ОМБР',
+    image: 'images/blog/Gratitude-61OMSB2-ua.jpg',
+    body: '61-ша окрема механізована Степова бригада'
+  },
+  {
+    id: 313,
+    title: 'A 4062',
+    image: 'images/blog/Gratitude-A4062-ua.jpg',
+    body: 'Військова частина A 4062'
+  },
+  {
+    id: 314,
+    title: 'A 3160',
+    image: 'images/blog/Gratitude-A3160-ua.jpg',
+    body: 'Військова частина A 3160'
+  },
+  {
+    id: 315,
+    title: 'A 4247',
+    image: 'images/blog/Gratitude-Krutogolov-A4247-ua.jpg',
+    body: 'Військова частина A 4247'
+  },
+  {
+    id: 316,
+    title: '79 ОДШБр',
+    image: 'images/blog/Gratitude-79ODSB-ua.jpg',
+    body: '79-та окрема десантно-штурмова Таврійська бригада'
+  },
+  {
+    id: 317,
+    title: '61 ОМБР',
+    image: 'images/blog/Gratitude-61OMSB-ua.jpg',
+    body: '61-ша окрема механізована Степова бригада'
+  },
+  {
+    id: 318,
+    title: 'ПРСБ',
+    image: 'images/blog/Gratitude-PRSBor-ua.jpg',
+    body: 'Державна пожежно-рятувальна служба Бориспільщини'
+  },
+  {
+    id: 319,
+    title: 'A 4010',
+    image: 'images/blog/Gratitude-A4010-ua.jpg',
+    body: 'Військова частина A 4010'
+  },
+];
 
 
 

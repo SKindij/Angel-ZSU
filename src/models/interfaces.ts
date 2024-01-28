@@ -1,10 +1,14 @@
 // @/models/interfaces.ts
-
-
 export interface IOurAchievement {
   id:number;
   label:string;
   value:string;
+};
+
+export interface IOurVideos {
+  id:number;
+  title:string;
+  link:string;
 };
 
 export interface IOurAward {
