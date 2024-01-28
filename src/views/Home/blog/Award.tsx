@@ -11,15 +11,16 @@ import CardMedia from '@mui/material/CardMedia';
 // the wrapper for the Card content
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-// an optional wrapper that groups a set of buttons
-import CardActions from '@mui/material/CardActions';
-import Button from '@mui/material/Button';
-// allows users to interact with the specified area of the Card
-import { CardActionArea } from '@mui/material';
 
-import GratitudeKrakenPic from '../../../../public/images/blog/Gratitude-Kraken.jpg';
+import { IOurAward } from '@/models/interfaces';
 
-export default function Award() {
+interface AwardProps {
+  award:IOurAward;
+};
+
+export default function Award({ award }:AwardProps) {
+  const { id, title, image, body } = award;
+
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
@@ -35,30 +36,16 @@ export default function Award() {
             <VolunteerActivismTwoToneIcon color='primary'/>
           </IconButton>
         }
-        title="ОРДП KRAKEN"
+        title={title}
       />
-      <CardMedia component="img" height="340"
-        image={GratitudeKrakenPic.src} alt="Chevrolet"
+      <CardMedia component="img" height="340" alt={title}
+        image={image || 'images/blog/Gratitude-Volounteer-Day.jpg'}
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          Спецпідрозділ «Kraken» — окремий розвідувально-диверсійний підрозділ Головного управління розвідки Міністерства оборони України.
+          {body}
         </Typography>
       </CardContent>
     </Card>
   );
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
