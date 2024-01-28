@@ -13,9 +13,7 @@ const AppFooter = () => {
     <Box
       component="footer"
       sx={{
-        pt: 6,
-        pb: 3,
-        mt: 'auto',
+        pt: 6, pb: 3, mt: 'auto',
         bgcolor: 'customBackground',
         color: 'primary.contrastText',
       }}
@@ -26,7 +24,7 @@ const AppFooter = () => {
           <Grid item xs={12} md={5}>
             <Box sx={{ width: { xs: '100%', md: 360 }, mb: { xs: 3, md: 0 } }}>
               <Typography variant="h4" sx={{ mb: 2 }}>
-                Благодійний фонд &ldquo;Янгол ЗСУ&rdquo;
+                Благодійний фонд <br />&ldquo;Янгол ЗСУ&rdquo;
               </Typography>
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
                 Мета - надання підтримки воїнам Збройних Сил України.

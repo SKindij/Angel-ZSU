@@ -1,4 +1,5 @@
 // @/views/Home/blog/AwardsGrid.tsx
+import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Award from '@/views/Home/blog/Award';
 
@@ -8,13 +9,17 @@ import { ourAwards } from '@/services/fund-data';
 const AwardsGrid = () => {
 
   return (
-    <Grid container spacing={{ xs:3, sm:2, md:3 }}>
-      {ourAwards.map((award) => (
-        <Grid key={award.id} item xs={12} sm={6} md={4} lg={3}>
-          <Award award={award} />
-        </Grid>
-      ))}
-    </Grid>
+    <Container sx={{ mb:2 }}>
+      <Grid container justifyContent="space-evenly"
+        rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 6 }}
+      >
+        {ourAwards.map((award) => (
+          <Grid item key={award.id} xs={12} sm={6} md={4}>
+            <Award award={award} />
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
   );
 };
 

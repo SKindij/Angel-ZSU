@@ -22,7 +22,7 @@ export default function Award({ award }:AwardProps) {
   const { id, title, image, body } = award;
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ boxShadow: 4, borderRadius: 4 }}>
       <CardHeader
         avatar={
           <Avatar aria-label="award"
@@ -38,7 +38,8 @@ export default function Award({ award }:AwardProps) {
         }
         title={title}
       />
-      <CardMedia component="img" height="340" alt={title}
+      <CardMedia component="img" alt={title}
+        sx={{ objectFit: 'cover', height: '340', }}
         image={image || 'images/blog/Gratitude-Volounteer-Day.jpg'}
       />
       <CardContent>
