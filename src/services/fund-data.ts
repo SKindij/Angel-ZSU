@@ -31,13 +31,13 @@ export const ourCampaignVideos:IOurVideos[] = [
   },
   {
     id: 212,
-    title: '',
-    url: '',
+    title: 'Запит на авто від 203 батальйону звязку 108 бригади',
+    url: 'https://www.youtube.com/embed/mBh9iV0lTsk?si=j3ou6U1ZKbAdyp9W',
   },
   {
     id: 213,
-    title: '',
-    url: '',
+    title: 'Запит на тепловізор від 3 ОШбр',
+    url: 'https://www.youtube.com/embed/5rZi-ggcZWc?si=mZmOnPkAD0IIseSj',
   },
   {
     id: 214,
@@ -59,8 +59,8 @@ export const ourCampaignVideos:IOurVideos[] = [
 export const ourReportVideos:IOurVideos[] = [
   {
     id: 211,
-    title: '',
-    url: '',
+    title: 'Звіт по запиту на авто від підрозділу аеророзвідки 203 батальйону 108 бригади',
+    url: 'https://www.youtube.com/embed/v6QTmE_a-dc?si=T3WFes6LMty4wWyz',
   },
   {
     id: 212,
