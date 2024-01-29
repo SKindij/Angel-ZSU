@@ -11,8 +11,8 @@ interface VideoGalleryProps {
 
 const VideoGallery:React.FC<VideoGalleryProps> = ({ videoUrls }) => {
   return (
-    <Box p={2}>
-      <Grid container sx={{ mt: 1 }} spacing={3}>
+    <Box p={1}>
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 6 }}>
         {videoUrls.map((video) => (
           <Grid key={video.id} item xs={12} sm={6} md={4} lg={4} xl={4}>
             <iframe
@@ -22,7 +22,7 @@ const VideoGallery:React.FC<VideoGalleryProps> = ({ videoUrls }) => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen loading="lazy"
             ></iframe>
-            <Typography variant="subtitle2" align="center">
+            <Typography variant="body1" align="center">
               {video.title}
             </Typography>
           </Grid>

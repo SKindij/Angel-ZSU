@@ -1,15 +1,15 @@
-// @/views/Reports/VideoCampaigns.tsx
+// @/views/Campaigns/VideoCampaigns.tsx
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 import VideoGallery from '@/views/Common/VideoGallery';
 // information from the database
-import { ourReportVideos } from '@/services/fund-data';
+import { ourCampaignVideos } from '@/services/fund-data';
 
 const VideoCampaigns = () => {
   return (
     <Box >
-      <VideoGallery videoUrls={ourReportVideos} />
+      <VideoGallery videoUrls={ourCampaignVideos} />
     </Box>
   );
 };

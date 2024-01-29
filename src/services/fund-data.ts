@@ -23,11 +23,44 @@ export const ourAchievements:IOurAchievement[] = [
 ];
 
 /* ----- Відео з YouTube ----- */
+export const ourCampaignVideos:IOurVideos[] = [
+  {
+    id: 211,
+    title: 'Запит на автівку хлопцям з 54 бригади 25 батальйону (ОТУ Соледар, направлення Кремінна)',
+    url: 'https://www.youtube.com/embed/w07ODwsCv-M?si=OfDt4rWgTRLWXGNx',
+  },
+  {
+    id: 212,
+    title: '',
+    url: '',
+  },
+  {
+    id: 213,
+    title: '',
+    url: '',
+  },
+  {
+    id: 214,
+    title: '',
+    url: '',
+  },
+  {
+    id: 215,
+    title: '',
+    url: '',
+  },
+  {
+    id: 216,
+    title: '',
+    url: '',
+  },
+];
+
 export const ourReportVideos:IOurVideos[] = [
   {
     id: 211,
-    title: 'Обмануті волонтери і військові: як відрізнити шахраїв від чесних продавців',
-    url: 'https://www.youtube.com/watch?app=desktop&v=HNiCRffMdEE&feature=youtu.be',
+    title: '',
+    url: '',
   },
   {
     id: 212,
