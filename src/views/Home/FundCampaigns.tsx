@@ -4,7 +4,7 @@ import SectionHeader from '@/views/Common/SectionHeader';
 
 const FundCampaigns = () => {
   return (
-    <Box id="fund-campaigns" sx={{ bgcolor:'background.paper', }}>
+    <Box id="fund-campaigns" sx={{ }}>
       <SectionHeader
         title="Актуальні грошові збори"
         description="Приєднуйтеся до наших благодійних ініціатив.

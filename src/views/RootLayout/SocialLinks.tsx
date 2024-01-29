@@ -31,7 +31,7 @@ const socialMediaLinks:SocialLink[] = [
   },
   {
     name: 'Facebook',
-    href: 'https://www.facebook.com/groups/1383290902438768/?ref=share',
+    href: 'https://www.facebook.com/share/PEgJw9DYBixr19YL/?mibextid=%22%22',
     color: 'blue',
     icon: <FacebookIcon />,
   },

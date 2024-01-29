@@ -15,7 +15,7 @@ import Achievements from '@/views/Home/hero/Achievements';
 
 const FundHero = () => {
   return (
-    <Box id="fund-hero" sx={{ bgcolor:'background.paper', position:'relative', pt:1, pb: { xs:8, md:10 } }}>
+    <Box id="fund-hero" sx={{ position:'relative', pt:1, pb: { xs:3, md:6 } }}>
       <Container maxWidth="lg">
 
         <Grid container spacing={0} sx={{ flexDirection: { xs:'column', md:'unset' } }}>
@@ -73,7 +73,7 @@ const FundHero = () => {
               </Box>
             </Box>
             {/* Angel ZSU brend */}
-            <Box sx={{ position: 'relative', height:{ xs:'420px', md:'540px'} }}>
+            <Box sx={{ position: 'relative', height:{ xs:'400px', md:'510px'} }}>
               <Image alt="Angel zsu brend" priority={true}
                 src={angelBrendPic} fill
                 // full-width on mobile, in 2-column layout on tablet, in 3-column layout on desktop
