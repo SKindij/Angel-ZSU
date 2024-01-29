@@ -1,6 +1,6 @@
 // @/services/fund-data.ts
 import {
-  IOurAchievement, IOurVideos, IOurAward, IFundFeatures,
+  IOurAchievement, IOurVideos, IOurAward,
 } from '@/models/interfaces';
 
 /* ----- НАШІ З ВАМИ ДОСЯГНЕННЯ ----- */
@@ -23,36 +23,36 @@ export const ourAchievements:IOurAchievement[] = [
 ];
 
 /* ----- Відео з YouTube ----- */
-const ourVideos:IOurVideos[] = [
+export const ourReportVideos:IOurVideos[] = [
   {
     id: 211,
     title: 'Обмануті волонтери і військові: як відрізнити шахраїв від чесних продавців',
-    link: 'https://www.youtube.com/watch?app=desktop&v=HNiCRffMdEE&feature=youtu.be',
+    url: 'https://www.youtube.com/watch?app=desktop&v=HNiCRffMdEE&feature=youtu.be',
   },
   {
     id: 212,
     title: '',
-    link: '',
+    url: '',
   },
   {
     id: 213,
     title: '',
-    link: '',
+    url: '',
   },
   {
     id: 214,
     title: '',
-    link: '',
+    url: '',
   },
   {
     id: 215,
     title: '',
-    link: '',
+    url: '',
   },
   {
     id: 216,
     title: '',
-    link: '',
+    url: '',
   },
 ];
 

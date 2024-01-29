@@ -10,11 +10,10 @@ export interface IFundFeatures {
   icon:React.ReactNode;
 }
 
-
 export interface IOurVideos {
   id:number;
   title:string;
-  link:string;
+  url:string;
 };
 
 export interface IOurAward {
