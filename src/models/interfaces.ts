@@ -4,6 +4,12 @@ export interface IOurAchievement {
   label:string;
   value:string;
 };
+export interface IFundFeatures {
+  title:string;
+  description:string;
+  icon:React.ReactNode;
+}
+
 
 export interface IOurVideos {
   id:number;

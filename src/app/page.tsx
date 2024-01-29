@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 // views components
 import FundHero from '@/views/Home/FundHero';
-import FundAngel from '@/views/Home/FundAngel';
+import FundFeatures from '@/views/Home/FundFeatures';
 import FundCampaigns from '@/views/Home/FundCampaigns';
 import FundTeam from '@/views/Home/FundTeam';
 import FundBlog from '@/views/Home/FundBlog';
@@ -16,7 +16,7 @@ export default function Home() {
       {/* welcome content block */}
       <FundHero />
       {/* Angel Image block */}
-      <FundAngel />
+      <FundFeatures />
 	    {/* actual cash fees */}
 	    <FundCampaigns />
       {/* members of our fund */}

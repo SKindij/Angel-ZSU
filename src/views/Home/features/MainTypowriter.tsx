@@ -1,4 +1,4 @@
-// @/views/Home/MainTypowriter.tsx
+// @/views/Home/features/MainTypowriter.tsx
 'use client';
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';

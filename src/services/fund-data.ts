@@ -1,5 +1,7 @@
 // @/services/fund-data.ts
-import { IOurAchievement, IOurVideos, IOurAward } from '@/models/interfaces';
+import {
+  IOurAchievement, IOurVideos, IOurAward, IFundFeatures,
+} from '@/models/interfaces';
 
 /* ----- НАШІ З ВАМИ ДОСЯГНЕННЯ ----- */
 export const ourAchievements:IOurAchievement[] = [
@@ -20,10 +22,8 @@ export const ourAchievements:IOurAchievement[] = [
   },
 ];
 
-
-
 /* ----- Відео з YouTube ----- */
-const ourVideo:IOurVideos[] = [
+const ourVideos:IOurVideos[] = [
   {
     id: 211,
     title: 'Обмануті волонтери і військові: як відрізнити шахраїв від чесних продавців',
