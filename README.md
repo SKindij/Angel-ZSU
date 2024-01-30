@@ -29,7 +29,7 @@ _Volunteer Project for the Charitable Fund 'Angel of the Armed Forces of Ukraine
 - - -
 
 ### Try It Out
-&emsp;You can experience this web-app firsthand by visiting the link:
+&emsp;You can experience this web-app firsthand by visiting the link: https://angelzsu.com/
 
 - - -
 
