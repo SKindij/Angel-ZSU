@@ -13,7 +13,7 @@ export const ourAchievements:IOurAchievement[] = [
   {
     id: 112,
     label: 'Зібрано з вашою допомогою.',
-    value: '300 000 +',
+    value: '700 000 +',
   },
   {
     id: 113,
@@ -142,10 +142,10 @@ export const ourMembersData:ITeamMember[] = [
     name: 'Jhon Dwirian',
     professional: 'волонтер',
     description:
-      'Duis aute irure dolor in reprehenderit. Excepteur sint occaecat proident, sunt in culpa mollit anim id est laborum.',
+      'Київ. Київська область. Україна.',
     territory: {
       city: 'Grab',
-      logo: '/images/companies/grab.png',
+      logo: '/images/emblems/COA_of_Kyiv.png',
     },
   },
   {
@@ -154,10 +154,10 @@ export const ourMembersData:ITeamMember[] = [
     name: 'Leon Kennedy',
     professional: 'волонтер',
     description:
-      'Duis aute irure dolor in reprehenderit in voluptatela pariatur. Excepteur sint, sunt int mollit anim id est laborum.',
+      'Бровари. Броварський район. Київська область.',
     territory: {
       city: 'Google',
-      logo: '/images/companies/google.png',
+      logo: '/images/emblems/google.png',
     },
   },
   {
@@ -166,10 +166,10 @@ export const ourMembersData:ITeamMember[] = [
     name: 'Nguyn Thuy',
     professional: 'волонтер',
     description:
-      'Duis aute irure dolor in reprehenderit. Excepteur sint onon proident, sunt in culpa qui oflit anim id est laborum.',
+      'Ніжин. Ніжинський район. Чернігівська область.',
     territory: {
       city: 'Airbnb',
-      logo: '/images/companies/airbnb.png',
+      logo: '/images/emblems/airbnb.png',
     },
   },
   {
@@ -178,10 +178,10 @@ export const ourMembersData:ITeamMember[] = [
     name: 'Rizki Known',
     professional: 'волонтер',
     description:
-      'Duis aute irure dolor in voluptatdolore eu fugiat nulla pariatur. Excepnon proident, offi mollit anim id est laborum.',
+      'Duisaute. Excepnon proident.',
     territory: {
       city: 'Microsoft',
-      logo: '/images/companies/microsoft.png',
+      logo: '/images/emblems/microsoft.png',
     },
   },
 ];
