@@ -147,7 +147,7 @@ export const ourAwards:IOurAward[] = [
     id: 711,
     title: 'ОРДП KRAKEN',
     image: 'images/blog/Gratitude-Kraken.jpg',
-    body: 'Окремий розвідувально-диверсійний підрозділ Головного управління розвідки'
+    body: 'Розвідувально-диверсійний підрозділ ГУР'
   },
   {
     id: 712,
@@ -177,7 +177,7 @@ export const ourAwards:IOurAward[] = [
     id: 716,
     title: '79 ОДШБр',
     image: 'images/blog/Gratitude-79ODSB-ua.jpg',
-    body: '79-та окрема десантно-штурмова Таврійська бригада'
+    body: '79-та десантно-штурмова Таврійська бригада'
   },
   {
     id: 717,
@@ -189,7 +189,7 @@ export const ourAwards:IOurAward[] = [
     id: 718,
     title: 'ПРСБ',
     image: 'images/blog/Gratitude-PRSBor-ua.jpg',
-    body: 'Державна пожежно-рятувальна служба Бориспільщини'
+    body: 'Пожежно-рятувальна служба Бориспільщини'
   },
   {
     id: 719,

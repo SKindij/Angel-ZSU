@@ -5,7 +5,7 @@ import AwardsGrid from '@/views/Home/blog/AwardsGrid';
 
 const FundBlog = () => {
   return (
-    <Box id="fund-blog" >
+    <Box id="fund-blog" sx={{ pb:3 }} >
       <SectionHeader
         title="Набір подяк для фонду"
         description="Усі сертифікати - є символом визнання нашої спільної місії та

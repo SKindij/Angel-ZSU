@@ -67,7 +67,7 @@ const FundTeam = () => {
 
   return (
     <Box id="fund-team"
-	  sx={{ pt:1, pb:{xs:7, md:9}, backgroundColor:'background.paper' }}
+	    sx={{ pt:1, pb:{xs:6, md:8}, backgroundColor:'background.paper' }}
 	  >
       <Container maxWidth="lg">
 

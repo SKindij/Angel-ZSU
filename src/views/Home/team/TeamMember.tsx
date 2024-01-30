@@ -13,6 +13,7 @@ export default function TeamMember({ member }:MemberProps) {
 
   return (
     <Box sx={{ px: 2, pt: 1, pb: 5 }}>
+
       <Box
         sx={{
           p: 2, borderRadius: 4,
@@ -28,17 +29,17 @@ export default function TeamMember({ member }:MemberProps) {
           }}
         >
           <Image alt={'Member ' + name}
-		    src={photo || 'images/blog/Gratitude-Volounteer-Day.jpg'}
+		        src={photo || 'images/blog/Gratitude-Volounteer-Day.jpg'}
             width={570} height={427}
-		  />
+		      />
         </Box>
         <Box sx={{ mb: 2 }}>
           <Typography variant="h4" sx={{ fontSize: '1.4rem' }}>
-		    {name}
-		  </Typography>
+		        {name}
+		      </Typography>
           <Typography sx={{ mb:2, color:'text.secondary' }}>
-		    {professional}
-		  </Typography>
+		        {professional}
+		      </Typography>
           <Typography sx={{ mb:2, color:'text.secondary' }} variant="body2">
             {description}
           </Typography>
@@ -48,6 +49,7 @@ export default function TeamMember({ member }:MemberProps) {
           </Box>
         </Box>
       </Box>
+
     </Box>
   );
 };

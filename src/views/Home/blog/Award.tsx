@@ -39,7 +39,7 @@ export default function Award({ award }:AwardProps) {
         title={title}
       />
       <CardMedia component="img" alt={title}
-        sx={{ objectFit: 'cover', height: '340', }}
+        sx={{ objectFit: 'cover', height: '380px', }}
         image={image || 'images/blog/Gratitude-Volounteer-Day.jpg'}
       />
       <CardContent>
