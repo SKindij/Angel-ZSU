@@ -157,7 +157,7 @@ export const ourMembersData:ITeamMember[] = [
       'Бровари. Броварський район. Київська область.',
     territory: {
       city: 'Google',
-      logo: '/images/emblems/google.png',
+      logo: '/images/emblems/Brovary-gerb.png',
     },
   },
   {
@@ -169,7 +169,7 @@ export const ourMembersData:ITeamMember[] = [
       'Ніжин. Ніжинський район. Чернігівська область.',
     territory: {
       city: 'Airbnb',
-      logo: '/images/emblems/airbnb.png',
+      logo: '/images/emblems/Nizhyn-COA.png',
     },
   },
   {
