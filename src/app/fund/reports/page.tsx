@@ -11,26 +11,26 @@ export default function ReportsPage() {
     <Container maxWidth="lg">
       {/* Reports on cars provided by the fund */}
       <SectionHeader
-        title="Відео повідомлення"
-        description="Звіти про надані фондом автівки."
+        title="Звіти про надані фондом автівки"
+        description="відео повідомлення"
       />
       <VideoOfCarsReports />
       {/* Reports on medical equipment provided by the fund */}
       <SectionHeader
-        title="Відео повідомлення"
-        description="Звіти про надане фондом медичне обладнання."
+        title="Звіти про надану фондом допомогу медикам"
+        description="відео повідомлення"
       />
       <VideoOfMedicalInstrumentsReports />
       {/* Reports on unmanned aerial vehicles provided by the fund */}
       <SectionHeader
-        title="Відео повідомлення"
-        description="Звіти про надані фондом безпілотні літальні апарати."
+        title="Звіти про надані фондом безпілотні літальні апарати"
+        description="відео повідомлення"
       />
       <VideoOfUFOreports />
       {/* Reports on useful things for the military provided by the fund */}
       <SectionHeader
-        title="Відео повідомлення"
-        description="Звіти про надані фондом корисні речі для військових."
+        title="Звіти про надані фондом корисні речі для військових"
+        description="відео повідомлення"
       />
       <VideoOfUsefulThingsReports />
     </Container>

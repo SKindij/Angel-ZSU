@@ -31,16 +31,21 @@ export const requestsForCarsVideos:IOurVideos[] = [
   },
   {
     id: 1106,
-    title: '',
-    url: '',
+    title: 'Запит від 54 бригади батальйону МПБ на авто та Starlink',
+    url: 'https://www.youtube.com/embed/htjSWnHB57Y?si=cZ8ZTG3RHD3yD85J',
   },
   {
     id: 1107,
-    title: '',
-    url: '',
+    title: 'Запит на авто від 61 бригади 99 батальйону 1 взводу 3 роти піхоти',
+    url: 'https://www.youtube.com/embed/syFXpnaOBQc?si=gUtsEaXid2eZkuPd',
   },
   {
     id: 1108,
+    title: 'Запит на авто від 92 бригади 4 штурмовий батальйон',
+    url: 'https://www.youtube.com/embed/kWAU58TwzFE?si=ALlguoBxrZqYedqV',
+  },
+  {
+    id: 1109,
     title: '',
     url: '',
   },
@@ -54,8 +59,8 @@ export const requestFromMilitaryMedicsVideos:IOurVideos[] = [
   },
   {
     id: 1202,
-    title: '',
-    url: '',
+    title: 'Запит від медичної роти 44 бригади',
+    url: 'https://www.youtube.com/embed/g3IUVxL1kEE?si=ae-DCawqeJRUwJ77" title="YouTube video player',
   },
   {
     id: 1203,
@@ -69,13 +74,13 @@ export const requestFromMilitaryMedicsVideos:IOurVideos[] = [
   },
   {
     id: 1205,
-    title: '',
-    url: '',
+    title: 'Запит на передову',
+    url: 'https://www.youtube.com/embed/2ELLqApUZdc?si=cdZbWlxDJqkRLazC',
   },
   {
     id: 1206,
-    title: '',
-    url: '',
+    title: 'Запит на авто від 17 ОТБР',
+    url: 'https://www.youtube.com/embed/zCZHV08ZSVg?si=Ghyn-2xsEjWmTF8l',
   },
 ];
 /* ----- запити на безпілотні літальні апарати ----- */
@@ -92,8 +97,8 @@ export const requestForUFOvideos:IOurVideos[] = [
   },
   {
     id: 1303,
-    title: '',
-    url: '',
+    title: 'Запит на FPV-дрони',
+    url: 'https://www.youtube.com/embed/cVhmgccEgmI?si=-IOpkOq5hZldm_Z6',
   },
   {
     id: 1304,
@@ -130,16 +135,31 @@ export const requestForMilitaryEquipmentVideos:IOurVideos[] = [
   },
   {
     id: 1404,
-    title: '',
-    url: '',
+    title: 'Запит на генератор від 61 бригади 99 батальйону 1 взводу 3 роти піхоти',
+    url: 'https://www.youtube.com/embed/bBNh4BGUJOI?si=1MwqrDhFe7wUhre3',
   },
   {
     id: 1405,
+    title: 'Запит від 2 батальйону 1 мінометної батареї 14 бригади',
+    url: 'https://www.youtube.com/embed/32xGoPEY8lA?si=3KNDexWzPBDTCi30',
+  },
+  {
+    id: 1406,
+    title: 'Запит від 71 окремої єгерської бригади',
+    url: 'https://www.youtube.com/embed/mHRUz-jR0hU?si=1kzuIPO-mhJ2VblI',
+  },
+  {
+    id: 1407,
+    title: 'Запит від Батальйону Оперативного Призначення «ГРОЗА» Національної гвардії України',
+    url: 'https://www.youtube.com/embed/dTos7vkVJ88?si=Rk-qoldBNHD5_JTD',
+  },
+  {
+    id: 1408,
     title: '',
     url: '',
   },
   {
-    id: 1406,
+    id: 1409,
     title: '',
     url: '',
   },
@@ -160,23 +180,38 @@ export const reportOfCarsVideos:IOurVideos[] = [
   },
   {
     id: 2103,
-    title: '',
-    url: '',
+    title: 'Звіт від 4 бригади швидкого реагування стосовно переданого авто',
+    url: 'https://www.youtube.com/embed/MAjKux9_bF8?si=ex-_uuhxOxGT7Gfk',
   },
   {
     id: 2104,
-    title: '',
-    url: '',
+    title: 'Звіт по закупівлі шин для автомобіля',
+    url: 'https://www.youtube.com/embed/LOiTtK4WiSU?si=-CFmKDEzYv06K-ln',
   },
   {
     id: 2105,
-    title: '',
-    url: '',
+    title: 'Звіт по авто для Добровольчого Батальйону Свобода',
+    url: 'https://www.youtube.com/embed/WSht33Mljok?si=8BCNv7KpAtXr8mQ-',
   },
   {
     id: 2106,
-    title: '',
-    url: '',
+    title: 'Звіт по авто для батальйону Карпатська Січ',
+    url: 'https://www.youtube.com/embed/x2Ot2PazULM?si=m9llq7i2cLLTXnBX',
+  },
+  {
+    id: 2107,
+    title: 'Звіт від партнерів з США',
+    url: 'https://www.youtube.com/embed/cN4NgzLphCg?si=4s8vvYpylO1TEGjG',
+  },
+  {
+    id: 2108,
+    title: 'Звіт від 71 Єгерської бригади',
+    url: 'https://www.youtube.com/embed/2FA25y-8ATw?si=MLDWLFv0o6OaUajx',
+  },
+  {
+    id: 2109,
+    title: 'Звіт по авто від 3 ОШБ',
+    url: 'https://www.youtube.com/embed/DlJU1aYAw0M?si=C_QMVxrMBDFTKzmm',
   },
 ];
 /* ----- Звіти про надане фондом медичне обладнання ----- */
@@ -221,8 +256,8 @@ export const reportOfUFOvideos:IOurVideos[] = [
   },
   {
     id: 2302,
-    title: '',
-    url: '',
+    title: 'Звіт по передачі Mavica',
+    url: 'https://www.youtube.com/embed/2SZXL4QWbR8?si=vYB79TCLUG0M0D8W',
   },
   {
     id: 2303,
@@ -274,8 +309,8 @@ export const reportOfUsefulThingsVideos:IOurVideos[] = [
   },
   {
     id: 2406,
-    title: '',
-    url: '',
+    title: 'Звіт від 162 батальйону',
+    url: 'https://www.youtube.com/embed/bi_p_5YnQgY?si=UXhf0e4u7YVGsxwm',
   },
   {
     id: 2407,
