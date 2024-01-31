@@ -79,8 +79,8 @@ const FooterSocialLinks = () => {
           <Link key={name} href={href} rel="noopener noreferrer" target="_blank" passHref>
             <div style={{ display: 'flex', alignItems: 'center' }}> {/* Замініть на Box, якщо потрібно */}
               <IconButton aria-label={name}
-			    color="inherit" size="medium" 
-				sx={{ '&:hover': { backgroundColor: 'secondary.main' } }}
+			    color="inherit" size="medium"
+				  sx={{ '&:hover': { backgroundColor: 'secondary.main' } }}
 			  >
                 {icon}
               </IconButton>
