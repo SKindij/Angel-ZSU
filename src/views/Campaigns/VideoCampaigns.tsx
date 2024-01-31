@@ -4,13 +4,39 @@ import Typography from '@mui/material/Typography';
 
 import VideoGallery from '@/views/Common/VideoGallery';
 // information from the database
-import { ourCampaignVideos } from '@/services/fund-common-data';
+import {
+  requestsForCarsVideos, requestFromMilitaryMedicsVideos, requestForUFOvideos, requestForMilitaryEquipmentVideos
+} from '@/services/fund-YouTube-data';
 
-const VideoCampaigns = () => {
+const VideoRequestsForCars = () => {
   return (
     <Box >
-      <VideoGallery videoUrls={ourCampaignVideos} />
+      <VideoGallery videoUrls={requestsForCarsVideos} />
     </Box>
   );
 };
-export default VideoCampaigns;
+
+const VideoRequestFromMilitaryMedics = () => {
+  return (
+    <Box >
+      <VideoGallery videoUrls={requestFromMilitaryMedicsVideos} />
+    </Box>
+  );
+};
+
+const VideoRequestForUFO = () => {
+  return (
+    <Box >
+      <VideoGallery videoUrls={requestForUFOvideos} />
+    </Box>
+  );
+};
+
+const VideoRequestForMilitaryEquipment = () => {
+  return (
+    <Box >
+      <VideoGallery videoUrls={requestForMilitaryEquipmentVideos} />
+    </Box>
+  );
+};
+export { VideoRequestsForCars, VideoRequestFromMilitaryMedics, VideoRequestForUFO, VideoRequestForMilitaryEquipment };

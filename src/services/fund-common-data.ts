@@ -32,8 +32,8 @@ export const ourMembersData:ITeamMember[] = [
     description:
       'Київ. Київська область. Україна.',
     territory: {
-      city: 'Grab',
-      logo: '/images/emblems/COA_of_Kyiv.png',
+      city: 'Kyiv',
+      logo: '/images/emblems/COA-of-Kyiv.png',
     },
   },
   {
@@ -44,7 +44,7 @@ export const ourMembersData:ITeamMember[] = [
     description:
       'Бровари. Броварський район. Київська область.',
     territory: {
-      city: 'Google',
+      city: 'Brovary',
       logo: '/images/emblems/Brovary-gerb.png',
     },
   },
@@ -54,9 +54,9 @@ export const ourMembersData:ITeamMember[] = [
     name: 'Nguyn Thuy',
     professional: 'волонтер',
     description:
-      'Ніжин. Ніжинський район. Чернігівська область.',
+      'Ніжин. Ніжинський район. Чернігівщина.',
     territory: {
-      city: 'Airbnb',
+      city: 'Nizhyn',
       logo: '/images/emblems/Nizhyn-COA.png',
     },
   },

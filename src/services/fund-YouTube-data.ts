@@ -79,62 +79,71 @@ export const requestFromMilitaryMedicsVideos:IOurVideos[] = [
   },
 ];
 /* ----- запити на безпілотні літальні апарати ----- */
-export const requestForMilitaryEquipmentVideos:IOurVideos[] = [
+export const requestForUFOvideos:IOurVideos[] = [
   {
-    id: 1201,
-    title: 'Запит на тепловізор від 3 ОШбр',
-    url: 'https://www.youtube.com/embed/5rZi-ggcZWc?si=mZmOnPkAD0IIseSj',
-  },
-  {
-    id: 1202,
-    title: 'Запит від Білоруських добровольців, батальйону імені Дмитра Терору на засоби звязку та 3D окуляри.',
-    url: 'https://www.youtube.com/embed/i14Un9lESEk?si=2YlK_An_HZKpJIMU',
-  },
-  {
-    id: 1203,
+    id: 1301,
     title: 'Запит від 65 Бригади Аеророзвідки на DJI Mavic 3 Fly More Combo',
     url: 'https://www.youtube.com/embed/jkJXkKsvo7c?si=Z4Uwy8qBbNjf7qe7',
   },
   {
-    id: 317,
+    id: 1302,
     title: 'Запит від Взводу Ударних БПЛА 4 Мех. Батальйону Окремої Президентської Бригади ім. Б. Хмельницького',
     url: 'https://www.youtube.com/embed/pAKI30hez10?si=KOrqtU84EhTNwTtM',
   },
   {
-    id: 322,
-    title: 'Запит від Мобільної Вогневої Групи на прожектори',
-    url: 'https://www.youtube.com/embed/R0F0ycjZnDs?si=Of9BxysBTbLH190U',
+    id: 1303,
+    title: '',
+    url: '',
+  },
+  {
+    id: 1304,
+    title: '',
+    url: '',
+  },
+  {
+    id: 1305,
+    title: '',
+    url: '',
+  },
+  {
+    id: 1306,
+    title: '',
+    url: '',
   },
 ];
 /* ----- запити на військове обладнання ----- */
-export const requestForUFOvideos:IOurVideos[] = [
+export const requestForMilitaryEquipmentVideos:IOurVideos[] = [
   {
-    id: 1201,
+    id: 1401,
     title: 'Запит на тепловізор від 3 ОШбр',
     url: 'https://www.youtube.com/embed/5rZi-ggcZWc?si=mZmOnPkAD0IIseSj',
   },
   {
-    id: 1202,
+    id: 1402,
     title: 'Запит від Білоруських добровольців, батальйону імені Дмитра Терору на засоби звязку та 3D окуляри.',
     url: 'https://www.youtube.com/embed/i14Un9lESEk?si=2YlK_An_HZKpJIMU',
   },
   {
-    id: 1203,
-    title: 'Запит від 65 Бригади Аеророзвідки на DJI Mavic 3 Fly More Combo',
-    url: 'https://www.youtube.com/embed/jkJXkKsvo7c?si=Z4Uwy8qBbNjf7qe7',
-  },
-  {
-    id: 317,
-    title: 'Запит від Взводу Ударних БПЛА 4 Мех. Батальйону Окремої Президентської Бригади ім. Б. Хмельницького',
-    url: 'https://www.youtube.com/embed/pAKI30hez10?si=KOrqtU84EhTNwTtM',
-  },
-  {
-    id: 322,
+    id: 1403,
     title: 'Запит від Мобільної Вогневої Групи на прожектори',
     url: 'https://www.youtube.com/embed/R0F0ycjZnDs?si=Of9BxysBTbLH190U',
   },
+  {
+    id: 1404,
+    title: '',
+    url: '',
+  },
+  {
+    id: 1405,
+    title: '',
+    url: '',
+  },
+  {
+    id: 1406,
+    title: '',
+    url: '',
+  },
 ];
-
 
 /* ------- ВІДЕО YouTube ЗВІТИ ------- */
 /* ----- Звіти про надані фондом автівки ----- */
