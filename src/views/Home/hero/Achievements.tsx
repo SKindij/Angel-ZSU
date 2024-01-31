@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 
 // information from the database
 import { IOurAchievement } from '@/models/interfaces';
-import { ourAchievements } from '@/services/fund-data';
+import { ourAchievements } from '@/services/fund-common-data';
 
 interface AchievItemProps {
   item:IOurAchievement;

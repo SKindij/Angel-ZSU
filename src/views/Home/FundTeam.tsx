@@ -16,7 +16,7 @@ import IconArrowForward from '@mui/icons-material/ArrowForward';
 import SectionHeader from '@/views/Common/SectionHeader';
 import TeamMember from '@/views/Home/team/TeamMember';
 // info from the database
-import { ourMembersData } from '@/services/fund-data';
+import { ourMembersData } from '@/services/fund-common-data';
 
 interface SliderArrowArrow {
   onClick?:()=>void;

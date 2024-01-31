@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 
 import VideoGallery from '@/views/Common/VideoGallery';
 // information from the database
-import { ourCampaignVideos } from '@/services/fund-data';
+import { ourCampaignVideos } from '@/services/fund-common-data';
 
 const VideoCampaigns = () => {
   return (

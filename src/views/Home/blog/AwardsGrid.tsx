@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import Award from '@/views/Home/blog/Award';
 
 // information from the database
-import { ourAwards } from '@/services/fund-data';
+import { ourAwards } from '@/services/fund-common-data';
 
 const AwardsGrid = () => {
 

@@ -1,16 +1,42 @@
 // @/views/Reports/VideoReports.tsx
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-
+// views component
 import VideoGallery from '@/views/Common/VideoGallery';
 // information from the database
-import { ourReportVideos } from '@/services/fund-data';
+import {
+  reportOfCarsVideos, reportOfMedicalInstruments, reportOfUFOvideos, reportOfUsefulThingsVideos
+} from '@/services/fund-YouTube-data';
 
-const VideoReports = () => {
+const VideoOfCarsReports = () => {
   return (
     <Box >
-      <VideoGallery videoUrls={ourReportVideos} />
+      <VideoGallery videoUrls={reportOfCarsVideos} />
     </Box>
   );
 };
-export default VideoReports;
+
+const VideoOfMedicalInstrumentsReports = () => {
+  return (
+    <Box >
+      <VideoGallery videoUrls={reportOfMedicalInstruments} />
+    </Box>
+  );
+};
+
+const VideoOfUFOreports = () => {
+  return (
+    <Box >
+      <VideoGallery videoUrls={reportOfUFOvideos} />
+    </Box>
+  );
+};
+
+const VideoOfUsefulThingsReports = () => {
+  return (
+    <Box >
+      <VideoGallery videoUrls={reportOfUsefulThingsVideos} />
+    </Box>
+  );
+};
+
+export { VideoOfCarsReports, VideoOfMedicalInstrumentsReports, VideoOfUFOreports, VideoOfUsefulThingsReports };
