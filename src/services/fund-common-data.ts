@@ -26,20 +26,8 @@ export const ourAchievements:IOurAchievement[] = [
 export const ourMembersData:ITeamMember[] = [
   {
     id: 511,
-    photo: '/images/members/christian-buehner.jpg',
-    name: 'Jhon Dwirian',
-    professional: 'волонтер',
-    description:
-      'Київ. Київська область. Україна.',
-    territory: {
-      city: 'Kyiv',
-      logo: '/images/emblems/COA-of-Kyiv.png',
-    },
-  },
-  {
-    id: 512,
-    photo: '/images/members/jonas-kakaroto.jpg',
-    name: 'Leon Kennedy',
+    photo: '/images/members/Shevchenko.jpg',
+    name: 'Шевченко Ігор',
     professional: 'волонтер',
     description:
       'Бровари. Броварський район. Київська область.',
@@ -49,27 +37,51 @@ export const ourMembersData:ITeamMember[] = [
     },
   },
   {
+    id: 512,
+    photo: '/images/members/Krutogolov.jpg',
+    name: 'Крутоголов Юлія',
+    professional: 'директор фонду',
+    description:
+      'Київ. Київська область. Україна.',
+    territory: {
+      city: 'Kyiv',
+      logo: '/images/emblems/COA-of-Kyiv.png',
+    },
+  },
+  {
     id: 513,
+    photo: '/images/members/Balbekov.jpg',
+    name: 'Балбеков Ілля',
+    professional: 'волонтер',
+    description:
+      'Конотоп. Конотопський район. Сумщина.',
+    territory: {
+      city: 'Konotop',
+      logo: '/images/emblems/microsoft.png',
+    },
+  },
+  {
+    id: 514,
     photo: '/images/members/noah-buscher.jpg',
-    name: 'Nguyn Thuy',
+    name: 'Сломінська Анастасія',
+    professional: 'волонтер',
+    description:
+      'Бровари. Броварський район. Київська область.',
+    territory: {
+      city: 'Brovary',
+      logo: '/images/emblems/Brovary-gerb.png',
+    },
+  },
+  {
+    id: 515,
+    photo: '/images/members/philip-martin.jpg',
+    name: 'Rizki Known',
     professional: 'волонтер',
     description:
       'Ніжин. Ніжинський район. Чернігівщина.',
     territory: {
       city: 'Nizhyn',
       logo: '/images/emblems/Nizhyn-COA.png',
-    },
-  },
-  {
-    id: 514,
-    photo: '/images/members/philip-martin.jpg',
-    name: 'Rizki Known',
-    professional: 'волонтер',
-    description:
-      'Duisaute. Excepnon proident.',
-    territory: {
-      city: 'Microsoft',
-      logo: '/images/emblems/microsoft.png',
     },
   },
 ];

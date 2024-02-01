@@ -24,13 +24,13 @@ export default function TeamMember({ member }:MemberProps) {
       >
         <Box
           sx={{
-            height: 200, mb: 2, borderRadius: 3,
-            lineHeight: 0, overflow: 'hidden',
+            mb: 2, borderRadius: 3, aspectRatio: '4 / 3',
+            position: 'relative', overflow: 'hidden',
           }}
         >
           <Image alt={'Member ' + name}
 		        src={photo || 'images/blog/Gratitude-Volounteer-Day.jpg'}
-            width={570} height={427}
+            layout="fill" objectFit="cover"
 		      />
         </Box>
         <Box sx={{ mb: 2 }}>
