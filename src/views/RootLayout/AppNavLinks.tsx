@@ -18,9 +18,9 @@ import ContactsIcon from '@mui/icons-material/Contacts';
 
 const HeaderNavLinks:HeaderNavLink[] = [
   { label: 'Головна', href: '/', icon: <HomeIcon /> },
-  { label: 'Збори', href: '/fund/campaigns', icon: <DonateIcon /> },
-  { label: 'Реквізити', href: '/fund/donate', icon: <AccountBalanceIcon /> },
-  { label: 'Звіти', href: '/fund/reports', icon: <ReportsIcon /> },
+  { label: 'Збори', href: '/campaigns', icon: <DonateIcon /> },
+  { label: 'Реквізити', href: '/donate', icon: <AccountBalanceIcon /> },
+  { label: 'Звіти', href: '/reports', icon: <ReportsIcon /> },
   { label: 'Про нас', href: '/about', icon: <InfoIcon /> },
   { label: 'Контакти', href: '/contacts', icon: <ContactsIcon /> },
 ];

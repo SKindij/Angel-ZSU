@@ -24,8 +24,18 @@ const VideoGallery:React.FC<VideoGalleryProps> = ({ videoUrls }) => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen loading="lazy"
               />
+              {/*
+			        <iframe
+                title={`YouTube video ${video.title}`}
+                src={video.url}
+                width="100%" height="315"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+              />
+              */}
               <CardContent>
-                <Typography variant="body1">
+                <Typography variant="body2">
                   {video.title}
                 </Typography>
               </CardContent>
