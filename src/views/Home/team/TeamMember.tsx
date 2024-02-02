@@ -33,6 +33,17 @@ export default function TeamMember({ member }:MemberProps) {
             layout="fill" objectFit="cover"
 		      />
         </Box>
+        {/*
+        <Box
+          sx={{ display: 'flex', flexDirection: 'column' }}
+        >
+          <Image alt={'Member ' + name}
+		        src={photo || 'images/blog/Gratitude-Volounteer-Day.jpg'}
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
+		      />
+        </Box>
+        */}
         <Box sx={{ mb: 2 }}>
           <Typography variant="h4" sx={{ fontSize: '1.4rem' }}>
 		        {name}

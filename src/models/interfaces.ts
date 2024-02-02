@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+
 // @/models/interfaces.ts
 export interface IOurAchievement {
   id:number;
@@ -26,7 +28,7 @@ export interface IOurAward {
 export interface ITeamMember {
   id:number;
   name:string;
-  photo?:string;
+  photo?:StaticImageData;
   professional?:string;
   description?:string;
   territory?:{

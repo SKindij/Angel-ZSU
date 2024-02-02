@@ -2,6 +2,17 @@
 import {
   IOurAchievement, ITeamMember, IOurAward,
 } from '@/models/interfaces';
+// for Local Images
+import KrutogolovaPic from '../../public/images/members/Krutogolova.png';
+import ShevchenkoPic from '../../public/images/members/Shevchenko.png';
+import BalbekovPic from '../../public/images/members/Balbekov.png';
+import SolominskaPic from '../../public/images/members/Solominska.png';
+import KvashaPic from '../../public/images/members/Kvasha.png';
+import PereverzevaPic from '../../public/images/members/Pereverzeva.jpg';
+
+
+import philipPic from '../../public/images/members/philip-martin.jpg';
+
 
 /* ----- НАШІ З ВАМИ ДОСЯГНЕННЯ ----- */
 export const ourAchievements:IOurAchievement[] = [
@@ -26,35 +37,32 @@ export const ourAchievements:IOurAchievement[] = [
 export const ourMembersData:ITeamMember[] = [
   {
     id: 511,
-    photo: '/images/members/Shevchenko.jpg',
-    name: 'Шевченко Ігор',
-    professional: 'волонтер',
-    description:
-      'Бровари. Броварський район. Київська область.',
-    territory: {
-      city: 'Brovary',
-      logo: '/images/emblems/Brovary-gerb.png',
-    },
-  },
-  {
-    id: 512,
-    photo: '/images/members/Krutogolov.jpg',
+    photo: KrutogolovaPic,
     name: 'Крутоголов Юлія',
     professional: 'директор фонду',
-    description:
-      'Київ. Київська область. Україна.',
+    description: 'Київ. Київська область. Україна.',
     territory: {
       city: 'Kyiv',
       logo: '/images/emblems/COA-of-Kyiv.png',
     },
   },
   {
+    id: 512,
+    photo: ShevchenkoPic,
+    name: 'Шевченко Ігор',
+    professional: 'волонтер',
+    description: 'Бровари. Броварський район. Київська область.',
+    territory: {
+      city: 'Brovary',
+      logo: '/images/emblems/Brovary-gerb.png',
+    },
+  },
+  {
     id: 513,
-    photo: '/images/members/Balbekov.jpg',
+    photo: BalbekovPic,
     name: 'Балбеков Ілля',
     professional: 'волонтер',
-    description:
-      'Конотоп. Конотопський район. Сумщина.',
+    description: 'Конотоп. Конотопський район. Сумщина.',
     territory: {
       city: 'Konotop',
       logo: '/images/emblems/microsoft.png',
@@ -62,11 +70,10 @@ export const ourMembersData:ITeamMember[] = [
   },
   {
     id: 514,
-    photo: '/images/members/noah-buscher.jpg',
+    photo: SolominskaPic,
     name: 'Сломінська Анастасія',
     professional: 'волонтер',
-    description:
-      'Бровари. Броварський район. Київська область.',
+    description: 'Бровари. Броварський район. Київська область.',
     territory: {
       city: 'Brovary',
       logo: '/images/emblems/Brovary-gerb.png',
@@ -74,11 +81,32 @@ export const ourMembersData:ITeamMember[] = [
   },
   {
     id: 515,
-    photo: '/images/members/philip-martin.jpg',
+    photo: KvashaPic,
+    name: 'Ігор Кваша',
+    professional: 'волонтер',
+    description: 'Київ. Київська область. Україна.',
+    territory: {
+      city: 'Kyiv',
+      logo: '/images/emblems/COA-of-Kyiv.png',
+    },
+  },
+  {
+    id: 516,
+    photo: PereverzevaPic,
+    name: 'Переверзєва Владислава',
+    professional: 'волонтер',
+    description: 'Дніпро. Придніпровська височина. Україна.',
+    territory: {
+      city: 'Dnipro',
+      logo: '/images/emblems/Nizhyn-COA.png',
+    },
+  },
+  {
+    id: 517,
+    photo: philipPic,
     name: 'Rizki Known',
     professional: 'волонтер',
-    description:
-      'Ніжин. Ніжинський район. Чернігівщина.',
+    description: 'Ніжин. Ніжинський район. Чернігівщина.',
     territory: {
       city: 'Nizhyn',
       logo: '/images/emblems/Nizhyn-COA.png',
