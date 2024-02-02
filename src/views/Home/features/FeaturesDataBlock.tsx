@@ -3,33 +3,33 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-import ArtTrackIcon from '@mui/icons-material/ArtTrack';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
-import ContactSupportIcon from '@mui/icons-material/ContactSupport';
+import DriveEtaIcon from '@mui/icons-material/DriveEta';
+import MedicationIcon from '@mui/icons-material/Medication';
+import BugReportIcon from '@mui/icons-material/BugReport';
+import ExploreIcon from '@mui/icons-material/Explore';
 
 import { IFundFeatures } from '@/models/interfaces';
 /* ----- Особливості фонду ----- */
 export const fundFeatures:IFundFeatures[] = [
   {
-    title: 'Easy Accessable',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-    icon: <ArtTrackIcon />
+    title: 'Приганяємо автомобілі',
+    description: 'Забезпечення транспортом військових для надійної та швидкої мобільності на фронті.',
+    icon: <DriveEtaIcon />
   },
   {
-    title: 'More Affordable Cost',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-    icon: <AttachMoneyIcon />
+    title: 'Допомагаємо медикам',
+    description: 'Надання підтримки медичним працівникам, що служать на передовій, шляхом постачання необхідного медичного обладнання та ресурсів',
+    icon: <MedicationIcon />
   },
   {
-    title: 'Flexible Study Time',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-    icon: <LocalLibraryIcon />
+    title: 'Забезпечуємо дронами',
+    description: 'Використання сучасних технологій БПЛА для розвідки та виконання бойових завдань.',
+    icon: <BugReportIcon />
   },
   {
-    title: 'Consultation With Mentor',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-    icon: <ContactSupportIcon />
+    title: 'Збираємо спорядження',
+    description: 'Забезпечення військових необхідним снаряженням для їхньої безпеки та комфорту під час несення служби.',
+    icon: <ExploreIcon />
   },
 ];
 

@@ -59,7 +59,7 @@ const FundTeam = () => {
     infinite: true, speed: 300, // autoplay: true,
     slidesToShow: matchMobileView ? 1 : 3, slidesToScroll: 1,
     prevArrow: <SliderArrow type="prev" />, nextArrow: <SliderArrow type="next" />,
-    dots: true, appendDots: (dots) => <StyledDots>{dots}</StyledDots>,
+    dots: !matchMobileView, appendDots: (dots) => <StyledDots>{dots}</StyledDots>,
     customPaging: () => (
       <Box sx={{ height:10, width:30, backgroundColor:'divider', display:'inline-block', borderRadius:4 }}/>
     ),

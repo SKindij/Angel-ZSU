@@ -104,23 +104,23 @@ export const ourMembersData:ITeamMember[] = [
   {
     id: 517,
     photo: philipPic,
-    name: 'Rizki Known',
+    name: 'Стоцький Віталій',
     professional: 'волонтер',
-    description: 'Ніжин. Ніжинський район. Чернігівщина.',
+    description: 'Бровари. Броварський район. Київська область.',
     territory: {
-      city: 'Nizhyn',
-      logo: '/images/emblems/Nizhyn-COA.png',
+      city: 'Brovary',
+      logo: '/images/emblems/Brovary-gerb.png',
     },
   },
   {
     id: 518,
     photo: philipPic,
-    name: 'Rizki Known',
+    name: 'Крутоголов Микола',
     professional: 'волонтер',
-    description: 'Ніжин. Ніжинський район. Чернігівщина.',
+    description: 'Київ. Київська область. Україна.',
     territory: {
-      city: 'Nizhyn',
-      logo: '/images/emblems/Nizhyn-COA.png',
+      city: 'Kyiv',
+      logo: '/images/emblems/COA-of-Kyiv.png',
     },
   },
   {
