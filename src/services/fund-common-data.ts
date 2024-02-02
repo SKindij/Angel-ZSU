@@ -98,11 +98,33 @@ export const ourMembersData:ITeamMember[] = [
     description: 'Дніпро. Придніпровська височина. Україна.',
     territory: {
       city: 'Dnipro',
-      logo: '/images/emblems/Nizhyn-COA.png',
+      logo: '/images/emblems/Dnipro_Gerb.png',
     },
   },
   {
     id: 517,
+    photo: philipPic,
+    name: 'Rizki Known',
+    professional: 'волонтер',
+    description: 'Ніжин. Ніжинський район. Чернігівщина.',
+    territory: {
+      city: 'Nizhyn',
+      logo: '/images/emblems/Nizhyn-COA.png',
+    },
+  },
+  {
+    id: 518,
+    photo: philipPic,
+    name: 'Rizki Known',
+    professional: 'волонтер',
+    description: 'Ніжин. Ніжинський район. Чернігівщина.',
+    territory: {
+      city: 'Nizhyn',
+      logo: '/images/emblems/Nizhyn-COA.png',
+    },
+  },
+  {
+    id: 519,
     photo: philipPic,
     name: 'Rizki Known',
     professional: 'волонтер',

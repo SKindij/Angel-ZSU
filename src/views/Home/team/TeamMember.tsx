@@ -30,7 +30,10 @@ export default function TeamMember({ member }:MemberProps) {
         >
           <Image alt={'Member ' + name}
 		        src={photo || 'images/blog/Gratitude-Volounteer-Day.jpg'}
-            layout="fill" objectFit="cover"
+            style={{
+              width: '100%', height: '100%',
+              objectFit: 'cover', // cover, contain, none
+            }}
 		      />
         </Box>
         {/*
