@@ -10,7 +10,9 @@ import SlominskaPic from '../../public/images/members/Slominska.png';
 import KvashaPic from '../../public/images/members/Kvasha.png';
 import PereverzevaPic from '../../public/images/members/Pereverzeva.jpg';
 
-
+import Krutogolov from '../../public/images/members/Krutogolov.png';
+import KazminPic from '../../public/images/members/Kazmin.png';
+import AbramenkopPic from '../../public/images/members/Abramenko.png';
 import philipPic from '../../public/images/members/philip-martin.jpg';
 
 
@@ -114,7 +116,7 @@ export const ourMembersData:ITeamMember[] = [
   },
   {
     id: 518,
-    photo: philipPic,
+    photo: Krutogolov,
     name: 'Крутоголов Микола',
     professional: 'волонтер',
     description: 'Київ. Київська область. Україна.',
@@ -125,6 +127,28 @@ export const ourMembersData:ITeamMember[] = [
   },
   {
     id: 519,
+    photo: KazminPic,
+    name: 'Олександр Казьмін',
+    professional: 'волонтер',
+    description: 'Бровари. Броварський район. Київська область.',
+    territory: {
+      city: 'Brovary',
+      logo: '/images/emblems/Brovary-gerb.png',
+    },
+  },
+  {
+    id: 521,
+    photo: AbramenkopPic,
+    name: 'Абраменко Дмитро',
+    professional: 'волонтер',
+    description: 'Бровари. Броварський район. Київська область.',
+    territory: {
+      city: 'Brovary',
+      logo: '/images/emblems/Brovary-gerb.png',
+    },
+  },
+  {
+    id: 520,
     photo: philipPic,
     name: 'Rizki Known',
     professional: 'волонтер',
