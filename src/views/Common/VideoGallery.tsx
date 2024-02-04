@@ -6,6 +6,8 @@ import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 
+import YouTubeFrame from '@/views/Common/YouTubeFrame';
+
 import { IOurVideos } from '@/models/interfaces';
 interface VideoGalleryProps {
   videoUrls:IOurVideos[];
@@ -18,22 +20,11 @@ const VideoGallery:React.FC<VideoGalleryProps> = ({ videoUrls }) => {
         {videoUrls.map((video) => (
           <Grid key={video.id} item xs={12} sm={6} md={4} lg={4} xl={4}>
             <Card>
-              <CardMedia title={`YouTube video ${video.title}`}
-                component="iframe" src={video.url}
-                width="100%" height="315"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen loading="lazy"
+              <YouTubeFrame
+                video={video.url}
+                width='100%'
+                height='100%'
               />
-              {/*
-			        <iframe
-                title={`YouTube video ${video.title}`}
-                src={video.url}
-                width="100%" height="315"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                loading="lazy"
-              />
-              */}
               <CardContent>
                 <Typography variant="body2">
                   {video.title}
