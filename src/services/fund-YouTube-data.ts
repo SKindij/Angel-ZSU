@@ -6,7 +6,7 @@ import { IOurVideos } from '@/models/interfaces';
 export const requestsForCarsVideos:IOurVideos[] = [
   {
     id: 1101,
-    title: 'Запит на автівку хлопцям з 54 бригади 25 батальйону (ОТУ Соледар, направлення Кремінна)',
+    title: 'Запит на автівку хлопцям з 54 бригади 25 батальйону (ОТУ Соледар, Кремінна)',
     url: 'w07ODwsCv-M',
   },
   {
@@ -46,8 +46,8 @@ export const requestsForCarsVideos:IOurVideos[] = [
   },
   {
     id: 1109,
-    title: '',
-    url: '',
+    title: 'Запит на авто від Окремомого взводу ВМЗ 142 бригади',
+    url: 'jjquVsu8-v4',
   },
 ];
 /* ----- запити від військових медиків ----- */
@@ -69,8 +69,8 @@ export const requestFromMilitaryMedicsVideos:IOurVideos[] = [
   },
   {
     id: 1204,
-    title: '',
-    url: '',
+    title: 'Запит на авто надсилає Медпункт першого батальйону 36 Бригади Морської піхоти',
+    url: 'satv_oH6qK4',
   },
   {
     id: 1205,
@@ -82,6 +82,11 @@ export const requestFromMilitaryMedicsVideos:IOurVideos[] = [
     title: 'Запит на авто від 17 ОТБР',
     url: 'zCZHV08ZSVg',
   },
+  {
+    id: 1207,
+    title: 'Запит від медичної служби 43 ОСБ',
+    url: 'OatEbYz3iWg',
+  },
 ];
 /* ----- запити на безпілотні літальні апарати ----- */
 export const requestForUFOvideos:IOurVideos[] = [
@@ -92,7 +97,7 @@ export const requestForUFOvideos:IOurVideos[] = [
   },
   {
     id: 1302,
-    title: 'Запит від Взводу Ударних БПЛА 4 Мех. Батальйону Окремої Президентської Бригади ім. Б. Хмельницького',
+    title: 'Від Взводу Ударних БПЛА 4 Мех.Бат. ОПБ ім. Б. Хмельницького',
     url: 'pAKI30hez10',
   },
   {
@@ -102,18 +107,18 @@ export const requestForUFOvideos:IOurVideos[] = [
   },
   {
     id: 1304,
-    title: '',
-    url: '',
+    title: 'Запит від 54 ОМБр мотопіхотний батальйон 3 мотопіхотна рота',
+    url: 'vDht3cziSgY',
   },
   {
     id: 1305,
-    title: '',
-    url: '',
+    title: 'Запит від аеророзвідників з 32-ОМБР',
+    url: 'dhyc-iUlnGs',
   },
   {
     id: 1306,
-    title: '',
-    url: '',
+    title: 'Запит на дрон від підрозділу аеророзвідки 212 батальйону',
+    url: 'VNZgwKkCmU0',
   },
 ];
 /* ----- запити на військове обладнання ----- */
@@ -125,7 +130,7 @@ export const requestForMilitaryEquipmentVideos:IOurVideos[] = [
   },
   {
     id: 1402,
-    title: 'Запит від Білоруських добровольців, батальйону імені Дмитра Терору на засоби звязку та 3D окуляри.',
+    title: 'Запит від Білоруських добровольців, батальйону імені Дмитра Терору.',
     url: 'i14Un9lESEk',
   },
   {
@@ -150,18 +155,13 @@ export const requestForMilitaryEquipmentVideos:IOurVideos[] = [
   },
   {
     id: 1407,
-    title: 'Запит від Батальйону Оперативного Призначення «ГРОЗА» Національної гвардії України',
+    title: 'Запит від Батальйону Оперативного Призначення «ГРОЗА» НГУ',
     url: 'dTos7vkVJ88',
   },
   {
     id: 1408,
-    title: '',
-    url: '',
-  },
-  {
-    id: 1409,
-    title: '',
-    url: '',
+    title: 'Запит на інструменти від 61 танкової бригади',
+    url: 'YtDV5NZlbdY',
   },
 ];
 
@@ -190,7 +190,7 @@ export const reportOfCarsVideos:IOurVideos[] = [
   },
   {
     id: 2105,
-    title: 'Звіт по авто для Добровольчого Батальйону Свобода',
+    title: 'Авто для Добровольчого Батальйону Свобода',
     url: 'WSht33Mljok',
   },
   {
@@ -218,33 +218,18 @@ export const reportOfCarsVideos:IOurVideos[] = [
 export const reportOfMedicalInstruments:IOurVideos[] = [
   {
     id: 2201,
-    title: '',
-    url: '',
+    title: 'Звіт від 95 ОДШБ',
+    url: 'u9bdIFYx01M',
   },
   {
     id: 2202,
-    title: '',
-    url: '',
-  },
-  {
-    id: 2203,
     title: 'Звіт від 17 бригади 3 роти',
     url: '58ezz5PRbLU',
   },
   {
-    id: 2204,
-    title: '',
-    url: '',
-  },
-  {
-    id: 2205,
-    title: '',
-    url: '',
-  },
-  {
-    id: 2206,
-    title: '',
-    url: '',
+    id: 2203,
+    title: 'Звіт по ремонту евакуаційного авто',
+    url: 'snOsviYXDWE',
   },
 ];
 /* ----- Звіти про надані фондом безпілотні літальні апарати ----- */
@@ -261,23 +246,13 @@ export const reportOfUFOvideos:IOurVideos[] = [
   },
   {
     id: 2303,
-    title: '',
-    url: '',
+    title: 'Звіт від 45 батальйону',
+    url: 'jOIrKFvUu6A',
   },
   {
     id: 2304,
-    title: '',
-    url: '',
-  },
-  {
-    id: 2305,
-    title: '',
-    url: '',
-  },
-  {
-    id: 2306,
-    title: '',
-    url: '',
+    title: 'Звіт від 5 ОШБр',
+    url: 'ARnXoZPO1CU',
   },
 ];
 /* ----- Звіти про надані фондом корисні речі для військових ----- */
@@ -314,21 +289,17 @@ export const reportOfUsefulThingsVideos:IOurVideos[] = [
   },
   {
     id: 2407,
-    title: '',
-    url: '',
+    title: 'Звіт по поіздці на Запорізький та Донецький напрямки',
+    url: 's73MvU8dgsk',
   },
   {
     id: 2408,
-    title: '',
-    url: '',
+    title: 'Звітує Мінометна батарея батальйону оперативного призначення НГУ',
+    url: '-pTpG_2r0cs',
   },
   {
     id: 2409,
-    title: '',
-    url: '',
+    title: 'Звіт від 36 бригади',
+    url: 'M0O7INZtfMw',
   },
 ];
-
-
-
-

@@ -6,7 +6,7 @@ import {
 import KrutogolovaPic from '../../public/images/members/Krutogolova.png';
 import ShevchenkoPic from '../../public/images/members/Shevchenko.png';
 import BalbekovPic from '../../public/images/members/Balbekov.png';
-import SolominskaPic from '../../public/images/members/Solominska.png';
+import SlominskaPic from '../../public/images/members/Slominska.png';
 import KvashaPic from '../../public/images/members/Kvasha.png';
 import PereverzevaPic from '../../public/images/members/Pereverzeva.jpg';
 
@@ -70,7 +70,7 @@ export const ourMembersData:ITeamMember[] = [
   },
   {
     id: 514,
-    photo: SolominskaPic,
+    photo: SlominskaPic,
     name: 'Сломінська Анастасія',
     professional: 'волонтер',
     description: 'Бровари. Броварський район. Київська область.',

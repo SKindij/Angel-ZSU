@@ -17,7 +17,7 @@ const YouTubeFrame:React.FC<YouTubeFrameProps> = ({
 }) => {
   const divRef = useRef<HTMLDivElement | null>(null);
 
-  const onClick = () => {
+  const makeFrame = () => {
     const iframe = document.createElement('iframe');
     iframe.setAttribute('frameborder', '0');
     iframe.setAttribute('allowfullscreen', '1');
@@ -38,39 +38,20 @@ const YouTubeFrame:React.FC<YouTubeFrameProps> = ({
   };
 
   return (
-    <Box
-      position="relative"
-      borderRadius={4}
-      overflow="hidden"
+    <Box position="relative"
+      overflow="hidden" borderRadius={4}
       sx={{
-        position: 'relative',
-        borderRadius: 4,
-        overflow: 'hidden',
-        cursor: 'pointer',
-        '&:hover img': {
-          boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
-        },
+        position: 'relative', overflow: 'hidden',
+        borderRadius: 4, cursor: 'pointer',
         '& img': {
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          transition: 'box-shadow 0.3s ease',
-          borderRadius: 4,
-        },
-        '& span': {
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          fontSize: '2rem',
-          color: 'white',
+          width: '100%', height: '100%',
+          objectFit: 'cover', borderRadius: 4,
         },
       }}
       ref={divRef}
     >
-      <span onClick={onClick} className="ti-control-play" />
       <img alt="YouTube Video Thumbnail"
-        onClick={onClick}
+        onClick={makeFrame}
         loading="lazy"
         src={`https://i.ytimg.com/vi/${video}/mqdefault.jpg`}
       />
