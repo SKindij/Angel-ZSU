@@ -159,16 +159,6 @@ _Carousel component built with React. It is a react port of slick carousel._
   - weekly downloads: 965 000
 * home-page: https://react-slick.neostack.com/
 
-### react-scroll
-_React component for animating vertical scrolling_
-
-* npm-site: https://www.npmjs.com/package/react-scroll
-  - version: 1.9.0
-  - install: `npm install react-scroll`
-  - install: `npm install --save-dev @types/react-scroll`
-  - weekly downloads: 430 000
-* home-page: https://github.com/fisshy/react-scroll
-
 ### 
 
 * npm-site:
