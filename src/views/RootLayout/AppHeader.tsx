@@ -74,22 +74,17 @@ const AppHeader = () => {
           {/* mobile App Icon and Logo */}
           <SecurityIcon
             sx={{
-              mr: 1,
-              color: 'inherit',
+              mr: 1, color: 'inherit',
               display: { xs: 'flex', md: 'none' },
             }}
           />
           <Typography
-            variant="h4"
-            noWrap
-            component="div"
+            component="div" variant="h4" noWrap
             sx={{
               display: { xs: 'flex', md: 'none' },
-              mr: 2,
-              flexGrow: 1,
-              fontWeight: 700,
+              mr: 2, flexGrow: 1,
+              fontWeight: 700, color: 'inherit',
               letterSpacing: '0.3rem',
-              color: 'inherit',
             }}
           >
             <Link href="/">БФ &ldquo;Янгол ЗСУ&rdquo;</Link>
@@ -97,22 +92,16 @@ const AppHeader = () => {
           {/* desktop App Icon and Logo */}
           <SecurityIcon
             sx={{
-              mr: 1,
-              color: 'inherit',
+              mr: 1, color: 'inherit',
               display: { xs: 'none', md: 'flex' },
             }}
           />
           <Typography
-            variant="h5"
-            noWrap
-            component="div"
+            component="div" variant="h5" noWrap
             sx={{
-              display: { xs: 'none', md: 'flex' },
-              mr: 2,
-              fontWeight: 700,
-              textDecoration: 'none',
-              letterSpacing: '0.3rem',
-              color: 'inherit',
+              display: { xs: 'none', md: 'flex' }, mr: 2,
+              fontWeight: 700, color: 'inherit',
+              textDecoration: 'none', letterSpacing: '0.3rem',
             }}
           >
             <Link href="/">БО БФ &ldquo;Янгол ЗСУ&rdquo;</Link>
@@ -122,12 +111,9 @@ const AppHeader = () => {
             {HeaderNavLinks.map(({ label, href }) => (
               <Link href={href} passHref key={label}>
                 <Button
-                  sx={{
-                    my: 2,
+                  sx={{ display: 'block',
+                    my: 2, px: 2,
                     color: 'white',
-                    display: 'block',
-                    pl: 2,
-                    pr: 2,
                     '&:hover': { color: 'secondary.main' },
                   }}
                 >
@@ -138,6 +124,12 @@ const AppHeader = () => {
           </Box>
           {/* desktop Social Media Icons */}
           <HeaderSocialLinks />
+          {/* desktop authentication */}
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <Link href="/auth/signin" passHref>
+              <Button color="inherit">Login</Button>
+            </Link>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
