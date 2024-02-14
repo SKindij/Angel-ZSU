@@ -65,7 +65,7 @@ export const ourMembersData:ITeamMember[] = [
     description: 'Конотоп. Конотопський район. Сумщина.',
     territory: {
       city: 'Konotop',
-      logo: '/images/emblems/microsoft.png',
+      logo: '/images/emblems/Coat-Konotop.png',
     },
   },
   {

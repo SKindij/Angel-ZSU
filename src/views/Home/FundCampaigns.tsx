@@ -1,9 +1,11 @@
 // @/views/Home/FundCampaigns.tsx
 import Box from '@mui/material/Box';
-// views сщьзщтутеі
+// views components
 import SectionHeader from '@/views/Common/SectionHeader';
-
+import CollectCard from '@/views/Home/campaigns/CollectCard';
 import ToVideoBButtons from '@/views/Home/campaigns/ToVideoButtons';
+// info from data base
+// import { fundRaisingData } from '@/services/get-data';
 
 const FundCampaigns = () => {
   return (
@@ -17,8 +19,8 @@ const FundCampaigns = () => {
 
 
 
-	  {/* Buttons to go to pages with videos */}
-	  <ToVideoBButtons />
+	    {/* Buttons to go to pages with videos */}
+	    <ToVideoBButtons />
 
     </Box>
   );

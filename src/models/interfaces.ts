@@ -1,4 +1,5 @@
 import { StaticImageData } from 'next/image';
+import { FundRaisingVariation } from '@/models/types';
 
 // @/models/interfaces.ts
 export interface IOurAchievement {
@@ -37,4 +38,12 @@ export interface ITeamMember {
   };
 };
 
+export interface IFundRaising {
+  id:number;
+  title:string;
+  variation:FundRaisingVariation;
+  info:string;
+  value:number;
+  isСomplete:boolean;
+};
 

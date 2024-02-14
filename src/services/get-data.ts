@@ -11,9 +11,12 @@ import { sql } from '@vercel/postgres';
 
 
 /* -----  ----- */
-
-export const fundRaisingData = {
+import {IFundRaising} from '@/models/interfaces';
+export const fundRaisingData:IFundRaising = {
   id: 1001,
-  label: '',
-  value: '',
+  title: 'Назва збору',
+  variation:'onCar',
+  info:'Щось про збір',
+  value: 27000,
+  isСomplete: false
 };
