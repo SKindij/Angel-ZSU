@@ -14,7 +14,15 @@ export const metadata = {
   title: 'Янгол ЗСУ',
   description: 'Благодійний фонд Янгол Збройних Сил України.',
   keywords: 'благодійний фонд, Янгол ЗСУ, благодійність, Україна',
-  author: 'SKindij',
+  authors: [{ name: 'SKindij', url: 'https://github.com/SKindij' }],
+  openGraph: {
+    title: 'Янгол ЗСУ',
+    description: 'Благодійний фонд Янгол Збройних Сил України.',
+    url: 'https://angelzsu.com/',
+    siteName: 'Angel ZSU',
+    locale: 'uk',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }:{ children:React.ReactNode }) {
