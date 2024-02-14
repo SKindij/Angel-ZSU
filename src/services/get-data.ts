@@ -4,3 +4,16 @@ import { unstable_noStore as noStore } from 'next/cache';
 import { sql } from '@vercel/postgres';
 
 /* -----  ----- */
+
+
+
+
+
+
+/* -----  ----- */
+
+export const fundRaisingData = {
+  id: 1001,
+  label: '',
+  value: '',
+};

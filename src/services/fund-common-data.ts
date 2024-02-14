@@ -9,12 +9,10 @@ import BalbekovPic from '../../public/images/members/Balbekov.png';
 import SlominskaPic from '../../public/images/members/Slominska.png';
 import KvashaPic from '../../public/images/members/Kvasha.png';
 import PereverzevaPic from '../../public/images/members/Pereverzeva.jpg';
-
+import StotskiyPic from '../../public/images/members/Stotskiy.jpg';
 import Krutogolov from '../../public/images/members/Krutogolov.png';
 import KazminPic from '../../public/images/members/Kazmin.png';
 import AbramenkopPic from '../../public/images/members/Abramenko.png';
-import philipPic from '../../public/images/members/philip-martin.jpg';
-
 
 /* ----- НАШІ З ВАМИ ДОСЯГНЕННЯ ----- */
 export const ourAchievements:IOurAchievement[] = [
@@ -42,10 +40,10 @@ export const ourMembersData:ITeamMember[] = [
     photo: KrutogolovaPic,
     name: 'Крутоголов Юлія',
     professional: 'директор фонду',
-    description: 'Київ. Київська область. Україна.',
+    description: 'Ніжин. Ніжинський район. Чернігівщина.',
     territory: {
-      city: 'Kyiv',
-      logo: '/images/emblems/COA-of-Kyiv.png',
+      city: 'Nizhyn',
+      logo: '/images/emblems/Nizhyn-COA.png',
     },
   },
   {
@@ -105,7 +103,7 @@ export const ourMembersData:ITeamMember[] = [
   },
   {
     id: 517,
-    photo: philipPic,
+    photo: StotskiyPic,
     name: 'Стоцький Віталій',
     professional: 'волонтер',
     description: 'Бровари. Броварський район. Київська область.',
@@ -145,17 +143,6 @@ export const ourMembersData:ITeamMember[] = [
     territory: {
       city: 'Brovary',
       logo: '/images/emblems/Brovary-gerb.png',
-    },
-  },
-  {
-    id: 520,
-    photo: philipPic,
-    name: 'Rizki Known',
-    professional: 'волонтер',
-    description: 'Ніжин. Ніжинський район. Чернігівщина.',
-    territory: {
-      city: 'Nizhyn',
-      logo: '/images/emblems/Nizhyn-COA.png',
     },
   },
 ];
