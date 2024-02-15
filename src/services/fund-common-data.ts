@@ -10,10 +10,12 @@ import SlominskaPic from '../../public/images/members/Slominska.png';
 import KvashaPic from '../../public/images/members/Kvasha.png';
 import PereverzevaPic from '../../public/images/members/Pereverzeva.jpg';
 import StotskiyPic from '../../public/images/members/Stotskiy.jpg';
-import Krutogolov from '../../public/images/members/Krutogolov.png';
+import KrutogolovPic from '../../public/images/members/Krutogolov.png';
+import TurchynPic from '../../public/images/members/Turchyn.png';
 import KazminPic from '../../public/images/members/Kazmin.png';
 import PugachPic from '../../public/images/members/Pugach.png';
 import AbramenkopPic from '../../public/images/members/Abramenko.png';
+import GoidenkoPic from '../../public/images/members/Goidenko.png';
 
 /* ----- НАШІ З ВАМИ ДОСЯГНЕННЯ ----- */
 export const ourAchievements:IOurAchievement[] = [
@@ -47,7 +49,7 @@ export const ourAchievements:IOurAchievement[] = [
 /* ----- Члени нашої команди ----- */
 export const ourMembersData:ITeamMember[] = [
   {
-    id: 511,
+    id: 8511,
     photo: KrutogolovaPic,
     name: 'Крутоголов Юлія',
     professional: 'директор фонду',
@@ -58,7 +60,7 @@ export const ourMembersData:ITeamMember[] = [
     },
   },
   {
-    id: 512,
+    id: 8512,
     photo: ShevchenkoPic,
     name: 'Шевченко Ігор',
     professional: 'волонтер',
@@ -69,7 +71,7 @@ export const ourMembersData:ITeamMember[] = [
     },
   },
   {
-    id: 513,
+    id: 8513,
     photo: BalbekovPic,
     name: 'Балбеков Ілля',
     professional: 'волонтер',
@@ -80,7 +82,7 @@ export const ourMembersData:ITeamMember[] = [
     },
   },
   {
-    id: 514,
+    id: 8514,
     photo: SlominskaPic,
     name: 'Сломінська Анастасія',
     professional: 'волонтер',
@@ -91,7 +93,7 @@ export const ourMembersData:ITeamMember[] = [
     },
   },
   {
-    id: 515,
+    id: 8515,
     photo: KvashaPic,
     name: 'Ігор Кваша',
     professional: 'волонтер',
@@ -102,7 +104,7 @@ export const ourMembersData:ITeamMember[] = [
     },
   },
   {
-    id: 516,
+    id: 8516,
     photo: PereverzevaPic,
     name: 'Переверзєва Владислава',
     professional: 'волонтер',
@@ -113,7 +115,7 @@ export const ourMembersData:ITeamMember[] = [
     },
   },
   {
-    id: 517,
+    id: 8517,
     photo: StotskiyPic,
     name: 'Стоцький Віталій',
     professional: 'волонтер',
@@ -124,8 +126,8 @@ export const ourMembersData:ITeamMember[] = [
     },
   },
   {
-    id: 518,
-    photo: Krutogolov,
+    id: 8518,
+    photo: KrutogolovPic,
     name: 'Крутоголов Микола',
     professional: 'волонтер',
     description: 'Київ. Київська область. Україна.',
@@ -135,7 +137,18 @@ export const ourMembersData:ITeamMember[] = [
     },
   },
   {
-    id: 519,
+    id: 8519,
+    photo: TurchynPic,
+    name: 'Віктор Турчин',
+    professional: 'волонтер',
+    description: 'Україна.',
+    territory: {
+      city: 'Kyiv',
+      logo: '/images/emblems/COA-of-Kyiv.png',
+    },
+  },
+  {
+    id: 8520,
     photo: KazminPic,
     name: 'Олександр Казьмін',
     professional: 'волонтер',
@@ -146,7 +159,7 @@ export const ourMembersData:ITeamMember[] = [
     },
   },
   {
-    id: 520,
+    id: 8521,
     photo: PugachPic,
     name: 'Іван Пугач',
     professional: 'волонтер',
@@ -157,7 +170,7 @@ export const ourMembersData:ITeamMember[] = [
     },
   },
   {
-    id: 521,
+    id: 8522,
     photo: AbramenkopPic,
     name: 'Абраменко Дмитро',
     professional: 'волонтер',
@@ -165,6 +178,17 @@ export const ourMembersData:ITeamMember[] = [
     territory: {
       city: 'Brovary',
       logo: '/images/emblems/Brovary-gerb.png',
+    },
+  },
+  {
+    id: 8523,
+    photo: GoidenkoPic,
+    name: 'Євгеній Гойденко',
+    professional: 'волонтер',
+    description: 'Суми. Сумська область. Україна.',
+    territory: {
+      city: 'Sumy',
+      logo: '/images/emblems/Sumy-Koehne.png',
     },
   },
 ];
