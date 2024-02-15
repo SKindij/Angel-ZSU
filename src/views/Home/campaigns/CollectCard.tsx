@@ -19,12 +19,11 @@ type CollectCardProps = {
   collectData:IFundRaising;
 };
 
-
 const CollectCard = ( { collectData }:CollectCardProps ) => {
   const firstCollectLetter = collectData.title.charAt(0);
 
   return (
-    <Card sx={{ boxShadow: 3, borderRadius: 8 }}>
+    <Card sx={{ maxWidth: 345, boxShadow: 3, borderRadius: 8 }}>
 	  {/*  */}
 	  <CardHeader
         avatar={
@@ -43,7 +42,7 @@ const CollectCard = ( { collectData }:CollectCardProps ) => {
 	  {/*  */}
 	  <CardMedia component="img"
         sx={{ objectFit: 'cover', height: '100%', }}
-        image={'/images//donate/qr-pb-donate.webp'}
+        image={'/images/donate/reptile.jpg'}
         alt={collectData.title}
       />
 	  {/*  */}

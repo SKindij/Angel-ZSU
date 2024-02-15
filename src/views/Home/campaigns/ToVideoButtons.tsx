@@ -9,7 +9,7 @@ import DvrTwoToneIcon from '@mui/icons-material/DvrTwoTone';
 
 const ToVideoButtons = () => {
   return (
-    <Box sx={{ my: 2 }}>
+    <Box sx={{ my: 2, pb: 2 }}>
       <Typography variant="h5" sx={{ mb: 2, textAlign: 'center' }}>
         Архів відеозаписів
       </Typography>
