@@ -3,7 +3,6 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
-import Typography from '@mui/material/Typography';
 // views components
 import angelOnSUVPic from '../../../public/images/angel-on-SUV.png';
 import MainTypowriter from '@/views/Home/features/MainTypowriter';
@@ -15,10 +14,10 @@ const FundFeatures = () => {
     <Box id="features" sx={{ bgcolor:'background.paper', py: { xs: 1, md: 2 } }}>
       <Container maxWidth="lg">
 
-        <Grid container spacing={2} sx={{ flexDirection: { xs:'column', md:'unset' } }}>
+        <Grid container spacing={1} sx={{ flexDirection: { xs:'column', md:'unset' } }}>
 		      {/* image with Angel */}
-          <Grid item xs={12} md={5}>
-            <Box sx={{ position: 'relative', height:'340px' }}>
+          <Grid item xs={12} md={4}>
+            <Box sx={{ position: 'relative', height:'400px' }}>
               <Image alt={'Angel defends car'}
 			          src={angelOnSUVPic} fill
                 // full-width on mobile, in 2-column layout on tablet, in 3-column layout on desktop
@@ -30,7 +29,7 @@ const FundFeatures = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} md={7}>
+          <Grid item xs={12} md={8}>
 		        <Box
               sx={{ display: 'flex', height: '100%',
                 textAlign: { xs:'center', md:'left' },

@@ -14,29 +14,29 @@ const ToVideoButtons = () => {
         Архів відеозаписів
       </Typography>
       <Grid container spacing={2} justifyContent="center">
-        <Grid item xs={8} md={4}>
+        <Grid item xs={9} md={4}>
           <Link href="/campaigns" passHref>
             <Button color="primary" variant="contained" size="medium"
               sx={{
-                px: 1, letterSpacing: 2,
+                px: 1, py: 1, letterSpacing: 2,
                 '&:hover': {backgroundColor:'sassyYellow', color:'primary.dark' }
               }}
 		          startIcon={<OndemandVideoTwoToneIcon/>} fullWidth
             >
-            Дивитися відеозапити
+              Дивитися відеозапити
             </Button>
           </Link>
         </Grid>
-        <Grid item xs={8} md={4}>
+        <Grid item xs={9} md={4}>
           <Link href="/reports" passHref>
             <Button color="secondary" variant="contained" size="medium"
               sx={{
-                px: 1, letterSpacing: 2, color: 'primary.dark',
+                px: 1, py: 1, letterSpacing: 2, color: 'primary.dark',
                 '&:hover': { color:'secondary.contrastText' }
               }}
               startIcon={<DvrTwoToneIcon/>} fullWidth
             >
-            Дивитися відеозвіти
+              Дивитися відеозвіти
             </Button>
           </Link>
         </Grid>
