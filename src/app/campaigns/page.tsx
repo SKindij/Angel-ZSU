@@ -1,10 +1,17 @@
 // @/app/campaigns/page.tsx
+import { Metadata } from 'next';
 import Container from '@mui/material/Container';
 // views components
 import SectionHeader from '@/views/Common/SectionHeader';
 import {
   VideoRequestsForCars, VideoRequestFromMilitaryMedics, VideoRequestForUFO, VideoRequestForMilitaryEquipment
 } from '@/views/Campaigns/VideoCampaigns';
+
+export const metadata:Metadata = {
+  title: 'Відео-запити від ЗСУ',
+  description: 'Колекція відео-запитів від військовослужбовців щодо потреб їх життедіяльності.',
+  keywords: ['позашляховик для ЗСУ, військовий медик, безпілотний літальний апарат, бронежилет, тепловізор'],
+};
 
 export default function CampaignsPage() {
   return (

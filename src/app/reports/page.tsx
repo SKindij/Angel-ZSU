@@ -1,10 +1,17 @@
 // @/app/reports/page.tsx
+import { Metadata } from 'next';
 import Container from '@mui/material/Container';
 // views components
 import SectionHeader from '@/views/Common/SectionHeader';
 import {
   VideoOfCarsReports, VideoOfMedicalInstrumentsReports, VideoOfUFOreports, VideoOfUsefulThingsReports
 } from '@/views/Reports/VideoReports';
+
+export const metadata:Metadata = {
+  title: 'Відео-звіти ЗСУ',
+  description: 'Підбірка відео-звітів від війських про надану фондом допомогу.',
+  keywords: ['автівки, допомога медикам, розвідувальні дрони, корисні речі, військові'],
+};
 
 export default function ReportsPage() {
   return (

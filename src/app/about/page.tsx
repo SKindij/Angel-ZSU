@@ -1,9 +1,15 @@
 // @/app/about/page.tsx
-import styles from './page.module.css';
+import { Metadata } from 'next';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import backPic from '../../../public/images/about-angels.jpg';
+
+export const metadata:Metadata = {
+  title: 'Про нас',
+  description: 'Мета створення фонду - надання підтримки воїнам, що захищають нашу Батьківщину.',
+  keywords: ['волонтерство, підтримка збройних сил, місія фонду, захист України, герої'],
+};
 
 export default function AboutPage() {
   return (
