@@ -254,10 +254,14 @@ export const ourAwards:IOurAward[] = [
 
 /* ----- Партнери нашого фонду ----- */
 export const partnersImages1:PartnerImage[] = [
-  { src: '/images/partners/Nova-Post.jpg', alt: 'Nova Post emblem' },
-  { src: '/images/partners/Cloud-Cakes-and-Flowers.jpg', alt: 'Cloud Cakes and Flowers emblem' },
+  { src: '/images/partners/Sananna-City.png', alt: 'Sananna City emblem' },
+  { src: '/images/partners/Nova-Post.png', alt: 'Nova Post emblem' },
+  { src: '/images/partners/Cloud-Cakes-and-Flowers.png', alt: 'Cloud Cakes and Flowers emblem' },
+  { src: '/images/partners/EpitsentrK.png', alt: 'EpitsentrK emblem' },
 ];
 export const partnersImages2:PartnerImage[] = [
-  { src: '/images/partners/Techno-Yizhak.jpg', alt: 'Techno Yizhak emblem' },
+  { src: '/images/partners/Techno-Yizhak.png', alt: 'Techno Yizhak emblem' },
   { src: '/images/partners/MOYO.png', alt: 'MOYO emblem' },
+  { src: '/images/partners/Kubik-Store-Service.png', alt: 'Kubik Store Service emblem' },
+  { src: '/images/partners/Atlant-GK.png', alt: 'Atlant GK emblem' },
 ];
