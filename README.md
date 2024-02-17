@@ -21,10 +21,54 @@ _Volunteer Project for the Charitable Fund 'Angel of the Armed Forces of Ukraine
 
 
 
+- - -
+
+### 📚 The project structure (architecture):
+
+```go
+📁 Angel-ZSU/
+│
+├─📁 docs/
+│  ├─ MUI-compendium.md
+│  ├─ npm-compendium.md
+│  └─ PostgreSQL-tables.md
+│
+├─📁 public/
+│  ├─📁 images/
+│
+├─📁 src/
+│  ├─📁 app/
+│  │  ├─📁 auth/
+│  │  │  ├─📁 signin/
+│  │  │  └─📁 signup/
+│  │  ├─📁 campaigns/
+│  │  ├─📁 donate/
+│  │  ├─📁 reports/
+│  │  ├─📁 about/
+│  │  ├─📁 contacts/
+│  │  ├─📁 candidate/
+│  │  │
+│  │  ├─ favicon.ico
+│  │  ├─ globals.css
+│  │  ├─ layout.tsx
+│  │  ├─ page.tsx
+│  │  ├─
+│
+│
+│
+├─ package.json
+├─ tsconfig.json
+├─ next.config
+├─ next-env.d
+├─ tailwind.config
+├─ postcss.config
+│
+└─
 
 
 
 
+```
 
 - - -
 
