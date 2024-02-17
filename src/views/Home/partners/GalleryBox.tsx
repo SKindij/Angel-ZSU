@@ -15,7 +15,7 @@ export default function GalleryBox({images}:GalleryBoxProps) {
         <Box sx={{ display: 'flex', m: 0, p: 0 }}>
           {images.map((image) => {
             return (
-              <Box key={image.alt} sx={{ width: '100%', marginX: '0.5rem' }}>
+              <Box key={image.alt} sx={{ width: '100%', mx: 2 }}>
                 <img
                   style={{ width: '100%', height: 'auto' }}
                   src={image.src}

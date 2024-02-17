@@ -254,14 +254,16 @@ export const ourAwards:IOurAward[] = [
 
 /* ----- Партнери нашого фонду ----- */
 export const partnersImages1:PartnerImage[] = [
-  { src: '/images/partners/Sananna-City.png', alt: 'Sananna City emblem' },
-  { src: '/images/partners/Nova-Post.png', alt: 'Nova Post emblem' },
-  { src: '/images/partners/Cloud-Cakes-and-Flowers.png', alt: 'Cloud Cakes and Flowers emblem' },
   { src: '/images/partners/EpitsentrK.png', alt: 'EpitsentrK emblem' },
+  { src: '/images/partners/Nova-Post.png', alt: 'Nova Post emblem' },
+  { src: '/images/partners/Sananna-City.png', alt: 'Sananna City emblem' },
+  { src: '/images/partners/Cloud-Cakes-and-Flowers.png', alt: 'Cloud Cakes and Flowers emblem' },
+  { src: '/images/partners/Po-Likti.png', alt: 'Po Likt emblem' },
 ];
 export const partnersImages2:PartnerImage[] = [
-  { src: '/images/partners/Techno-Yizhak.png', alt: 'Techno Yizhak emblem' },
-  { src: '/images/partners/MOYO.png', alt: 'MOYO emblem' },
-  { src: '/images/partners/Kubik-Store-Service.png', alt: 'Kubik Store Service emblem' },
   { src: '/images/partners/Atlant-GK.png', alt: 'Atlant GK emblem' },
+  { src: '/images/partners/Techno-Yizhak.png', alt: 'Techno Yizhak emblem' },
+  { src: '/images/partners/Kubik-Store-Service.png', alt: 'Kubik Store Service emblem' },
+  { src: '/images/partners/MOYO.png', alt: 'MOYO emblem' },
+  { src: '/images/partners/Angel-ZSU.png', alt: 'Angel ZSU emblem' },
 ];
