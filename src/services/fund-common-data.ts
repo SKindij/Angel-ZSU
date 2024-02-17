@@ -2,6 +2,7 @@
 import {
   IOurAchievement, ITeamMember, IOurAward,
 } from '@/models/interfaces';
+import { PartnerImage } from '@/models/types';
 // for Local Images
 import KrutogolovaPic from '../../public/images/members/Krutogolova.png';
 import ShevchenkoPic from '../../public/images/members/Shevchenko.png';
@@ -251,3 +252,12 @@ export const ourAwards:IOurAward[] = [
   },
 ];
 
+/* ----- Партнери нашого фонду ----- */
+export const partnersImages1:PartnerImage[] = [
+  { src: '/images/partners/Nova-Post.jpg', alt: 'Nova Post emblem' },
+  { src: '/images/partners/Cloud-Cakes-and-Flowers.jpg', alt: 'Cloud Cakes and Flowers emblem' },
+];
+export const partnersImages2:PartnerImage[] = [
+  { src: '/images/partners/Techno-Yizhak.jpg', alt: 'Techno Yizhak emblem' },
+  { src: '/images/partners/MOYO.png', alt: 'MOYO emblem' },
+];
