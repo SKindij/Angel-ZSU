@@ -6,13 +6,10 @@ import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { purple } from '@mui/material/colors';
 
 import {IFundRaising} from '@/models/interfaces';
 type CollectCardProps = {
@@ -20,22 +17,11 @@ type CollectCardProps = {
 };
 
 const CollectCard = ( { collectData }:CollectCardProps ) => {
-  const firstCollectLetter = collectData.title.charAt(0);
 
   return (
     <Card sx={{ maxWidth: 345, boxShadow: 3, borderRadius: 8 }}>
 	  {/*  */}
 	  <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: purple[500] }} aria-label="collectData">
-            {firstCollectLetter}
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
         title={collectData.title}
         subheader={collectData.variation}
       />
@@ -47,7 +33,7 @@ const CollectCard = ( { collectData }:CollectCardProps ) => {
       />
 	  {/*  */}
       <CardContent>
-        <Typography variant="h3" color="secondary">
+        <Typography variant="h4" color="secondary" mb={1}>
           {collectData.title}
         </Typography>
         {/* Таблиця із цінами по супермаркетах */}

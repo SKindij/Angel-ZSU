@@ -8,7 +8,7 @@ import { partnersImages1, partnersImages2 } from '@/services/fund-common-data';
 
 const FundPartners = () => {
   return (
-    <Box id="fund-partners" sx={{ backgroundColor:'background.paper' }}>
+    <Box id="fund-partners" sx={{ pt:1, backgroundColor:'background.paper' }}>
       <SectionHeader
         title="Партнери нашого фонду"
         description="Їхні внески та співпраця є невід'ємною частиною нашої успішної роботи на благо спільноти"
