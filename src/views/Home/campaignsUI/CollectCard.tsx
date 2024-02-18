@@ -10,7 +10,9 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import DeleteIcon from '@mui/icons-material/Delete';
+import PlayCircleOutlinedIcon from '@mui/icons-material/PlayCircleOutlined';
+import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
+import DeleteOutlineRoundedIcon from '@mui/icons-material/DeleteOutlineRounded';
 
 import { IFundRaising } from '@/models/interfaces';
 type CollectCardProps = { collectData:IFundRaising } ;
@@ -48,33 +50,29 @@ const CollectCard = ( { collectData }:CollectCardProps ) => {
       </CardContent>
       <CardActions sx={{ display:'flex', flexDirection:'column', justifyContent:'center' }}>
         {/* функціональні кнопки для відвідувача сайту */}
-        <Box sx={{ display:'flex', gap:3, justifyContent:'center', mb:2 }}>
-          <Button variant="outlined" size="small" >
+        <Box sx={{ display:'flex', gap:2, justifyContent:'center', mb:2 }}>
+          <Button variant="outlined" size="small" startIcon={<PlayCircleOutlinedIcon />} >
             YouTube запиту
           </Button>
-          <Button variant="outlined" size="small" >
+          <Button variant="outlined" size="small" startIcon={<PlayCircleOutlinedIcon />} >
             YouTube звіту
           </Button>
         </Box>
         <Box sx={{ display:'flex', justifyContent:'center', mb:2 }}>
-          {collectData.isActual ? (
+          <Link href={'/donate'} >
             <Button variant="contained" size="small" color="success">
-              Задонатити на збір
+              {collectData.isActual ? 'Задонатити на збір' : 'Підтримати команду'}
             </Button>
-          ) : (
-            <Button variant="contained" size="small" color="success">
-              Підтримати команду
-            </Button>
-          )}
+          </Link>
         </Box>
         {/* функціональні кнопки для адміністратора сайту */}
         <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', mb:2 }}>
-          <Button variant="contained" size="small" color="secondary">
+          <Button variant="contained" size="small" color="secondary" startIcon={<EditNoteRoundedIcon />} >
             <Link href={`/admin/collect/${collectData.id}/edit`} >
               Редагувати
             </Link>
           </Button>
-          <Button variant="contained" size="small" color="error" startIcon={<DeleteIcon />}>
+          <Button variant="contained" size="small" color="error" startIcon={<DeleteOutlineRoundedIcon />} >
             Видалити
           </Button>
         </Box>

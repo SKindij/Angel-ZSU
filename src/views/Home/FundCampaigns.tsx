@@ -22,16 +22,16 @@ const FundCampaigns = () => {
         <Grid container justifyContent="space-evenly"
           rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 6 }}
         >
-          <Grid item key={fundRaisingData[0].id} xs={12} sm={6} md={4}>
+          <Grid item key={fundRaisingData[3].id} xs={12} sm={6} md={4}>
             <CollectCard collectData={fundRaisingData[3]}/>
           </Grid>
-          <Grid item key={fundRaisingData[1].id} xs={12} sm={6} md={4}>
+          <Grid item key={fundRaisingData[2].id} xs={12} sm={6} md={4}>
             <CollectCard collectData={fundRaisingData[2]}/>
           </Grid>
-          <Grid item key={fundRaisingData[2].id} xs={12} sm={6} md={4}>
+          <Grid item key={fundRaisingData[1].id} xs={12} sm={6} md={4}>
             <CollectCard collectData={fundRaisingData[1]}/>
           </Grid>
-          <Grid item key={fundRaisingData[2].id} xs={12} sm={6} md={4}>
+          <Grid item key={fundRaisingData[0].id} xs={12} sm={6} md={4}>
             <CollectCard collectData={fundRaisingData[0]}/>
           </Grid>
         </Grid>

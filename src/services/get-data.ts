@@ -14,7 +14,7 @@ import { sql } from '@vercel/postgres';
 import {IFundRaising} from '@/models/interfaces';
 export const fundRaisingData:IFundRaising[] = [
   {
-    id: 7001,
+    id: 7501,
     isActual: false,
     variation:'for car',
     purpose: 'На ремонт евакуаційного автомобіля',
@@ -23,7 +23,7 @@ export const fundRaisingData:IFundRaising[] = [
 
   },
   {
-    id: 7002,
+    id: 7502,
     isActual: false,
     variation:'for medicine',
     purpose: 'На закупівлю медичного обладнання та препаратів',
@@ -32,7 +32,7 @@ export const fundRaisingData:IFundRaising[] = [
 
   },
   {
-    id: 7003,
+    id: 7503,
     isActual: false,
     variation:'for equipment',
     purpose: 'На придбання інструментів для бліндажів',
@@ -41,7 +41,7 @@ export const fundRaisingData:IFundRaising[] = [
 
   },
   {
-    id: 7004,
+    id: 7504,
     isActual: true,
     variation:'for drone',
     purpose: 'На придбання дронів для військового підрозділу',
