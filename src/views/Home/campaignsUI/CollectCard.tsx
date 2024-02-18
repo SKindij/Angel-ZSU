@@ -10,6 +10,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
+import DeleteIcon from '@mui/icons-material/Delete';
+
 import { IFundRaising } from '@/models/interfaces';
 type CollectCardProps = { collectData:IFundRaising } ;
 
@@ -44,32 +46,35 @@ const CollectCard = ( { collectData }:CollectCardProps ) => {
           {collectData.value}
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions sx={{ display:'flex', flexDirection:'column', justifyContent:'center' }}>
         {/* функціональні кнопки для відвідувача сайту */}
-        <Box>
-          <Button variant="contained" size="small" >
+        <Box sx={{ display:'flex', gap:3, justifyContent:'center', mb:2 }}>
+          <Button variant="outlined" size="small" >
             YouTube запиту
           </Button>
-          <Button variant="contained" size="small" >
+          <Button variant="outlined" size="small" >
             YouTube звіту
           </Button>
         </Box>
-        <Box>
-          <Button variant="contained" size="small" color="secondary">
-            Задонатити на збір
-          </Button>
-          <Button variant="contained" size="small" color="secondary">
-            Підтримати команду
-          </Button>
+        <Box sx={{ display:'flex', justifyContent:'center', mb:2 }}>
+          {collectData.isActual ? (
+            <Button variant="contained" size="small" color="secondary">
+              Задонатити на збір
+            </Button>
+          ) : (
+            <Button variant="contained" size="small" color="success">
+              Підтримати команду
+            </Button>
+          )}
         </Box>
         {/* функціональні кнопки для адміністратора сайту */}
-        <Box>
+        <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', mb:2 }}>
           <Button variant="contained" size="small" color="secondary">
             <Link href={`/admin/collect/${collectData.id}/edit`} >
               Редагувати
             </Link>
           </Button>
-          <Button variant="contained" size="small" color="primary">
+          <Button variant="contained" size="small" color="error" startIcon={<DeleteIcon />}>
             Видалити
           </Button>
         </Box>
