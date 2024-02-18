@@ -7,7 +7,6 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 // MUI components
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 // MUI icons
 import IconArrowBack from '@mui/icons-material/ArrowBack';

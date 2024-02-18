@@ -58,7 +58,7 @@ const CollectCard = ( { collectData }:CollectCardProps ) => {
         </Box>
         <Box sx={{ display:'flex', justifyContent:'center', mb:2 }}>
           {collectData.isActual ? (
-            <Button variant="contained" size="small" color="secondary">
+            <Button variant="contained" size="small" color="success">
               Задонатити на збір
             </Button>
           ) : (

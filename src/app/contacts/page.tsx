@@ -5,6 +5,8 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 
+import СandidateButton from '@/views/Home/teamUI/СandidateButton';
+
 export const metadata:Metadata = {
   title: 'Контакти',
   description: 'Способи контактування із представниками фонду.',
@@ -15,17 +17,15 @@ export default function ContactsPage() {
   return (
     <Box
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        padding: '20px',
+        display: 'flex', flexDirection: 'column',
+        alignItems: 'center', padding: '20px',
       }}
     >
-
       <Typography paragraph>
         Тут будуть наші контакти.
       </Typography>
-
+      {/* invitation to join the community */}
+      <СandidateButton />
     </Box>
   );
 }

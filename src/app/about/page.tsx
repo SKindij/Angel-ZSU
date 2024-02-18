@@ -5,6 +5,8 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import backPic from '../../../public/images/about-angels.jpg';
 
+import ToVideoBButtons from '@/views/Home/campaignsUI/ToVideoButtons';
+
 export const metadata:Metadata = {
   title: 'Про нас',
   description: 'Мета створення фонду - надання підтримки воїнам, що захищають нашу Батьківщину.',
@@ -15,23 +17,13 @@ export default function AboutPage() {
   return (
     <Box
       sx={{
-        backgroundImage: `url(${backPic.src})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        padding: '20px',
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
+        backgroundImage: `url(${backPic.src})`, backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover', backgroundPosition: 'center',
+        padding: '20px', minHeight: '100vh',
+        display: 'flex', flexDirection: 'column', justifyContent: 'center',
       }}
     >
-      <Paper
-        sx={{
-          padding: '20px',
-          backgroundColor: 'rgba(255, 255, 255, 0.5)',
-        }}
-      >
+      <Paper sx={{ padding: '20px', backgroundColor: 'rgba(255, 255, 255, 0.5)' }}>
         <Typography variant="h2" gutterBottom>
           Про нас
         </Typography>
@@ -53,6 +45,8 @@ export default function AboutPage() {
           безпеки і свободи України.
         </Typography>
       </Paper>
+      {/* Buttons to go to pages with videos */}
+	    <ToVideoBButtons />
     </Box>
   );
 }
