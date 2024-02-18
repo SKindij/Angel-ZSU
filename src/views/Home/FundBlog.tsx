@@ -1,7 +1,7 @@
 // @/views/Home/FundBlog.tsx
 import Box from '@mui/material/Box';
-import SectionHeader from '@/views/Common/SectionHeader';
-import AwardsGrid from '@/views/Home/blog/AwardsGrid';
+import SectionHeader from '@/views/CommonUI/SectionHeader';
+import AwardsGrid from '@/views/Home/blogUI/AwardsGrid';
 
 const FundBlog = () => {
   return (

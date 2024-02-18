@@ -13,9 +13,9 @@ import IconButton from '@mui/material/IconButton';
 import IconArrowBack from '@mui/icons-material/ArrowBack';
 import IconArrowForward from '@mui/icons-material/ArrowForward';
 // views components
-import SectionHeader from '@/views/Common/SectionHeader';
-import TeamMember from '@/views/Home/team/TeamMember';
-import СandidateButton from '@/views/Home/team/СandidateButton';
+import SectionHeader from '@/views/CommonUI/SectionHeader';
+import TeamMember from '@/views/Home/teamUI/TeamMember';
+import СandidateButton from '@/views/Home/teamUI/СandidateButton';
 // info from the database
 import { ourMembersData } from '@/services/fund-common-data';
 

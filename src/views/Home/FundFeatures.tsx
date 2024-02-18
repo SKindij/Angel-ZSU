@@ -5,8 +5,8 @@ import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 // views components
 import angelOnSUVPic from '../../../public/images/angel-on-SUV.png';
-import MainTypowriter from '@/views/Home/features/MainTypowriter';
-import FeaturesDataBlock from '@/views/Home/features/FeaturesDataBlock';
+import MainTypowriter from '@/views/Home/featuresUI/MainTypowriter';
+import FeaturesDataBlock from '@/views/Home/featuresUI/FeaturesDataBlock';
 
 
 const FundFeatures = () => {

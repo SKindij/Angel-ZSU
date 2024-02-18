@@ -1,9 +1,9 @@
 // @/views/Home/FundPartners.tsx
 import Box from '@mui/material/Box';
-import SectionHeader from '@/views/Common/SectionHeader';
+import SectionHeader from '@/views/CommonUI/SectionHeader';
 
-import { GalleryWrapper } from './partners/MainWrapper';
-import GalleryBox from './partners/GalleryBox';
+import { GalleryWrapper } from './partnersUI/MainWrapper';
+import GalleryBox from './partnersUI/GalleryBox';
 import { partnersImages1, partnersImages2 } from '@/services/fund-common-data';
 
 const FundPartners = () => {

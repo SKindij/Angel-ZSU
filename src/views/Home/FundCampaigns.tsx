@@ -3,9 +3,9 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 // views components
-import SectionHeader from '@/views/Common/SectionHeader';
-import CollectCard from '@/views/Home/campaigns/CollectCard';
-import ToVideoBButtons from '@/views/Home/campaigns/ToVideoButtons';
+import SectionHeader from '@/views/CommonUI/SectionHeader';
+import CollectCard from '@/views/Home/campaignsUI/CollectCard';
+import ToVideoBButtons from '@/views/Home/campaignsUI/ToVideoButtons';
 // info from data base
 import { fundRaisingData } from '@/services/get-data';
 
@@ -23,13 +23,16 @@ const FundCampaigns = () => {
           rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 6 }}
         >
           <Grid item key={fundRaisingData[0].id} xs={12} sm={6} md={4}>
-            <CollectCard collectData={fundRaisingData[0]}/>
+            <CollectCard collectData={fundRaisingData[3]}/>
           </Grid>
           <Grid item key={fundRaisingData[1].id} xs={12} sm={6} md={4}>
+            <CollectCard collectData={fundRaisingData[2]}/>
+          </Grid>
+          <Grid item key={fundRaisingData[2].id} xs={12} sm={6} md={4}>
             <CollectCard collectData={fundRaisingData[1]}/>
           </Grid>
           <Grid item key={fundRaisingData[2].id} xs={12} sm={6} md={4}>
-            <CollectCard collectData={fundRaisingData[2]}/>
+            <CollectCard collectData={fundRaisingData[0]}/>
           </Grid>
         </Grid>
       </Container>

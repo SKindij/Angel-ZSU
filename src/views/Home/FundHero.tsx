@@ -9,9 +9,9 @@ import Typography from '@mui/material/Typography';
 // use local images
 import angelBrendPic from '../../../public/images/layout/angel-zsu-brend-480.png';
 // views content components
-import Slogan from '@/views/Home/hero/Slogan';
-import ScrollingButtons from '@/views/Home/hero/ScrollingButtons';
-import Achievements from '@/views/Home/hero/Achievements';
+import Slogan from '@/views/Home/heroUI/Slogan';
+import ScrollingButtons from '@/views/Home/heroUI/ScrollingButtons';
+import Achievements from '@/views/Home/heroUI/Achievements';
 
 const FundHero = () => {
   return (

@@ -1,4 +1,4 @@
-// @/views/Home/hero/Slogan.tsx
+// @/views/Home/heroUI/Slogan.tsx
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 

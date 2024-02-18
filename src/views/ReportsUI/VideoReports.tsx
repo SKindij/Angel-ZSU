@@ -1,7 +1,7 @@
-// @/views/Reports/VideoReports.tsx
+// @/views/ReportsUI/VideoReports.tsx
 import Box from '@mui/material/Box';
 // views component
-import VideoGallery from '@/views/Common/VideoGallery';
+import VideoGallery from '@/views/CommonUI/VideoGallery';
 // information from the database
 import {
   reportOfCarsVideos, reportOfMedicalInstruments, reportOfUFOvideos, reportOfUsefulThingsVideos
