@@ -20,12 +20,12 @@ const CollectCard = ( { collectData }:CollectCardProps ) => {
 
   return (
     <Card sx={{ maxWidth: 345, boxShadow: 3, borderRadius: 8 }}>
-	  {/*  */}
+	  {/* актульність та різновид збору */}
 	  <CardHeader
         title={collectData.title}
         subheader={collectData.variation}
       />
-	  {/*  */}
+	  {/* картинка, що залежить від різновиду збору */}
 	  <CardMedia component="img"
         sx={{ objectFit: 'cover', height: '100%', }}
         image={'/images/donate/reptile.jpg'}

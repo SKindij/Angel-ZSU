@@ -38,7 +38,7 @@ export const fundRaisingData:IFundRaising[] = [
     isСomplete: true
   },
   {
-    id: 1003,
+    id: 1004,
     title: 'Перший збір',
     variation:'onDron',
     info:'Інформація про цей збір',
