@@ -22,6 +22,10 @@ export const metadata:Metadata = {
   generator: 'Next.js',
   applicationName: 'AngelZSU',
   creator: 'Serhii Kindij',
+  metadataBase: new URL('https://angelzsu.com/'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'Янгол ЗСУ',
     description: 'Благодійний фонд Янгол Збройних Сил України.',

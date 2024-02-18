@@ -1,6 +1,6 @@
 // @/app/auth/signup/page.tsx
 import { Metadata } from 'next';
-import SignUpForm from '@/views/Auth/SignUpForm';
+import SignUpForm from '@/views/AuthUI/SignUpForm';
 
 export const metadata:Metadata = {
   title: 'Реєстрація',

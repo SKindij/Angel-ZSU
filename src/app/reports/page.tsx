@@ -2,10 +2,10 @@
 import { Metadata } from 'next';
 import Container from '@mui/material/Container';
 // views components
-import SectionHeader from '@/views/Common/SectionHeader';
+import SectionHeader from '@/views/CommonUI/SectionHeader';
 import {
   VideoOfCarsReports, VideoOfMedicalInstrumentsReports, VideoOfUFOreports, VideoOfUsefulThingsReports
-} from '@/views/Reports/VideoReports';
+} from '@/views/ReportsUI/VideoReports';
 
 export const metadata:Metadata = {
   title: 'Відео-звіти ЗСУ',

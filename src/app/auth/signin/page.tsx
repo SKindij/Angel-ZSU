@@ -1,6 +1,6 @@
 // @/app/auth/signin/page.tsx
 import { Metadata } from 'next';
-import SignInForm from '@/views/Auth/SignInForm';
+import SignInForm from '@/views/AuthUI/SignInForm';
 
 export const metadata:Metadata = {
   title: 'Адмін вхід',
