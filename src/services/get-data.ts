@@ -14,35 +14,39 @@ import { sql } from '@vercel/postgres';
 import {IFundRaising} from '@/models/interfaces';
 export const fundRaisingData:IFundRaising[] = [
   {
-    id: 1001,
-    title: 'Четвертий збір',
-    variation:'onCar',
-    info:'Інформація про цей збір',
+    id: 7001,
+    isActual: false,
+    variation:'for car',
+    purpose: 'На придбання автомобіля для евакуації поранених',
+    info:'Допоможіть нам придбати автомобіль для ефективної доставки бійців до медичних пунктів.',
     value: 475000,
-    isСomplete: false
+
   },
   {
-    id: 1002,
-    title: 'Третій збір',
-    variation:'onMedicine',
-    info:'Інформація про цей збір',
+    id: 7002,
+    isActual: false,
+    variation:'for medicine',
+    purpose: 'На закупівлю медичного обладнання та препаратів',
+    info:'Збираємо кошти на закупівлю турнікетів, нош, ліків.',
     value: 32000,
-    isСomplete: true
+
   },
   {
-    id: 1003,
-    title: 'Другий збір',
-    variation:'onTools',
-    info:'Інформація про цей збір',
+    id: 7003,
+    isActual: false,
+    variation:'for equipment',
+    purpose: 'На придбання інструментів для ремонту та будівництва бліндажів',
+    info:'Потрібні кошти на закупівлю інструментів для проведення робіт у прифронтових районах.',
     value: 21000,
-    isСomplete: true
+
   },
   {
-    id: 1004,
-    title: 'Перший збір',
-    variation:'onDron',
-    info:'Інформація про цей збір',
+    id: 7004,
+    isActual: true,
+    variation:'for drone',
+    purpose: 'На придбання дронів для військового підрозділу',
+    info:'Допоможіть нам придбати дрони для ведення ефективної розвідки ворожих позицій.',
     value: 47000,
-    isСomplete: true
+
   },
 ];

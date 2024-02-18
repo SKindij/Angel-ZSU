@@ -45,5 +45,7 @@ export interface IFundRaising {
   purpose:string;
   info:string;
   value:number;
+  requestVideoUrl?:string;
+  reportVideoUrl?:string;
 };
 

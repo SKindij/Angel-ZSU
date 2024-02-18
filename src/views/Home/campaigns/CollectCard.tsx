@@ -20,9 +20,9 @@ const CollectCard = ( { collectData }:CollectCardProps ) => {
 
   return (
     <Card sx={{ maxWidth: 345, boxShadow: 3, borderRadius: 8 }}>
-	  {/* актульність та різновид збору */}
-	  <CardHeader
-        title={collectData.title}
+	    {/* актульність та різновид збору */}
+	    <CardHeader
+        title={collectData.isActual ? 'Актуальний Збір' : 'Збір Закрито'}
         subheader={collectData.variation}
       />
 	  {/* картинка, що залежить від різновиду збору */}
