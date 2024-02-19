@@ -3,50 +3,49 @@ import { unstable_noStore as noStore } from 'next/cache';
 // function allows you to make queries to the database
 import { sql } from '@vercel/postgres';
 
-/* -----  ----- */
-
-
-
-
-
-
-/* -----  ----- */
+import { FundRaisingVariation } from '@/models/types';
 import {IFundRaising} from '@/models/interfaces';
-export const fundRaisingData:IFundRaising[] = [
-  {
-    id: 7501,
-    isActual: false,
-    variation:'for car',
-    purpose: 'На ремонт евакуаційного автомобіля',
-    info:'Допоможіть нам придбати автомобіль для ефективної доставки бійців до медичних пунктів.',
-    value: 98000,
 
-  },
-  {
-    id: 7502,
-    isActual: false,
-    variation:'for medicine',
-    purpose: 'На закупівлю медичного обладнання та препаратів',
-    info:'Збираємо кошти на закупівлю турнікетів, нош, ліків.',
-    value: 23000,
+/* ----- FUND CAMPAIGNS  ----- */
+// Function to get all Collect Cards Info
+export async function fetchAllFundRaiserData():Promise<IFundRaising[]> {
+  noStore(); // this prevent response from being cached
+  try {
+    console.log('Fetching Collect Cards Info...');
+    const raiserData = await sql<IFundRaising>`
+      -- choose the data we need
+      SELECT 
+        fr.fr_id AS id,
+        fr.fr_is_actual AS isActual,
+        fr.fr_purpose AS purpose,
+        fr.fr_info AS info,
+        fr.fr_value AS value,
+        fr.request_video_url AS requestVideoUrl,
+        fr.report_video_url AS reportVideoUrl,
+        frv.frv_id AS variation_id,
+        frv.frv_type AS variation
+      FROM 
+        fund_raising_cards fr
+      -- combine data table with fields of other tables
+      JOIN 
+        fund_raising_variation frv ON fr.variation_id = frv.frv_id
+      -- sort received data rows
+      ORDER BY 
+        fr.fr_id DESC;
+    `;
+    console.log('Raiser Data fetch completed.');
+    console.log(raiserData.rows[0]);
 
-  },
-  {
-    id: 7503,
-    isActual: false,
-    variation:'for equipment',
-    purpose: 'На придбання інструментів для бліндажів',
-    info:'Потрібні кошти на закупівлю інструментів для проведення робіт у прифронтових районах.',
-    value: 18000,
+    return raiserData.rows;
 
-  },
-  {
-    id: 7504,
-    isActual: true,
-    variation:'for drone',
-    purpose: 'На придбання дронів для військового підрозділу',
-    info:'Допоможіть нам придбати дрони для ведення ефективної розвідки ворожих позицій.',
-    value: 37000,
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch Raiser Data.');
+  }
+};
 
-  },
-];
+
+
+
+
+/* -----  ----- */

@@ -13,10 +13,8 @@ import IconArrowBack from '@mui/icons-material/ArrowBack';
 import IconArrowForward from '@mui/icons-material/ArrowForward';
 // views content components
 import SectionHeader from '@/views/CommonUI/SectionHeader';
-import CollectCard from '@/views/Home/campaignsUI/CollectCard';
+import FundRaiserData from '@/views/Home/campaignsUI/RaiserData';
 import ToVideoBButtons from '@/views/Home/campaignsUI/ToVideoButtons';
-// info from data base
-import { fundRaisingData } from '@/services/get-data';
 
 interface SliderArrowArrow {
   onClick?:()=>void;
@@ -65,9 +63,7 @@ const FundCampaigns = () => {
 
         {/* Actual cash fees slider*/}
         <Slider {...sliderConfig}>
-          {fundRaisingData.map((data, index) => (
-            <CollectCard key={index} collectData={data} />
-          ))}
+          <FundRaiserData />
         </Slider>
 	  </Container>
 
