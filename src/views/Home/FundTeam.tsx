@@ -1,6 +1,6 @@
 // @/views/Home/FundTeam.tsx
 'use client';
-import React, { FC } from 'react';
+import { FC } from 'react';
 import Slider, { Settings } from 'react-slick';
 import { useTheme, styled } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -53,11 +53,13 @@ const StyledDots = styled('ul')(({ theme }) => ({
 
 const FundTeam = () => {
   const { breakpoints } = useTheme();
-  const matchMobileView = useMediaQuery(breakpoints.down('md'));
+  const matchMobileView = useMediaQuery(breakpoints.down('sm'));
+  const matchTabletView = useMediaQuery(breakpoints.down('md'));
 
   const sliderConfig:Settings = {
-    infinite: true, speed: 300, // autoplay: true,
-    slidesToShow: matchMobileView ? 1 : 3, slidesToScroll: 1,
+    // infinite: true, speed: 300, autoplay: true,
+    slidesToShow: matchMobileView ? 1 : (matchTabletView ? 2 : 3),
+    slidesToScroll: 1,
     prevArrow: <SliderArrow type="prev" />, nextArrow: <SliderArrow type="next" />,
     dots: !matchMobileView, appendDots: (dots) => <StyledDots>{dots}</StyledDots>,
     customPaging: () => (
