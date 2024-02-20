@@ -4,10 +4,9 @@ import Container from '@mui/material/Container';
 // views content components
 import SectionHeader from '@/views/CommonUI/SectionHeader';
 import RaiserCarousele from '@/views/Home/campaignsUI/RaiserCarousele';
-import RaiserData from '@/views/Home/campaignsUI/RaiserData';
 import ToVideoBButtons from '@/views/Home/campaignsUI/ToVideoButtons';
-
 import CollectCard from '@/views/Home/campaignsUI/CollectCard';
+
 import {IFundRaising} from '@/models/interfaces';
 // get info from data base
 import { fetchAllFundRaiserData } from '@/services/get-data';
@@ -18,8 +17,7 @@ const FundCampaigns = async () => {
     console.log('No Fund Raisers data received.');
     return <p>No Fund Raisers info available.</p>;
   }
-  console.log('Received fundRaisers data:');
-  console.log(fundRaisers);
+  console.log('Received fundRaisers data!');
 
   return (
     <Box id="fund-campaigns" sx={{ pt:1, pb:{xs:4, md:6} }}>
