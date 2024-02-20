@@ -5,12 +5,12 @@
 ### Fund Campaigns
 
 ```sql
-  CREATE TABLE fund_raising_variation (
-    frv_id SMALLINT PRIMARY KEY,
-    frv_type VARCHAR(20) NOT NULL UNIQUE
+  CREATE TABLE fund_raising_types (
+    id SMALLINT PRIMARY KEY,
+    type VARCHAR(20) NOT NULL UNIQUE
   );
 
-  INSERT INTO fund_raising_variation (frv_id, frv_type)
+  INSERT INTO fund_raising_types (id, type)
   VALUES
     (21, 'for car'),
     (22, 'for drone'),
@@ -18,18 +18,18 @@
     (24, 'for equipment'),
     (25, 'for another');
 
-  CREATE TABLE fund_raising_cards (
-    fr_id SMALLSERIAL PRIMARY KEY,
-    fr_is_actual BOOLEAN NOT NULL,
-	variation_id SMALLINT REFERENCES fund_raising_variation(frv_id) NOT NULL ,
-    fr_purpose VARCHAR(50) NOT NULL,
-    fr_info TEXT NOT NULL,
-    fr_value REAL NOT NULL,
+  CREATE TABLE fund_raising_info (
+    id SMALLSERIAL PRIMARY KEY,
+    is_actual BOOLEAN NOT NULL,
+	type_id SMALLINT REFERENCES fund_raising_types(id) NOT NULL ,
+    purpose VARCHAR(50) NOT NULL,
+    info TEXT NOT NULL,
+    value INTEGER NOT NULL,
     request_video_url VARCHAR(255),
     report_video_url VARCHAR(255)
   );
 
-  INSERT INTO fund_raising_cards (fr_id, fr_is_actual, variation_id, fr_purpose, fr_info, fr_value)
+  INSERT INTO fund_raising_info (id, is_actual, type_id, purpose, info, value)
   VALUES
     (7501, false, 21, 'На ремонт евакуаційного автомобіля', 'Допоможіть нам придбати автомобіль для ефективної доставки бійців до медичних пунктів.', 98000),
     (7502, false, 23, 'На закупівлю медичного обладнання та препаратів', 'Збираємо кошти на закупівлю турнікетів, нош, ліків.', 23000),
@@ -38,17 +38,26 @@
 ```
 
 
-### users
-
-
-
-
-
+- - -
 
 ## Retrieving Data
 
+```sql
+  SELECT * FROM fund_raising_types;
+
+  SELECT * FROM fund_raising_info;
+  
+  SELECT id, purpose, value FROM fund_raising_info;
 
 
+
+```
+
+
+#### Command to delete a table from a database
+```sql
+  DROP TABLE table_name;
+```
 
 
 
