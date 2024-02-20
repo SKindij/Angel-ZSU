@@ -40,7 +40,7 @@ export interface ITeamMember {
 
 export interface IFundRaising {
   id:number;
-  isActual:boolean;
+  is_actual:boolean;
   variation:FundRaisingVariation;
   purpose:string;
   info:string;

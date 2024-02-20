@@ -7,33 +7,31 @@ import { FundRaisingVariation } from '@/models/types';
 import {IFundRaising} from '@/models/interfaces';
 
 /* ----- FUND CAMPAIGNS  ----- */
-// Function to get all Collect Cards Info
 export async function fetchAllFundRaiserData():Promise<IFundRaising[]> {
-  noStore(); // this prevent response from being cached
+  // noStore(); this prevent response from being cached
+  // is equivalent to in fetch(..., {cache: 'no-store'})
   try {
-    console.log('Fetching Collect Cards Info...');
+    console.log('Fetching Fund Raising Info...');
     const raiserData = await sql<IFundRaising>`
       -- choose the data we need
       SELECT 
-        fr.fr_id AS id,
-        fr.fr_is_actual AS isActual,
-        fr.fr_purpose AS purpose,
-        fr.fr_info AS info,
-        fr.fr_value AS value,
-        fr.request_video_url AS requestVideoUrl,
-        fr.report_video_url AS reportVideoUrl,
-        frv.frv_id AS variation_id,
-        frv.frv_type AS variation
+        fri.id, frt.type AS variation, 
+		fri.is_actual,
+		fri.purpose, fri.info, fri.value,
+        fri.request_video_url,
+        fri.report_video_url    
       FROM 
-        fund_raising_cards fr
-      -- combine data table with fields of other tables
+        fund_raising_info fri
+      -- combine data table with fields of other table
       JOIN 
-        fund_raising_variation frv ON fr.variation_id = frv.frv_id
+        fund_raising_types frt ON fri.type_id = frt.id
       -- sort received data rows
       ORDER BY 
-        fr.fr_id DESC;
+        fri.id DESC;
     `;
+    // checking form of received data
     console.log('Raiser Data fetch completed.');
+    console.log(`Number of raws: ${raiserData.rows.length}`);
     console.log(raiserData.rows[0]);
 
     return raiserData.rows;
