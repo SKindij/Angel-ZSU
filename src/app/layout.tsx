@@ -30,9 +30,9 @@ export const metadata:Metadata = {
   },
   openGraph: {
     title: 'Янгол ЗСУ',
-    description: 'Благодійний фонд Янгол Збройних Сил України.',
+    description: 'Приганяємо автомобілі. Допомагаємо медикам. Забезпечуємо дронами. Збираємо військове спорядження. Благодійний фонд Янгол Збройних Сил України.',
     url: 'https://angelzsu.com/',
-    siteName: 'Angel ZSU',
+    siteName: 'Angel ZSU (Янгол ЗСУ)',
     locale: 'uk',
     type: 'website',
   },
