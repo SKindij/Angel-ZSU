@@ -1,6 +1,7 @@
 // @/app/layout.tsx
 import { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeRegistry from '@/views/ThemeRegistry/ThemeRegistry';
 import './globals.css';
 import './react-slick.css';
@@ -55,6 +56,7 @@ export default function RootLayout({ children }:{ children:React.ReactNode }) {
           </Box>
         </ThemeRegistry>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
