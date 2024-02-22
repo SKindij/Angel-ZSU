@@ -1,5 +1,6 @@
 // @/app/layout.tsx
 import { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/react';
 import ThemeRegistry from '@/views/ThemeRegistry/ThemeRegistry';
 import './globals.css';
 import './react-slick.css';
@@ -53,6 +54,7 @@ export default function RootLayout({ children }:{ children:React.ReactNode }) {
 			      <AppFooter />
           </Box>
         </ThemeRegistry>
+        <Analytics />
       </body>
     </html>
   );
