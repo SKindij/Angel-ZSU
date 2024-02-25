@@ -15,7 +15,7 @@ const ToVideoButtons = () => {
       </Typography>
       <Grid container spacing={2} justifyContent="center">
         <Grid item xs={9} md={4}>
-          <Link href="#" passHref>
+          <Link href="/campaigns" passHref>
             <Button color="primary" variant="contained" size="medium"
               sx={{
                 px: 1, py: 1, letterSpacing: 2,
@@ -28,7 +28,7 @@ const ToVideoButtons = () => {
           </Link>
         </Grid>
         <Grid item xs={9} md={4}>
-          <Link href="#" passHref>
+          <Link href="/reports" passHref>
             <Button color="secondary" variant="contained" size="medium"
               sx={{
                 px: 1, py: 1, letterSpacing: 2, color: 'primary.dark',
