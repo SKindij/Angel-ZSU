@@ -36,8 +36,8 @@ const AppHeader = () => {
   // hook to get current path (URL) of page
   const pathname = usePathname();
   // hook for authentication
-  // const session = useSession();
-  // console.log(session);
+  const session = useSession();
+  console.log(session);
 
   return (
     <AppBar position="static">
@@ -138,9 +138,18 @@ const AppHeader = () => {
           <HeaderSocialLinks />
           {/* desktop authentication */}
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <Link href="/auth/signin" passHref>
-              <Button color="inherit">Login</Button>
-            </Link>
+            {/* checking the user's session to display relevant links */}
+            {session?.data ? (
+              // link to log out of the active user account
+              <Link href="#" onClick={() => signOut({ callbackUrl: '/' })}>
+                <Button color="inherit">Sign Out</Button>
+              </Link>
+            ) : (
+              // a login link if the user is not logged in
+              <Link href="/auth/signin" passHref>
+                <Button color="inherit">Login</Button>
+              </Link>
+            )}
           </Box>
         </Toolbar>
       </Container>
