@@ -64,28 +64,12 @@ export default function SignInForm() {
               label="Password" id="password"
               autoComplete="current-password"
             />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
             <Button type="submit"
               fullWidth variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{ mt: 4, mb: 2 }}
             >
                 УВІЙТИ
             </Button>
-            <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                    Forgot password?
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link href="/auth/signup" variant="body2">
-                  {'Don\'t have an account? Sign Up'}
-                </Link>
-              </Grid>
-            </Grid>
           </Box>
         </Box>
       </Grid>
