@@ -1,4 +1,4 @@
-// @/views/Home/team/TeamMember.tsx
+// @/views/Home/teamUI/TeamMember.tsx
 import Image from 'next/image';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -18,8 +18,6 @@ export default function TeamMember({ member }:MemberProps) {
         sx={{
           p: 2, borderRadius: 4,
           backgroundColor: 'bakeryBox',
-          transition: (theme) => theme.transitions.create(['box-shadow']),
-          '&:hover': { boxShadow: 2 },
         }}
       >
         <Box

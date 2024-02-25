@@ -1,4 +1,4 @@
-// @/views/Home/team/СandidateButton.tsx
+// @/views/Home/teamUI/СandidateButton.tsx
 import Link from 'next/link';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
