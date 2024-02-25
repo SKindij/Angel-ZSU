@@ -98,6 +98,24 @@ _TypeScript-first schema validation with static type inference_
   - weekly downloads: 5 300 000
 * home-page: https://zod.dev/
 
+### 🔒 "bcrypt"
+A library to help you hash passwords.
+
+* npm-site: https://www.npmjs.com/package/bcrypt
+  - version: 5.1.1
+  - install: `npm install bcrypt`
+  - also: `npm install --save @types/bcrypt`
+  - weekly downloads: 1 400 000
+* home-page: https://github.com/kelektiv/node.bcrypt.js#readme
+
+### NextAuth
+
+* npm-site: https://www.npmjs.com/package/next-auth
+  - version: 4.24.6
+  - install: `npm i next-auth`
+  - weekly downloads: 700 500
+* home-page: https://next-auth.js.org/
+
 ### 🧩 "clsx"
 A tiny (234B) utility for constructing className strings conditionally.\
 Also serves as a faster & smaller drop-in replacement for the `classnames` module.
@@ -110,16 +128,6 @@ Also serves as a faster & smaller drop-in replacement for the `classnames` modul
   - usage: `import { clsx } from 'clsx';`
 
 The clsx function can take any number of arguments, each of which can be an Object, Array, Boolean, or String.
-
-### 🔒 "bcrypt"
-A library to help you hash passwords.
-
-* npm-site: https://www.npmjs.com/package/bcrypt
-  - version: 5.1.1
-  - install: `npm install bcrypt`
-  - also: `npm install --save @types/bcrypt`
-  - weekly downloads: 1 400 000
-* home-page: https://github.com/kelektiv/node.bcrypt.js#readme
 
 ### typewriter-effect
 
@@ -138,16 +146,6 @@ _It is an open source, production-ready library that’s designed for all creati
   - weekly downloads: 2 370 000
 * home-page: https://github.com/framer/motion#readme
 
-### color
-_JavaScript library for immutable color conversion and manipulation with support for CSS color strings._
-
-* npm-site: https://www.npmjs.com/package/color
-  - version: 4.2.3
-  - install: `npm i color`
-  - install: `npm install --save-dev @types/color`
-  - weekly downloads: 17 200 000
-* home-page: https://github.com/Qix-/color#readme
-
 ### react-slick
 _Carousel component built with React. It is a react port of slick carousel._
 
@@ -158,6 +156,16 @@ _Carousel component built with React. It is a react port of slick carousel._
   - install: `npm install slick-carousel`
   - weekly downloads: 965 000
 * home-page: https://react-slick.neostack.com/
+
+### color
+_JavaScript library for immutable color conversion and manipulation with support for CSS color strings._
+
+* npm-site: https://www.npmjs.com/package/color
+  - version: 4.2.3
+  - install: `npm i color`
+  - install: `npm install --save-dev @types/color`
+  - weekly downloads: 17 200 000
+* home-page: https://github.com/Qix-/color#readme
 
 ### 
 
