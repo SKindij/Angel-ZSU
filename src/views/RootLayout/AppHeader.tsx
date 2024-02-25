@@ -2,6 +2,8 @@
 'use client';
 import * as React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useSession, signOut } from 'next-auth/react';
 // MUI components
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -31,6 +33,11 @@ const AppHeader = () => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+  // hook to get current path (URL) of page
+  const pathname = usePathname();
+  // hook for authentication
+  // const session = useSession();
+  // console.log(session);
 
   return (
     <AppBar position="static">
@@ -108,19 +115,24 @@ const AppHeader = () => {
           </Typography>
           {/* desktop site navigation */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, ml: 6 }}>
-            {HeaderNavLinks.map(({ label, href }) => (
-              <Link href={href} passHref key={label}>
-                <Button
-                  sx={{ display: 'block',
-                    my: 2, px: 2,
-                    color: 'white',
-                    '&:hover': { color: 'secondary.main' },
-                  }}
-                >
-                  {label}
-                </Button>
-              </Link>
-            ))}
+            {HeaderNavLinks.map(({ label, href }) => {
+              // determine active navigation state based on current URL
+              // variable gets true or false depending on whether these two values match
+              const isActive = pathname === href;
+              return (
+                <Link href={href} passHref key={label}>
+                  <Button
+                    sx={{ display: 'block',
+                      my: 2, px: 2,
+                      color: isActive ? 'secondary.main' : 'white',
+                      '&:hover': { color: 'secondary.main' },
+                    }}
+                  >
+                    {label}
+                  </Button>
+                </Link>
+              );
+            })}
           </Box>
           {/* desktop Social Media Icons */}
           <HeaderSocialLinks />
