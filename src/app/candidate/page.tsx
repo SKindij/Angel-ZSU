@@ -1,10 +1,10 @@
 // @/app/candidate/page.tsx
 import { Metadata } from 'next';
+import Link from 'next/link';
 import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 // views components
 import SectionHeader from '@/views/CommonUI/SectionHeader';
+import ComplexButton from '@/views/CandidateUI/ComplexButton';
 
 export const metadata:Metadata = {
   title: 'Волонтер',
@@ -19,9 +19,13 @@ export default function CandidatePage() {
         title="СТАНЬ ВОЛОНТЕРОМ"
         description="ЗАПРОШУЄМО В НАШУ КОМАНДУ"
       />
-      {/* Додатковий вміст вашого розділу */}
-
-
+      {/* button-link to questionnaire on Google Docs */}
+      <Link
+        href='https://docs.google.com/forms/d/e/1FAIpQLSfsm3963R77mW8nWuw_2BW_rbPh_tbo6t1e6S_qW0xsXNWxUw/viewform'
+        rel="noopener noreferrer" target="_blank" passHref
+      >
+        <ComplexButton />
+      </Link>
     </Container>
   );
 }
