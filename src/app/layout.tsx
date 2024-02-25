@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import ThemeRegistry from '@/views/ThemeRegistry/ThemeRegistry';
+import { Providers } from '@/views/AuthUI/Providers';
 import './globals.css';
 import './react-slick.css';
 // import 'slick-carousel/slick/slick-theme.css';
@@ -44,16 +45,18 @@ export default function RootLayout({ children }:{ children:React.ReactNode }) {
     <html lang="uk">
       <body>
         <ThemeRegistry>
-          <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-            {/* menu and app site navigation */}
-            <AppHeader />
-            <Box component="main">
-              {/* the main content of the site */}
-              {children}
-            </Box>
-            {/* bottom content of site */}
+          <Providers>
+            <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+              {/* menu and app site navigation */}
+              <AppHeader />
+              <Box component="main">
+                {/* the main content of the site */}
+                {children}
+              </Box>
+              {/* bottom content of site */}
 			      <AppFooter />
-          </Box>
+            </Box>
+          </Providers>
         </ThemeRegistry>
         <Analytics />
         <SpeedInsights />
