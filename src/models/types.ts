@@ -7,7 +7,7 @@ export type PartnerImage = {
 };
 
 export type TUser = {
-  id:number;
+  id:string;
   name:string;
   role:string;
   email:string;
