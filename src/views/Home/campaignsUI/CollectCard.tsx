@@ -11,8 +11,6 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 // MUI icons
 import PlayCircleOutlinedIcon from '@mui/icons-material/PlayCircleOutlined';
-import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
-import DeleteOutlineRoundedIcon from '@mui/icons-material/DeleteOutlineRounded';
 
 import { IFundRaising } from '@/models/interfaces';
 type CollectCardProps = { collectData:IFundRaising } ;
