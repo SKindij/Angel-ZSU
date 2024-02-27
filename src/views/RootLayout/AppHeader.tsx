@@ -140,10 +140,19 @@ const AppHeader = () => {
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             {/* checking the user's session to display relevant links */}
             {session?.data ? (
-              // link to log out of the active user account
-              <Link href="#" onClick={() => signOut({ callbackUrl: '/' })}>
-                <Button color="inherit">Sign Out</Button>
-              </Link>
+              <>
+                <Link href="/admin">
+                  <Button color="inherit"
+                    sx={{'&:hover': { color: 'secondary.main' } }}>
+                      Admin
+                  </Button>
+                </Link>
+                <Link href="#" onClick={() => signOut({ callbackUrl: '/' })}>
+                  <Button color="inherit" sx={{'&:hover': { color: 'secondary.main' } }}>
+                    Sign Out
+                  </Button>
+                </Link>
+              </>
             ) : (
               // a login link if the user is not logged in
               <Link href="/auth/signin" passHref>
