@@ -47,5 +47,6 @@ export interface IFundRaising {
   value:number;
   requestVideoUrl?:string;
   reportVideoUrl?:string;
+  monobanka?:string;
 };
 
