@@ -55,16 +55,22 @@ const CollectCard = ( { collectData }:CollectCardProps ) => {
 		        }}
           >
             {/* conditional rendering for the button */}
-            {collectData.requestVideoUrl && (
-              <Button variant="outlined" size="small" startIcon={<PlayCircleOutlinedIcon />}>
+            {collectData.request_video_url && (
+              <Link href={collectData.request_video_url}
+                rel="noopener noreferrer" target="_blank" passHref >
+                <Button variant="outlined" size="small" startIcon={<PlayCircleOutlinedIcon />}>
                 YouTube запиту
-              </Button>
+                </Button>
+              </Link>
             )}
             {/* conditional rendering for the button */}
-            {collectData.reportVideoUrl && (
-              <Button variant="outlined" size="small" startIcon={<PlayCircleOutlinedIcon />}>
+            {collectData.report_video_url && (
+              <Link href={collectData.report_video_url}
+                rel="noopener noreferrer" target="_blank" passHref >
+                <Button variant="outlined" size="small" startIcon={<PlayCircleOutlinedIcon />}>
                 YouTube звіту
-              </Button>
+                </Button>
+              </Link>
             )}
           </Box>
 		      <Typography variant="body1" mb={1}>
@@ -72,7 +78,8 @@ const CollectCard = ( { collectData }:CollectCardProps ) => {
           </Typography>
           <Box sx={{ display:'flex', flexDirection:'column', justifyContent:'center', mb:2 }}>
             {collectData.is_actual && (
-              <Link href={collectData.monobanka ? collectData.monobanka : '/donate'} >
+              <Link href={collectData.monobanka ? collectData.monobanka : '/donate'}
+                rel="noopener noreferrer" target="_blank" passHref >
                 <Button variant="contained" size="medium" color="success">
                 на Mono банку
                 </Button>

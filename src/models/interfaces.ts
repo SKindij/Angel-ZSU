@@ -45,8 +45,8 @@ export interface IFundRaising {
   purpose:string;
   info:string;
   value:number;
-  requestVideoUrl?:string;
-  reportVideoUrl?:string;
+  request_video_url?:string;
+  report_video_url?:string;
   monobanka?:string;
 };
 

@@ -11,10 +11,11 @@ export async function fetchAllFundRaiserData():Promise<IFundRaising[]> {
       -- choose the data we need
       SELECT 
         fri.id, frt.type AS variation, 
-		fri.is_actual,
-		fri.purpose, fri.info, fri.value,
+		    fri.is_actual,
+		    fri.purpose, fri.info, fri.value,
         fri.request_video_url,
-        fri.report_video_url    
+        fri.report_video_url,
+        fri.monobanka
       FROM 
         fund_raising_info fri
       -- combine data table with fields of other table
