@@ -8,11 +8,11 @@ export function getFundraisingImagePath(variation:FundRaisingVariation):string {
     case 'for drone':
       return '/images/donate/dron_fundraising.png';
     case 'for medicine':
-      return '/images/donate/medicine_fundraising.jpg';
+      return '/images/donate/medicine_fundraising.png';
     case 'for equipment':
-      return '/images/donate/tools_fundraising.jpg';
+      return '/images/donate/tools_fundraising.png';
     case 'for another':
-      return '/images/donate/other_fundraising.jpg';
+      return '/images/donate/other_fundraising.png';
   }
 };
 
