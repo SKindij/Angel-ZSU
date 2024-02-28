@@ -50,7 +50,7 @@
   
   SELECT id, purpose, value FROM fund_raising_info;
 
-
+  SELECT id, request_video_url, report_video_url FROM fund_raising_info;
 
 ```
 

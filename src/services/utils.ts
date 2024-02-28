@@ -4,9 +4,9 @@ import { FundRaisingVariation } from '@/models/types';
 export function getFundraisingImagePath(variation:FundRaisingVariation):string {
   switch (variation) {
     case 'for car':
-      return '/images/donate/car_fundraising.jpg';
+      return '/images/donate/car_fundraising.png';
     case 'for drone':
-      return '/images/donate/dron_fundraising.jpg';
+      return '/images/donate/dron_fundraising.png';
     case 'for medicine':
       return '/images/donate/medicine_fundraising.jpg';
     case 'for equipment':

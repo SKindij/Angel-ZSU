@@ -28,6 +28,7 @@ export async function fetchAllFundRaiserData():Promise<IFundRaising[]> {
     // checking form of received data
     console.log('Raiser Data fetch completed.');
     console.log(`Number of raws: ${raiserData.rows.length}`);
+    console.log(raiserData.rows);
     return raiserData.rows;
 
   } catch (error) {
