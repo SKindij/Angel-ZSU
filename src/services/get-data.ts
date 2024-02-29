@@ -1,13 +1,14 @@
 // @/services/get-data.ts
-import { sql } from '@vercel/postgres';
-
 import {IFundRaising} from '@/models/interfaces';
+// function allows to make queries to database
+import { sql } from '@vercel/postgres';
+import { unstable_noStore as noStore } from 'next/cache';
 
 /* ----- FUND CAMPAIGNS  ----- */
 export async function fetchAllFundRaiserData():Promise<IFundRaising[]> {
   try {
     console.log('Fetching Fund Raising Info...');
-    const raiserData = await sql<IFundRaising>`
+    const raisersData = await sql<IFundRaising>`
       -- choose the data we need
       SELECT 
         fri.id, frt.type AS variation, 
@@ -27,8 +28,8 @@ export async function fetchAllFundRaiserData():Promise<IFundRaising[]> {
     `;
     // checking form of received data
     console.log('Raiser Data fetch completed.');
-    console.log(`Number of raws: ${raiserData.rows.length}`);
-    return raiserData.rows;
+    console.log(`Number of raws: ${raisersData.rows.length}`);
+    return raisersData.rows;
 
   } catch (error) {
     console.error('Database Error:', error);
@@ -36,8 +37,24 @@ export async function fetchAllFundRaiserData():Promise<IFundRaising[]> {
   }
 };
 
+export async function fetchFundRaiserById(id:number) {
+  // this prevent response from being cached
+  noStore(); // equivalent to fetch(..., {cache: 'no-store'})
+  try {
+    // execute SQL query to receive fee for its id
+    const raiserData = await sql<IFundRaising>`
+      SELECT * FROM fund_raising_info WHERE id = ${id};
+    `;
+    return raiserData.rows[0];
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch raiser.');
+  }
+}
+
 
 
 
 
 /* -----  ----- */
+
