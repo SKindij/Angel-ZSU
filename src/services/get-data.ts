@@ -52,7 +52,21 @@ export async function fetchFundRaiserById(id:number) {
   }
 }
 
-
+export async function fetchRaiserTypes():Promise<string[]> {
+  // this prevent response from being cached
+  noStore(); // equivalent to fetch(..., {cache: 'no-store'})
+  try {
+    console.log('Fetching raiser types...');
+    const data = await sql`SELECT type FROM fund_raising_types;`;
+    // extract type names from rows
+    const raisingTypes = data.rows.map( (row) => row.type );
+    console.log(`Number of types: ${raisingTypes.length}`); // => 4
+    return raisingTypes;
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch type names.');
+  }
+}
 
 
 

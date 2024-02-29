@@ -45,8 +45,10 @@
 
 ```sql
   SELECT * FROM fund_raising_types;
+  SELECT type FROM fund_raising_types;
+
   SELECT * FROM fund_raising_info;
-  
+
   SELECT id, purpose, value FROM fund_raising_info;
   SELECT id, request_video_url, report_video_url FROM fund_raising_info;
 
