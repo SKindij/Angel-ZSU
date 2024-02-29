@@ -1,6 +1,6 @@
 {
   "name": "angel-zsu",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "private": true,
   "author": "SKindij",
   "description": "Website of the 'Angel of the Armed Forces of Ukraine' charity fund",
@@ -34,7 +34,8 @@
     "react-dom": "18.2.0",
     "react-slick": "^0.30.0",
     "slick-carousel": "^1.8.1",
-    "typewriter-effect": "^2.21.0"
+    "typewriter-effect": "^2.21.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.0.4",
