@@ -33,46 +33,49 @@ export default function RaiserEditForm({ raiser, raisingTypes }:RaiserEditFormPr
       <Stack sx={{ width: 300 }}
         spacing={{ xs: 1, sm: 2, md: 3 }}
       >
-        <Divider>Зміна параметрів напою.</Divider>
-        {/* Поле для зміни країни виробництва напою */}
+        <Divider>базові дані щодо збору</Divider>
         <FormControl required size="small">
-          <InputLabel id="country-label">країна виробництва</InputLabel>
-          <Select name="country"
-            labelId="country-label" id="country"
+          <InputLabel id="country-label">актуальність збору</InputLabel>
+          <Select name="actual"
+            labelId="actual-label" id="actual"
             defaultValue={raiser.is_actual}
           >
-            <MenuItem value="" disabled><em>перелік країн</em></MenuItem>
+            <MenuItem value="" disabled><em>категорія збору</em></MenuItem>
             {raisingTypes.map( (type, index) => (
               <MenuItem key={index} value={type}>{type}</MenuItem>
             ) )}
           </Select>
-          <FormHelperText>* Required</FormHelperText>
+          <FormHelperText>* required</FormHelperText>
         </FormControl>
 
-        {/* Поле для редагування назви напою */}
+        <Divider>мета та інформація щодо збору</Divider>
         <TextField type="text" color="secondary" size="small"
-          id="title" name="title"
-          label="* Введіть найменування напою"
-          placeholder="Назва місткістьL"
+          id="purpose" name="purpose"
+          label="* введіть назву збору"
+          placeholder="на що збираємо?"
           defaultValue={raiser.purpose}
-          helperText="* edit beverige title"
+          helperText="* edit raiser title"
         />
-        {/* ----- ЦІНИ МАГАЗИНІВ ----- */}
-        <Divider>поля зміни цін магазинів</Divider>
-        <TextField type="number" size="small"
-          id="priceAuchan" name="priceAuchan"
-          label="Auchan"
-          placeholder="ГРН"
-          defaultValue={raiser.value}
-        />
-        {/* ----- ОПИС НАПОЮ ----- */}
-        <Divider>поле зміни опису напою</Divider>
         <TextField type="text" color="secondary" size="small"
-          id="description" name="description"
-          label="Напишіть щось про цей напій"
+          id="info" name="info"
+          label="Напишіть щось про цей збір"
           defaultValue={raiser.info}
         />
 
+        <Divider>скільки вам потрібно зібрати?</Divider>
+        <TextField type="number" size="small"
+          id="value" name="value"
+          label="value"
+          placeholder="ГРН"
+          defaultValue={raiser.value}
+        />
+
+        <Divider>посилання на різні ресурси</Divider>
+
+
+
+
+        {/* ----- administrator function buttons ----- */}
         <Link href="/admin">
           <Button variant="outlined">Відмінити</Button>
         </Link>
