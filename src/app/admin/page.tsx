@@ -16,8 +16,7 @@ export default async function AdminPage() {
   const session = await getServerSession(authConfig);
 
   return (
-    <Box sx={{ padding: '20px', }}>
-	  {/* display username */}
+    <Box sx={{ p: 2, }}>
       <Typography variant="subtitle1" color="lostLavender">
         Вітаю {session?.user?.name} !
       </Typography>
