@@ -18,27 +18,22 @@ import FormHelperText from '@mui/material/FormHelperText';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 // put information to the database
-import { updateRaiser } from '@/services/data-actions';
+import { createRaiser } from '@/services/data-actions';
 
 interface RaiserCreateFormProps {
-  raiser:IFundRaising;
   raisingTypes:string[];
 }
 // form for editing information about the raiser
-export default function RaiserCreateForm({ raiser, raisingTypes }:RaiserCreateFormProps) {
-  // creates new function that will have same body but with a fixed value raiser.id
-  // useful if you need to pass function with certain parameters to another place
-  const updateRaiserWithId = updateRaiser.bind(null, raiser.id);
+export default function RaiserCreateForm({ raisingTypes }:RaiserCreateFormProps) {
   // to control the value of the radio buttons
-  const [value, setValue] = useState(raiser.is_actual.toString());
+  const [value, setValue] = useState('true');
   const handleChange = (event:React.ChangeEvent<HTMLInputElement>) => {
     setValue((event.target as HTMLInputElement).value);
   };
 
   return (
-    <form action={updateRaiserWithId}>
+    <form action={createRaiser}>
       {/* hidden field to pass id of drink to be updated */}
-      <input type="hidden" name="id" value={raiser.id} />
       <Stack sx={{ width: 300, my:2 }}
         spacing={{ xs: 1, sm: 2, md: 3 }}
       >
@@ -59,7 +54,6 @@ export default function RaiserCreateForm({ raiser, raisingTypes }:RaiserCreateFo
           <InputLabel id="variation-label">категорія збору</InputLabel>
           <Select name="variation"
             labelId="variation-label" id="variation"
-            defaultValue={raiser.variation}
           >
             <MenuItem value="" disabled><em>категорії збору</em></MenuItem>
             {raisingTypes.map( (type, index) => (
@@ -72,43 +66,39 @@ export default function RaiserCreateForm({ raiser, raisingTypes }:RaiserCreateFo
         <Divider>мета та інформація щодо збору</Divider>
         <TextField type="text" color="secondary" size="small"
           id="purpose" name="purpose"
-          label="* введіть назву збору"
-          defaultValue={raiser.purpose}
-          helperText="* редагування мети збору"
+          label="* назва збору"
+          placeholder="введіть текст"
         />
         <TextField type="text" color="secondary" size="small"
           id="info" name="info"
-          label="* напишіть щось про цей збір"
-          defaultValue={raiser.info}
-          helperText="* зміна інформації щодо збору"
+          label="* інформація про збір"
+          placeholder="введіть текст"
         />
 
         <Divider>яку суму потрібно зібрати?</Divider>
         <TextField type="number" size="small"
           id="value" name="value"
           label="value"
-          defaultValue={raiser.value}
+          placeholder="ГРН"
         />
 
         <Divider>посилання на YouTube</Divider>
         <TextField type="text" color="secondary" size="small"
           id="requestVideo" name="requestVideo"
-          label="* посилання на відео запит"
-          defaultValue={raiser.request_video_url}
+          label="* url на відео запит"
+          placeholder="введіть посилання"
         />
         <TextField type="text" color="secondary" size="small"
           id="reportVideo" name="reportVideo"
-          label="* посилання на відео звіт"
-          defaultValue={raiser.report_video_url}
-          helperText="* зміна посилання на відеозвіт"
+          label="* url на відео звіт"
+          placeholder="введіть посилання"
         />
 
         <Divider>посилання на монобанку</Divider>
         <TextField type="text" color="secondary" size="small"
           id="monobanka" name="monobanka"
-          label="* посилання на монобанку"
-          defaultValue={raiser.monobanka}
-          helperText="* зміна посилання на монобанку"
+          label="* url на монобанку"
+          placeholder="введіть посилання"
         />
 
         {/* ----- administrator function buttons ----- */}
