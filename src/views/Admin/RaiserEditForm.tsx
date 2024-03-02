@@ -19,7 +19,6 @@ import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 // put information to the database
 import { updateRaiser } from '@/services/data-actions';
-
 interface RaiserEditFormProps {
   raiser:IFundRaising;
   raisingTypes:string[];
@@ -34,15 +33,14 @@ export default function RaiserEditForm({ raiser, raisingTypes }:RaiserEditFormPr
   const handleChange = (event:React.ChangeEvent<HTMLInputElement>) => {
     setValue((event.target as HTMLInputElement).value);
   };
-
   return (
     <form action={updateRaiserWithId}>
       {/* hidden field to pass id of drink to be updated */}
       <input type="hidden" name="id" value={raiser.id} />
-      <Stack sx={{ width: 300, my:2 }}
+      <Stack sx={{ width: 450, my:2, pl: 3 }}
         spacing={{ xs: 1, sm: 2, md: 3 }}
       >
-        <Divider>базові дані щодо збору</Divider>
+        <Divider>БАЗОВІ ДАНІ ЩОДО ЗБОРУ</Divider>
         {/* Форма для зміни статусу збору */}
         <FormControl component="fieldset">
           <FormLabel component="legend">Оберіть статус:</FormLabel>
@@ -66,10 +64,9 @@ export default function RaiserEditForm({ raiser, raisingTypes }:RaiserEditFormPr
               <MenuItem key={index} value={type}>{type}</MenuItem>
             ) )}
           </Select>
-          <FormHelperText>* required</FormHelperText>
+          <FormHelperText>* оберіть один із варіантів</FormHelperText>
         </FormControl>
-
-        <Divider>мета та інформація щодо збору</Divider>
+        <Divider>МЕТА ЗБОРУ та КОРОТКИЙ ОПИС</Divider>
         <TextField type="text" color="secondary" size="small"
           id="purpose" name="purpose"
           label="* редагування мети збору"
@@ -81,14 +78,13 @@ export default function RaiserEditForm({ raiser, raisingTypes }:RaiserEditFormPr
           defaultValue={raiser.info}
         />
 
-        <Divider>яку суму потрібно зібрати?</Divider>
+        <Divider>Яку суму потрібно зібрати?</Divider>
         <TextField type="number" size="small"
           id="value" name="value"
           label="value"
           defaultValue={raiser.value}
         />
-
-        <Divider>посилання на YouTube</Divider>
+        <Divider>Посилання на YouTube</Divider>
         <TextField type="text" color="secondary" size="small"
           id="requestVideo" name="requestVideo"
           label="* посилання на відео запит"
@@ -99,14 +95,12 @@ export default function RaiserEditForm({ raiser, raisingTypes }:RaiserEditFormPr
           label="* посилання на відео звіт"
           defaultValue={raiser.report_video_url}
         />
-
-        <Divider>посилання на монобанку</Divider>
+        <Divider>Посилання на Монобанку</Divider>
         <TextField type="text" color="secondary" size="small"
           id="monobanka" name="monobanka"
           label="* посилання на монобанку"
           defaultValue={raiser.monobanka}
         />
-
         {/* ----- administrator function buttons ----- */}
         <Link href="/admin">
           <Button variant="outlined">Відмінити</Button>
@@ -118,12 +112,3 @@ export default function RaiserEditForm({ raiser, raisingTypes }:RaiserEditFormPr
     </form>
   );
 }
-
-
-
-
-
-
-
-
-

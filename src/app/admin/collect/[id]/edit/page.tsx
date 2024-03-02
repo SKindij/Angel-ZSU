@@ -28,7 +28,7 @@ export default async function CollectEditPage({params}:Props) {
   return (
     <Container>
       {/* зміна інформації про збір */}
-      <Typography variant="h2">
+      <Typography variant="h4" component="h2" color="coral">
         Редагування картки існуючого збору.
       </Typography>
       <RaiserEditForm

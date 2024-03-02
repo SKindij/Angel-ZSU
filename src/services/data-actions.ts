@@ -12,7 +12,7 @@ import { redirect } from 'next/navigation';
 /* ----- shape scheme definition using zod ----- */
 const FormSchema = z.object({
   id: z.string(),
-  isActual: z.boolean(),
+  isActual: z.coerce.boolean(),
   variation: z.string(),
   purpose: z.string(),
   info: z.string(),
@@ -27,6 +27,10 @@ const FormSchema = z.object({
 // define schema to update Raiser excluding id and date
 const UpdateRaiser = FormSchema.omit({ id:true, date:true });
 export async function updateRaiser(id:number, formData:FormData) {
+  if (!formData) {
+    console.error('Form data is empty');
+    return;
+  }
   // extract data after validation
   const {
     isActual, variation, purpose, info,
@@ -43,7 +47,8 @@ export async function updateRaiser(id:number, formData:FormData) {
   });
   // get current date in ISO format and separate time from date
   const date = new Date().toISOString().split('T')[0];
-  // Log the data
+  // Simulate database operations
+  console.log('Simulating database operations...');
   console.log(`this id: ${id}`);
   console.log(`isActual: ${isActual}`);
   console.log(`variation: ${variation}`);
@@ -54,8 +59,6 @@ export async function updateRaiser(id:number, formData:FormData) {
   console.log(`reportVideo: ${reportVideo}`);
   console.log(`monobanka: ${monobanka}`);
   console.log(`date: ${date}`);
-  // Simulate database operations
-  console.log('Simulating database operations...');
   // to revalidate path and redirect to desired page
   revalidatePath('/admin');
   redirect('/admin');
