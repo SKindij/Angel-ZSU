@@ -7,7 +7,6 @@ import { unstable_noStore as noStore } from 'next/cache';
 /* ----- FUND CAMPAIGNS  ----- */
 export async function fetchAllFundRaiserData():Promise<IFundRaising[]> {
   try {
-    console.log('Fetching Fund Raising Info...');
     const raisersData = await sql<IFundRaising>`
       -- choose the data we need
       SELECT 
@@ -26,9 +25,7 @@ export async function fetchAllFundRaiserData():Promise<IFundRaising[]> {
       ORDER BY 
         fri.id DESC;
     `;
-    // checking form of received data
-    console.log('Raiser Data fetch completed.');
-    console.log(`Number of raws: ${raisersData.rows.length}`);
+    console.log('Fetching Fund Raising Info completed.');
     return raisersData.rows;
 
   } catch (error) {
@@ -69,19 +66,15 @@ export async function fetchRaiserTypes():Promise<string[]> {
   // this prevent response from being cached
   noStore(); // equivalent to fetch(..., {cache: 'no-store'})
   try {
-    console.log('Fetching raiser types...');
     const data = await sql`SELECT type FROM fund_raising_types;`;
     // extract type names from rows
     const raisingTypes = data.rows.map( (row) => row.type );
-    console.log(`Number of types: ${raisingTypes.length}`); // => 5
     return raisingTypes;
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch type names.');
   }
 }
-
-
 
 /* -----  ----- */
 
