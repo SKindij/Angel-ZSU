@@ -74,7 +74,7 @@ const FundHero = () => {
             </Box>
             {/* Angel ZSU brend */}
             <Box sx={{ position: 'relative', height:{ xs:'400px', md:'510px'} }}>
-              <Image alt="Angel zsu brend" priority={true}
+              <Image alt="Angel zsu brend"
                 src={angelBrendPic} fill
                 // full-width on mobile, in 2-column layout on tablet, in 3-column layout on desktop
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

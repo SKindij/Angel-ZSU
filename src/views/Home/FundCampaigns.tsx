@@ -17,7 +17,7 @@ const FundCampaigns = async () => {
     console.log('No Fund Raisers data received.');
     return <p>No Fund Raisers info available.</p>;
   }
-  console.log('Received fundRaisers data!');
+  console.log('Received Raisers data for Fund Campaigns!');
 
   return (
     <Box id="fund-campaigns" sx={{ pt:1, pb:{xs:4, md:6} }}>

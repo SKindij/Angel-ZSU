@@ -1,8 +1,4 @@
 // @/app/page.tsc
-import { Fragment } from 'react';
-// material-ui
-import Typography from '@mui/material/Typography';
-import Link from 'next/link';
 // views components
 import FundHero from '@/views/Home/FundHero';
 import FundFeatures from '@/views/Home/FundFeatures';

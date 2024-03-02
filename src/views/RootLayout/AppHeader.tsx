@@ -37,7 +37,6 @@ const AppHeader = () => {
   const pathname = usePathname();
   // hook for authentication
   const session = useSession();
-  console.log(session);
 
   return (
     <AppBar position="static">

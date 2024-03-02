@@ -1,4 +1,4 @@
-// @/views/Admin/RaiserEditForm.tsx
+// @/views/Admin/RaiserCreateForm.tsx
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
@@ -20,12 +20,12 @@ import Button from '@mui/material/Button';
 // put information to the database
 import { updateRaiser } from '@/services/data-actions';
 
-interface RaiserEditFormProps {
+interface RaiserCreateFormProps {
   raiser:IFundRaising;
   raisingTypes:string[];
 }
 // form for editing information about the raiser
-export default function RaiserEditForm({ raiser, raisingTypes }:RaiserEditFormProps) {
+export default function RaiserCreateForm({ raiser, raisingTypes }:RaiserCreateFormProps) {
   // creates new function that will have same body but with a fixed value raiser.id
   // useful if you need to pass function with certain parameters to another place
   const updateRaiserWithId = updateRaiser.bind(null, raiser.id);
@@ -56,7 +56,7 @@ export default function RaiserEditForm({ raiser, raisingTypes }:RaiserEditFormPr
         </FormControl>
         {/* Поле для зміни категорії збору */}
         <FormControl required size="small">
-          <InputLabel id="variation-label">різновид збору</InputLabel>
+          <InputLabel id="variation-label">категорія збору</InputLabel>
           <Select name="variation"
             labelId="variation-label" id="variation"
             defaultValue={raiser.variation}
@@ -72,13 +72,15 @@ export default function RaiserEditForm({ raiser, raisingTypes }:RaiserEditFormPr
         <Divider>мета та інформація щодо збору</Divider>
         <TextField type="text" color="secondary" size="small"
           id="purpose" name="purpose"
-          label="* редагування мети збору"
+          label="* введіть назву збору"
           defaultValue={raiser.purpose}
+          helperText="* редагування мети збору"
         />
-        <TextField type="text" multiline color="secondary"
+        <TextField type="text" color="secondary" size="small"
           id="info" name="info"
-          label="* зміна інформації щодо збору"
+          label="* напишіть щось про цей збір"
           defaultValue={raiser.info}
+          helperText="* зміна інформації щодо збору"
         />
 
         <Divider>яку суму потрібно зібрати?</Divider>
@@ -98,6 +100,7 @@ export default function RaiserEditForm({ raiser, raisingTypes }:RaiserEditFormPr
           id="reportVideo" name="reportVideo"
           label="* посилання на відео звіт"
           defaultValue={raiser.report_video_url}
+          helperText="* зміна посилання на відеозвіт"
         />
 
         <Divider>посилання на монобанку</Divider>
@@ -105,6 +108,7 @@ export default function RaiserEditForm({ raiser, raisingTypes }:RaiserEditFormPr
           id="monobanka" name="monobanka"
           label="* посилання на монобанку"
           defaultValue={raiser.monobanka}
+          helperText="* зміна посилання на монобанку"
         />
 
         {/* ----- administrator function buttons ----- */}
