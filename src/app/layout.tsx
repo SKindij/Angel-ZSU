@@ -44,8 +44,8 @@ export default function RootLayout({ children }:{ children:React.ReactNode }) {
   return (
     <html lang="uk">
       <body>
-        <Providers>
-          <ThemeRegistry>
+        <ThemeRegistry>
+          <Providers>
             <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
               {/* menu and app site navigation */}
               <AppHeader />
@@ -56,8 +56,8 @@ export default function RootLayout({ children }:{ children:React.ReactNode }) {
               {/* bottom content of site */}
 			      <AppFooter />
             </Box>
-          </ThemeRegistry>
-        </Providers>
+          </Providers>
+        </ThemeRegistry>
         <Analytics />
         <SpeedInsights />
       </body>

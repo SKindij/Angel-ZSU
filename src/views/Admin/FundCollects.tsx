@@ -1,6 +1,6 @@
 // @/views/Admin/FundCollects.tsx
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
 // views content components
 import CollectInfo from '@/views/Admin/CollectInfo';
 
@@ -19,11 +19,14 @@ const FundCollects = async () => {
 
   return (
     <Box sx={{ py: 2, my: 2 }}>
-
-      {fundRaisers.map((fundRaiser) => (
-        <CollectInfo key={fundRaiser.id} collectData={fundRaiser} />
-      ))}
-
+      <div>
+        <Typography variant="h3" component="h2" >
+        Ви можете керувати інформаційними картками про збори.
+        </Typography>
+        {fundRaisers.map((fundRaiser) => (
+          <CollectInfo key={fundRaiser.id} collectData={fundRaiser} />
+        ))}
+      </div>
     </Box>
   );
 };

@@ -13,16 +13,15 @@ export default async function AdminPage() {
   const session = await getServerSession(authConfig);
   return (
     <Box sx={{ p: 2, }}>
-      <Typography variant="h1" color="info.main">
-        Панель адміністратора
-      </Typography>
-      <Typography variant="subtitle1" color="lostLavender">
-        Вітаю {session?.user?.name} !
-      </Typography>
-	    <Typography variant="body1" color="textSecondary">
-        Ви можете керувати інформаційними картками про збори на головній сторінці сайту.
-      </Typography>
-      <FundCollects />
+      <div>
+        <Typography variant="h1" color="info.main">
+          Панель адміністратора
+        </Typography>
+        <Typography variant="subtitle1" color="lostLavender">
+          Вітаю {session?.user?.name} !
+        </Typography>
+        <FundCollects />
+      </div>
     </Box>
   );
 }

@@ -13,7 +13,8 @@ type Props = {
   };
 };
 
-export default async function CollectEditPage({params: {id}}:Props) {
+export default async function CollectEditPage({params}:Props) {
+  const id = params.id;
   // get data of a specific collect and necessary lists of data
   const [raiser, raisingTypes] = await Promise.all([
     fetchFundRaiserById(Number(id)),
