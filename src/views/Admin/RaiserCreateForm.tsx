@@ -26,15 +26,15 @@ interface RaiserCreateFormProps {
 // form for editing information about the raiser
 export default function RaiserCreateForm({ raisingTypes }:RaiserCreateFormProps) {
   // to control the value of the radio buttons
-  const [value, setValue] = useState('true');
+  const [isActual, setIsActual] = useState('true');
   const handleChange = (event:React.ChangeEvent<HTMLInputElement>) => {
-    setValue((event.target as HTMLInputElement).value);
+    setIsActual(event.target.value);
   };
 
   return (
     <form action={createRaiser}>
       {/* hidden field to pass id of drink to be updated */}
-      <Stack sx={{ width: 300, my:2 }}
+      <Stack sx={{ width: 450, my:2, pl: 3 }}
         spacing={{ xs: 1, sm: 2, md: 3 }}
       >
         <Divider>базові дані щодо збору</Divider>
@@ -43,7 +43,7 @@ export default function RaiserCreateForm({ raisingTypes }:RaiserCreateFormProps)
           <FormLabel component="legend">Оберіть статус:</FormLabel>
           <RadioGroup row
             aria-label="raiser-status" name="isActual"
-            value={value} onChange={handleChange}
+            value={isActual} onChange={handleChange}
           >
             <FormControlLabel value="true" control={<Radio />} label="Актуальний" />
             <FormControlLabel value="false" control={<Radio />} label="Закритий" />
@@ -54,13 +54,14 @@ export default function RaiserCreateForm({ raisingTypes }:RaiserCreateFormProps)
           <InputLabel id="variation-label">категорія збору</InputLabel>
           <Select name="variation"
             labelId="variation-label" id="variation"
+            defaultValue=""
           >
             <MenuItem value="" disabled><em>категорії збору</em></MenuItem>
-            {raisingTypes.map( (type, index) => (
-              <MenuItem key={index} value={type}>{type}</MenuItem>
+            {raisingTypes.map( (type) => (
+              <MenuItem key={type} value={type}>{type}</MenuItem>
             ) )}
           </Select>
-          <FormHelperText>* required</FormHelperText>
+          <FormHelperText>* Виберіть різновид збору</FormHelperText>
         </FormControl>
 
         <Divider>мета та інформація щодо збору</Divider>
@@ -69,7 +70,7 @@ export default function RaiserCreateForm({ raisingTypes }:RaiserCreateFormProps)
           label="* назва збору"
           placeholder="введіть текст"
         />
-        <TextField type="text" color="secondary" size="small"
+        <TextField type="text" multiline color="secondary"
           id="info" name="info"
           label="* інформація про збір"
           placeholder="введіть текст"
@@ -103,7 +104,7 @@ export default function RaiserCreateForm({ raisingTypes }:RaiserCreateFormProps)
 
         {/* ----- administrator function buttons ----- */}
         <Link href="/admin">
-          <Button variant="outlined">Відмінити</Button>
+          <Button type="button" variant="outlined" sx={{ px:5, ml: 3 }}>Відмінити</Button>
         </Link>
         <Button type="submit" variant="outlined" color="secondary">
           Зберегти

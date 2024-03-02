@@ -103,7 +103,7 @@ export default function RaiserEditForm({ raiser, raisingTypes }:RaiserEditFormPr
         />
         {/* ----- administrator function buttons ----- */}
         <Link href="/admin">
-          <Button variant="outlined">Відмінити</Button>
+          <Button type="button" variant="outlined" sx={{ px:5, ml: 3 }}>Відмінити</Button>
         </Link>
         <Button type="submit" variant="outlined" color="secondary">
           Зберегти

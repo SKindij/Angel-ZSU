@@ -65,8 +65,43 @@ export async function updateRaiser(id:number, formData:FormData) {
 }
 
 // separate scheme for creating Raiser, excluding id and date
-
-
-
+const CreateRaiser = FormSchema.omit({ id:true, date:true });
+// adds data about the new raiser to the database
+export async function createRaiser(formData:FormData) {
+  if (!formData) {
+    console.error('Form data is empty');
+    return;
+  }
+  // extract data after validation
+  const {
+    isActual, variation, purpose, info,
+    value, requestVideo, reportVideo, monobanka
+  } = UpdateRaiser.parse({
+    isActual: formData.get('isActual'),
+    variation: formData.get('variation'),
+    purpose: formData.get('purpose'),
+    info: formData.get('info'),
+    value: formData.get('value'),
+    requestVideo: formData.get('requestVideo'),
+    reportVideo: formData.get('reportVideo'),
+    monobanka: formData.get('monobanka'),
+  });
+  // get current date in ISO format and separate time from date
+  const date = new Date().toISOString().split('T')[0];
+  // Simulate database operations
+  console.log('Simulating database operations...');
+  console.log(`isActual: ${isActual}`);
+  console.log(`variation: ${variation}`);
+  console.log(`purpose: ${purpose}`);
+  console.log(`info: ${info}`);
+  console.log(`value: ${value}`);
+  console.log(`requestVideo: ${requestVideo}`);
+  console.log(`reportVideo: ${reportVideo}`);
+  console.log(`monobanka: ${monobanka}`);
+  console.log(`date: ${date}`);
+  // to revalidate path and redirect to desired page
+  revalidatePath('/admin');
+  redirect('/admin');
+}
 
 

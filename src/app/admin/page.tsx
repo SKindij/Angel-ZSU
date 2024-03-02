@@ -14,11 +14,11 @@ export default async function AdminPage() {
   return (
     <Box sx={{ p: 2, }}>
       <div>
-        <Typography variant="h1" color="info.main">
+        <Typography variant="h1" color="purple" mb={2}>
           Панель адміністратора
         </Typography>
         <Typography variant="subtitle1" color="lostLavender">
-          Вітаю {session?.user?.name} !
+          Вітаю {session?.user?.name}! У тебе є доступ до додаткових можливостей.
         </Typography>
         <FundCollects />
       </div>
