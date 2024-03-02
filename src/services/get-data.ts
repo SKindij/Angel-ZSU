@@ -43,7 +43,20 @@ export async function fetchFundRaiserById(id:number) {
   try {
     // execute SQL query to receive fee for its id
     const raiserData = await sql<IFundRaising>`
-      SELECT * FROM fund_raising_info WHERE id = ${id};
+      -- choose the data we need
+      SELECT 
+        fri.id, frt.type AS variation, 
+        fri.is_actual,
+        fri.purpose, fri.info, fri.value,
+        fri.request_video_url,
+        fri.report_video_url,
+        fri.monobanka
+      FROM 
+        fund_raising_info fri
+      -- combine data table with fields of other table
+      JOIN 
+        fund_raising_types frt ON fri.type_id = frt.id
+      WHERE fri.id = ${id};
     `;
     return raiserData.rows[0];
   } catch (error) {
@@ -60,7 +73,7 @@ export async function fetchRaiserTypes():Promise<string[]> {
     const data = await sql`SELECT type FROM fund_raising_types;`;
     // extract type names from rows
     const raisingTypes = data.rows.map( (row) => row.type );
-    console.log(`Number of types: ${raisingTypes.length}`); // => 4
+    console.log(`Number of types: ${raisingTypes.length}`); // => 5
     return raisingTypes;
   } catch (error) {
     console.error('Database Error:', error);

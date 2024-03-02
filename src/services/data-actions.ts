@@ -24,43 +24,46 @@ const FormSchema = z.object({
 });
 
 /* ----- FUND CAMPAIGNS ----- */
+// define schema to update Raiser excluding id and date
+const UpdateRaiser = FormSchema.omit({ id:true, date:true });
+export async function updateRaiser(id:number, formData:FormData) {
+  // extract data after validation
+  const {
+    isActual, variation, purpose, info,
+    value, requestVideo, reportVideo, monobanka
+  } = UpdateRaiser.parse({
+    isActual: formData.get('isActual'),
+    variation: formData.get('variation'),
+    purpose: formData.get('purpose'),
+    info: formData.get('info'),
+    value: formData.get('value'),
+    requestVideo: formData.get('requestVideo'),
+    reportVideo: formData.get('reportVideo'),
+    monobanka: formData.get('monobanka'),
+  });
+  // get current date in ISO format and separate time from date
+  const date = new Date().toISOString().split('T')[0];
+  // Log the data
+  console.log(`this id: ${id}`);
+  console.log(`isActual: ${isActual}`);
+  console.log(`variation: ${variation}`);
+  console.log(`purpose: ${purpose}`);
+  console.log(`info: ${info}`);
+  console.log(`value: ${value}`);
+  console.log(`requestVideo: ${requestVideo}`);
+  console.log(`reportVideo: ${reportVideo}`);
+  console.log(`monobanka: ${monobanka}`);
+  console.log(`date: ${date}`);
+  // Simulate database operations
+  console.log('Simulating database operations...');
+  // to revalidate path and redirect to desired page
+  revalidatePath('/admin');
+  redirect('/admin');
+}
 
 // separate scheme for creating Raiser, excluding id and date
 
 
 
 
-
-// define schema to update Raiser excluding id and date
-const UpdateRaiser = FormSchema.omit({ id:true, date:true });
-export async function updateRaiser(id:number, formData:FormData) {
-  // extract data after validation
-  const {
-    country, category, title, description,
-    priceAuchan, priceNovus, priceSilpo, priceATB
-  } = UpdateRaiser.parse({
-    country: formData.get('country'),
-    category: formData.get('category'),
-    title: formData.get('title'),
-    priceAuchan: formData.get('priceAuchan'),
-    description: formData.get('description'),
-  });
-  // get current date in ISO format and separate time from date
-  const date = new Date().toISOString().split('T')[0];
-  // Log the data
-  console.log(`this id: ${id}`);
-  console.log(`update country: ${country}`);
-  console.log(`update category: ${category}`);
-  console.log('--- beverage ---');
-  console.log(`update title: ${title}`);
-  // Log data with 'none' if price is 0
-  console.log(`update priceAuchan: ${priceAuchan === 0 ? 'none' : priceAuchan} on ${date}.`);
-  console.log('--- description ---');
-  console.log(`update text: ${description}`);
-  // Simulate database operations
-  console.log('Simulating database operations...');
-  // to revalidate path and redirect to desired page
-  revalidatePath('/categories/beverages');
-  redirect('/categories/beverages');
-}
 
