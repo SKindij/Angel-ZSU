@@ -21,7 +21,6 @@ const CollectInfo = ( { collectData }:CollectInfoProps ) => {
       textAlign: 'center', boxShadow: 3
     }}
     >
-
 	  {/* актульність та різновид збору */}
       <Typography variant="subtitle1" color="info.main" mb={1}>
         {collectData.is_actual ? 'Актуальний Збір' : 'Збір Закрито'}
@@ -86,11 +85,11 @@ const CollectInfo = ( { collectData }:CollectInfoProps ) => {
 
       {/* функціональні кнопки для адміністратора сайту */}
       <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', mb:2 }}>
-        <Button variant="contained" size="small" color="secondary" startIcon={<EditNoteRoundedIcon />} >
-          <Link href={`/admin/collect/${collectData.id}/edit`} >
+        <Link href={`/admin/collect/${collectData.id}/edit`} >
+          <Button variant="contained" size="small" color="secondary" startIcon={<EditNoteRoundedIcon />} >
                 Редагувати
-          </Link>
-        </Button>
+          </Button>
+        </Link>
         <Button variant="contained" size="small" color="error" startIcon={<DeleteOutlineRoundedIcon />} >
               Видалити
         </Button>
