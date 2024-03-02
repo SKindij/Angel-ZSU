@@ -59,7 +59,7 @@ const CollectCard = ( { collectData }:CollectCardProps ) => {
               <Link href={collectData.request_video_url}
                 rel="noopener noreferrer" target="_blank" passHref >
                 <Button variant="outlined" size="small" startIcon={<PlayCircleOutlinedIcon />}>
-                YouTube запиту
+                  YouTube запиту
                 </Button>
               </Link>
             )}
@@ -68,25 +68,25 @@ const CollectCard = ( { collectData }:CollectCardProps ) => {
               <Link href={collectData.report_video_url}
                 rel="noopener noreferrer" target="_blank" passHref >
                 <Button variant="outlined" size="small" startIcon={<PlayCircleOutlinedIcon />}>
-                YouTube звіту
+                  YouTube звіту
                 </Button>
               </Link>
             )}
           </Box>
-		      <Typography variant="body1" mb={1}>
+		      <Typography variant="subtitle1" mb={1}>
             {collectData.is_actual ? 'Задонатити на Збір' : 'Підтримати Фонд'}
           </Typography>
           <Box sx={{ display:'flex', flexDirection:'column', justifyContent:'center', mb:2 }}>
             {collectData.is_actual && (
               <Link href={collectData.monobanka ? collectData.monobanka : '/donate'}
                 rel="noopener noreferrer" target="_blank" passHref >
-                <Button variant="contained" size="medium" color="success">
-                на Mono банку
+                <Button variant="text" size="medium" color="success">
+                  на Mono банку
                 </Button>
               </Link>
             )}
             <Link href={'/donate'} >
-              <Button sx={{ mt:1 }} variant="contained" size="medium" color="success">
+              <Button sx={{ mt:1 }} variant="text" size="medium" color="success">
                 за реквізитами
               </Button>
             </Link>
