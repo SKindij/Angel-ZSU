@@ -110,7 +110,7 @@ export async function createRaiser(formData:FormData) {
 }
 
 // to delete fundraiser card from database by id
-export async function deleteInvoice(id:number) {
+export async function deleteRaiser(id:number) {
   // execute SQL query to delete fundraiser card
   await sql`
     DELETE FROM fund_raising_info
@@ -119,4 +119,5 @@ export async function deleteInvoice(id:number) {
   console.log('Fundraiser card deleted successfully from the database');
   // initiates new request to server and recreates table
   revalidatePath('/admin');
+  redirect('/admin');
 }

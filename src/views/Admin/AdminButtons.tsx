@@ -5,7 +5,7 @@ import AddCircleTwoToneIcon from '@mui/icons-material/AddCircleTwoTone';
 import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import DeleteOutlineRoundedIcon from '@mui/icons-material/DeleteOutlineRounded';
 
-import { deleteInvoice } from '@/services/data-actions';
+import { deleteRaiser } from '@/services/data-actions';
 
 // to update information on existing collection
 export function UpdateRaiserCard({ id }:{ id:number }) {
@@ -19,11 +19,13 @@ export function UpdateRaiserCard({ id }:{ id:number }) {
 }
 
 // to delete an existing collection
-export function DeleteRaiserCard() {
+export function DeleteRaiser({ id }:{ id:number }) {
   return (
-    <Button variant="contained" size="small" color="error" startIcon={<DeleteOutlineRoundedIcon />} >
-        Видалити
-    </Button>
+    <Link href={`/admin/collect/${id}/delete`} >
+      <Button variant="contained" size="small" color="error" startIcon={<EditNoteRoundedIcon />} >
+          Видалити
+      </Button>
+    </Link>
   );
 }
 

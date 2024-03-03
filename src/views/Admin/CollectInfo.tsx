@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import PlayCircleOutlinedIcon from '@mui/icons-material/PlayCircleOutlined';
 // admin view components
-import { UpdateRaiserCard, DeleteRaiserCard } from '@/views/Admin/AdminButtons';
+import { UpdateRaiserCard, DeleteRaiser } from '@/views/Admin/AdminButtons';
 
 import { IFundRaising } from '@/models/interfaces';
 import { formatDateToLocal } from '@/services/utils';
@@ -83,7 +83,7 @@ const CollectInfo = ( { collectData }:CollectInfoProps ) => {
         {/* функціональні кнопки для адміністратора сайту */}
         <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', mb:2 }}>
           <UpdateRaiserCard id={collectData.id} />
-          <DeleteRaiserCard />
+          <DeleteRaiser id={collectData.id} />
         </Box>
         <Typography variant="body1" mb={1}>
           Остання зміна: {formatDateToLocal(collectData.last_updated)}
