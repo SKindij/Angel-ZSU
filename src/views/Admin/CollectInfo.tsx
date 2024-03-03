@@ -5,10 +5,9 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-// MUI icons
 import PlayCircleOutlinedIcon from '@mui/icons-material/PlayCircleOutlined';
-import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
-import DeleteOutlineRoundedIcon from '@mui/icons-material/DeleteOutlineRounded';
+// admin view components
+import { UpdateRaiserCard, DeleteRaiserCard } from '@/views/Admin/AdminButtons';
 
 import { IFundRaising } from '@/models/interfaces';
 import { formatDateToLocal } from '@/services/utils';
@@ -83,14 +82,8 @@ const CollectInfo = ( { collectData }:CollectInfoProps ) => {
         </Box>
         {/* функціональні кнопки для адміністратора сайту */}
         <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', mb:2 }}>
-          <Link href={`/admin/collect/${collectData.id}/edit`} >
-            <Button variant="contained" size="small" color="secondary" startIcon={<EditNoteRoundedIcon />} >
-                Редагувати
-            </Button>
-          </Link>
-          <Button variant="contained" size="small" color="error" startIcon={<DeleteOutlineRoundedIcon />} >
-              Видалити
-          </Button>
+          <UpdateRaiserCard id={collectData.id} />
+          <DeleteRaiserCard />
         </Box>
         <Typography variant="body1" mb={1}>
           Остання зміна: {formatDateToLocal(collectData.last_updated)}

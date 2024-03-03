@@ -1,11 +1,9 @@
 // @/views/Admin/FundCollects.tsx
-import Link from 'next/link';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 // views content components
-import AddCircleTwoToneIcon from '@mui/icons-material/AddCircleTwoTone';
 import CollectInfo from '@/views/Admin/CollectInfo';
+import { CreateRaiserCard } from '@/views/Admin/AdminButtons';
 
 import {IFundRaising} from '@/models/interfaces';
 // get info from data base
@@ -32,13 +30,8 @@ const FundCollects = async () => {
         <Typography variant="h3" component="h3" mb={2}>
           Додати нову інфо-картку про збір
         </Typography>
-        <Link href={'/admin/collect/create'} >
-          <Button variant="contained" size="medium" color="info"
-            sx={{ px:5, ml: 7 }} startIcon={<AddCircleTwoToneIcon />}
-          >
-            Створити Збір
-          </Button>
-        </Link>
+        {/* button create new collection */}
+        <CreateRaiserCard />
       </div>
     </Box>
   );
