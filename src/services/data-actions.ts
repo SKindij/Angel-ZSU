@@ -61,7 +61,7 @@ export async function updateRaiser(id:number, formData:FormData) {
           last_updated = CURRENT_TIMESTAMP
       WHERE id = ${id};
     `;
-  console.log('Data updated successfully in the database');
+  console.log('Raiser Info updated successfully in database');
   // to revalidate path and redirect to desired page
   revalidatePath('/admin');
   redirect('/admin');
@@ -79,7 +79,7 @@ export async function createRaiser(formData:FormData) {
   const {
     isActual, variation, purpose, info,
     value, requestVideo, reportVideo, monobanka
-  } = UpdateRaiser.parse({
+  } = CreateRaiser.parse({
     isActual: formData.get('isActual'),
     variation: formData.get('variation'),
     purpose: formData.get('purpose'),
@@ -87,11 +87,23 @@ export async function createRaiser(formData:FormData) {
     value: formData.get('value'),
     requestVideo: formData.get('requestVideo'),
     reportVideo: formData.get('reportVideo'),
-    monobanka: formData.get('monobanka'),
+    monobanka: formData.get('monobanka')
   });
-  // Simulate database operations
-  console.log('Simulating database operations...');
-
+  // use sql query to insert new collection into database
+  await sql`
+    INSERT INTO fund_raising_info (
+      is_actual, type_id, purpose, info, value, 
+      request_video_url, report_video_url, monobanka,
+      last_updated
+    ) VALUES (
+      ${isActual}, 
+      (SELECT id FROM fund_raising_types WHERE type = ${variation}), 
+      ${purpose}, ${info}, ${value},
+      ${requestVideo}, ${reportVideo}, ${monobanka},
+      CURRENT_TIMESTAMP
+    )
+  `;
+  console.log('Raiser created successfully in database');
   // to revalidate path and redirect to desired page
   revalidatePath('/admin');
   redirect('/admin');
