@@ -55,7 +55,7 @@
 
   SELECT * FROM fund_raising_info;
 
-  SELECT id, purpose, value, last_updated FROM fund_raising_info;
+  SELECT id, purpose, monobanka, last_updated FROM fund_raising_info;
   SELECT id, request_video_url, report_video_url FROM fund_raising_info;
 
   SELECT * FROM fund_raising_info WHERE id = your_id;
@@ -74,17 +74,29 @@
 ## Update Information
 
 ```sql
-UPDATE fund_raising_info
-  SET 
-    is_actual = true,  -- зміна is_actual на true
-    type_id = 25,      -- нове значення type_id
-    purpose = 'Нова мета',  -- нова мета
-    info = 'Нова інформація',  -- нова інформація
-    value = 40000,     -- нове значення value
-    request_video_url = 'новий_урл'  -- новий URL для запиту відео
-    WHERE id = 7504;
+    UPDATE fund_raising_info
+      SET is_actual = ${isActual},
+          type_id = (SELECT id FROM fund_raising_types WHERE type = ${variation}),
+          purpose = ${purpose},
+          info = ${info},
+          value = ${value},
+          request_video_url = ${requestVideo},
+          report_video_url = ${reportVideo},
+          monobanka = ${monobanka},
+          last_updated = CURRENT_TIMESTAMP
+      WHERE id = ${id};
 
 ```
 
+For example:
+
+```sql
+UPDATE fund_raising_info
+SET 
+    info = 'Бійці бригади ведуть важкі бої в Серебрянському лісі. Їм вкрай необхідне авто для підвозу бк, продовольства та вивозу поранених воїнів.',
+    monobanka = NULL,
+    last_updated = CURRENT_TIMESTAMP
+WHERE id = 7503;
+```
 
 

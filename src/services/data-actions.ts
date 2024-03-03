@@ -9,13 +9,17 @@ import { revalidatePath } from 'next/cache';
 // to redirect to the desired page
 import { redirect } from 'next/navigation';
 
+
 /* ----- shape scheme definition using zod ----- */
 const FormSchema = z.object({
   id: z.string(),
+  // provides conversion of value to boolean
   isActual: z.coerce.boolean(),
-  variation: z.string(),
+  // check that value is one of the given list
+  variation: z.enum(['for car', 'for drone', 'for medicine', 'for equipment', 'for another']),
   purpose: z.string(),
   info: z.string(),
+  // provides conversion of value to number
   value: z.coerce.number(),
   requestVideo: z.string(),
   reportVideo: z.string(),
@@ -31,7 +35,7 @@ export async function updateRaiser(id:number, formData:FormData) {
     console.error('Form data is empty');
     return;
   }
-  // extract data after validation
+  // extract data with validation
   const {
     isActual, variation, purpose, info,
     value, requestVideo, reportVideo, monobanka
@@ -45,20 +49,19 @@ export async function updateRaiser(id:number, formData:FormData) {
     reportVideo: formData.get('reportVideo'),
     monobanka: formData.get('monobanka'),
   });
-  // get current date in ISO format and separate time from date
-  const date = new Date().toISOString().split('T')[0];
-  // Simulate database operations
-  console.log('Simulating database operations...');
-  console.log(`this id: ${id}`);
-  console.log(`isActual: ${isActual}`);
-  console.log(`variation: ${variation}`);
-  console.log(`purpose: ${purpose}`);
-  console.log(`info: ${info}`);
-  console.log(`value: ${value}`);
-  console.log(`requestVideo: ${requestVideo}`);
-  console.log(`reportVideo: ${reportVideo}`);
-  console.log(`monobanka: ${monobanka}`);
-  console.log(`date: ${date}`);
+  // use sql query to update the database
+  await sql`
+      UPDATE fund_raising_info
+      SET is_actual = ${isActual},
+          type_id = (SELECT id FROM fund_raising_types WHERE type = ${variation}),
+          purpose = ${purpose}, info = ${info}, value = ${value},
+          request_video_url = ${requestVideo},
+          report_video_url = ${reportVideo},
+          monobanka = ${monobanka},
+          last_updated = CURRENT_TIMESTAMP
+      WHERE id = ${id};
+    `;
+  console.log('Data updated successfully in the database');
   // to revalidate path and redirect to desired page
   revalidatePath('/admin');
   redirect('/admin');
@@ -86,19 +89,9 @@ export async function createRaiser(formData:FormData) {
     reportVideo: formData.get('reportVideo'),
     monobanka: formData.get('monobanka'),
   });
-  // get current date in ISO format and separate time from date
-  const date = new Date().toISOString().split('T')[0];
   // Simulate database operations
   console.log('Simulating database operations...');
-  console.log(`isActual: ${isActual}`);
-  console.log(`variation: ${variation}`);
-  console.log(`purpose: ${purpose}`);
-  console.log(`info: ${info}`);
-  console.log(`value: ${value}`);
-  console.log(`requestVideo: ${requestVideo}`);
-  console.log(`reportVideo: ${reportVideo}`);
-  console.log(`monobanka: ${monobanka}`);
-  console.log(`date: ${date}`);
+
   // to revalidate path and redirect to desired page
   revalidatePath('/admin');
   redirect('/admin');

@@ -11,6 +11,8 @@ export const formatDateToLocal = (
     day: 'numeric',
     month: 'numeric',
     year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
   };
     // create an object Intl.DateTimeFormat
   const formatter = new Intl.DateTimeFormat(locale, options);

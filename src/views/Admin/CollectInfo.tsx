@@ -67,17 +67,17 @@ const CollectInfo = ( { collectData }:CollectInfoProps ) => {
           {collectData.is_actual ? 'Задонатити на Збір' : 'Підтримати Фонд'}
         </Typography>
         <Box sx={{ display:'flex', justifyContent:'center', mb:2 }}>
-          {collectData.is_actual && (
-            <Link href={collectData.monobanka ? collectData.monobanka : '/donate'}
+          {collectData.is_actual && collectData.monobanka && (
+            <Link href={collectData.monobanka}
               rel="noopener noreferrer" target="_blank" passHref >
               <Button variant="text" size="medium" color="success">
-              на Mono банку
+                на Mono банку
               </Button>
             </Link>
           )}
           <Link href={'/donate'} >
             <Button sx={{ ml: 1 }} variant="text" size="medium" color="success">
-                за реквізитами
+              за реквізитами
             </Button>
           </Link>
         </Box>

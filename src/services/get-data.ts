@@ -2,10 +2,14 @@
 import {IFundRaising} from '@/models/interfaces';
 // function allows to make queries to database
 import { sql } from '@vercel/postgres';
+// to declaratively opt out of static rendering and
+// indicate a particular component should not be cached
 import { unstable_noStore as noStore } from 'next/cache';
 
 /* ----- FUND CAMPAIGNS  ----- */
 export async function fetchAllFundRaiserData():Promise<IFundRaising[]> {
+  // this prevent response from being cached
+  noStore(); // equivalent to fetch(..., {cache: 'no-store'})
   try {
     const raisersData = await sql<IFundRaising>`
       -- choose the data we need
