@@ -6,15 +6,22 @@ export const trustedUsers:TUser[] = [
     id: '2024tu101',
     name: 'Robot',
     role: 'architect',
-    email: 'robot@gmail.com',
+    email: 'robot@angelzsu.com',
     password: 'werter1985',
   },
   {
     id: '2024tu101',
     name: 'Ігор',
     role: 'admin',
-    email: 'tracker@gmail.com',
-    password: 'busik1999',
+    email: 'ihor@angelzsu.com',
+    password: 'U24bfa22vy24',
+  },
+  {
+    id: '2024tu101',
+    name: 'Юлія',
+    role: 'admin',
+    email: 'julia@angelzsu.com',
+    password: 'U24bfa22vy24',
   },
 
 ];
