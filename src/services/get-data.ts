@@ -15,7 +15,8 @@ export async function fetchAllFundRaiserData():Promise<IFundRaising[]> {
 		    fri.purpose, fri.info, fri.value,
         fri.request_video_url,
         fri.report_video_url,
-        fri.monobanka
+        fri.monobanka,
+        fri.last_updated
       FROM 
         fund_raising_info fri
       -- combine data table with fields of other table

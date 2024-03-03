@@ -48,5 +48,6 @@ export interface IFundRaising {
   request_video_url?:string;
   report_video_url?:string;
   monobanka?:string;
+  last_updated:Date;
 };
 

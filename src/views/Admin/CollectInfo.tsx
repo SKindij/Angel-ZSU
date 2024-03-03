@@ -11,10 +11,10 @@ import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 import DeleteOutlineRoundedIcon from '@mui/icons-material/DeleteOutlineRounded';
 
 import { IFundRaising } from '@/models/interfaces';
+import { formatDateToLocal } from '@/services/utils';
 type CollectInfoProps = { collectData:IFundRaising } ;
 
 const CollectInfo = ( { collectData }:CollectInfoProps ) => {
-
   return (
     <div>
       <Paper sx={{
@@ -63,20 +63,20 @@ const CollectInfo = ( { collectData }:CollectInfoProps ) => {
             </Link>
           )}
         </Box>
-		  <Typography variant="body1" mb={1}>
+		    <Typography variant="body1" mb={1}>
           {collectData.is_actual ? 'Задонатити на Збір' : 'Підтримати Фонд'}
         </Typography>
         <Box sx={{ display:'flex', justifyContent:'center', mb:2 }}>
           {collectData.is_actual && (
             <Link href={collectData.monobanka ? collectData.monobanka : '/donate'}
               rel="noopener noreferrer" target="_blank" passHref >
-              <Button variant="contained" size="medium" color="success">
+              <Button variant="text" size="medium" color="success">
               на Mono банку
               </Button>
             </Link>
           )}
           <Link href={'/donate'} >
-            <Button sx={{ ml: 1 }} variant="contained" size="medium" color="success">
+            <Button sx={{ ml: 1 }} variant="text" size="medium" color="success">
                 за реквізитами
             </Button>
           </Link>
@@ -92,6 +92,9 @@ const CollectInfo = ( { collectData }:CollectInfoProps ) => {
               Видалити
           </Button>
         </Box>
+        <Typography variant="body1" mb={1}>
+          Остання зміна: {formatDateToLocal(collectData.last_updated)}
+        </Typography>
       </Paper>
     </div>
   );

@@ -38,6 +38,12 @@
     (7504, true, 23, 'Терміновий збір на Авдіївський напрямок', 'Хлопці потребують: турнікети, аптечки, старлінки. Долучайся до збору поки не пізно!', 320000, 'https://www.youtube.com/shorts/vf2QvrdsxAU', 'https://send.monobank.ua/jar/3RWiy1PPFb');
 ```
 
+#### add new column to the table
+
+```sql
+  ALTER TABLE fund_raising_info 
+  ADD COLUMN last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+```
 
 - - -
 
@@ -49,7 +55,7 @@
 
   SELECT * FROM fund_raising_info;
 
-  SELECT id, purpose, value FROM fund_raising_info;
+  SELECT id, purpose, value, last_updated FROM fund_raising_info;
   SELECT id, request_video_url, report_video_url FROM fund_raising_info;
 
   SELECT * FROM fund_raising_info WHERE id = your_id;
