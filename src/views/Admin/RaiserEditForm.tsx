@@ -28,11 +28,13 @@ export default function RaiserEditForm({ raiser, raisingTypes }:RaiserEditFormPr
   // creates new function that will have same body but with a fixed value raiser.id
   // useful if you need to pass function with certain parameters to another place
   const updateRaiserWithId = updateRaiser.bind(null, raiser.id);
+
   // to control the value of the radio buttons
-  const [value, setValue] = useState(raiser.is_actual.toString());
-  const handleChange = (event:React.ChangeEvent<HTMLInputElement>) => {
-    setValue((event.target as HTMLInputElement).value);
+  const [isActual, setIsActual] = useState(raiser.is_actual.toString());
+  const onOptionChange = (event:React.ChangeEvent<HTMLInputElement>) => {
+    setIsActual((event.target as HTMLInputElement).value);
   };
+
   return (
     <form action={updateRaiserWithId}>
       {/* hidden field to pass id of drink to be updated */}
@@ -42,16 +44,28 @@ export default function RaiserEditForm({ raiser, raisingTypes }:RaiserEditFormPr
       >
         <Divider>БАЗОВІ ДАНІ ЩОДО ЗБОРУ</Divider>
         {/* Форма для зміни статусу збору */}
-        <FormControl component="fieldset">
-          <FormLabel component="legend">Оберіть статус:</FormLabel>
-          <RadioGroup row
-            aria-label="raiser-status" name="isActual"
-            value={value} onChange={handleChange}
-          >
-            <FormControlLabel value="true" control={<Radio />} label="Актуальний" />
-            <FormControlLabel value="false" control={<Radio />} label="Закритий" />
-          </RadioGroup>
-        </FormControl>
+        <div className="App">
+          <h3>Оберіть статус:</h3>
+          <input
+            type="radio" name="isActual"
+            value="true" id="true"
+            checked={isActual === 'true'}
+            onChange={onOptionChange}
+          />
+          <label htmlFor="regular">Відкритий</label>
+          <input
+            type="radio" name="isActual"
+            value="false" id="false"
+            checked={isActual === 'false'}
+            onChange={onOptionChange}
+          />
+          <label htmlFor="medium">Закритий</label>
+
+          <p>
+            Select topping <strong>{isActual}</strong>
+          </p>
+        </div>
+
         {/* Поле для зміни категорії збору */}
         <FormControl required size="small">
           <InputLabel id="variation-label">різновид збору</InputLabel>

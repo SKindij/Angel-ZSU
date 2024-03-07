@@ -22,7 +22,9 @@ const CollectInfo = ( { collectData }:CollectInfoProps ) => {
       }}
       >
 	    {/* актульність та різновид збору */}
-        <Typography variant="subtitle1" color="info.main" mb={1}>
+        <Typography variant="subtitle1" mb={1}
+          sx={{ color: collectData.is_actual ? 'warning.main' : 'text.primary' }}
+        >
           {collectData.is_actual ? 'Актуальний Збір' : 'Збір Закрито'}
         </Typography>
         <Typography paragraph>

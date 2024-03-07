@@ -35,11 +35,8 @@ export async function updateRaiser(id:number, formData:FormData) {
     console.error('Form data is empty');
     return;
   }
-  // extract data with validation
-  const {
-    isActual, variation, purpose, info,
-    value, requestVideo, reportVideo, monobanka
-  } = UpdateRaiser.parse({
+  // extract data
+  const formDataObject = {
     isActual: formData.get('isActual'),
     variation: formData.get('variation'),
     purpose: formData.get('purpose'),
@@ -48,10 +45,20 @@ export async function updateRaiser(id:number, formData:FormData) {
     requestVideo: formData.get('requestVideo'),
     reportVideo: formData.get('reportVideo'),
     monobanka: formData.get('monobanka'),
+  };
+
+  const isActual = formDataObject.isActual === 'true';
+
+  const {
+    variation, purpose, info,
+    value, requestVideo, reportVideo, monobanka
+  } = UpdateRaiser.parse({
+    ...formDataObject,
+    isActual: isActual
   });
+
   // use sql query to update the database
   console.log(`is_actual = ${isActual}`);
-
   await sql`
       UPDATE fund_raising_info
       SET is_actual = ${isActual},
@@ -63,7 +70,6 @@ export async function updateRaiser(id:number, formData:FormData) {
           last_updated = CURRENT_TIMESTAMP
       WHERE id = ${id};
     `;
-
   console.log('Raiser Info updated successfully in database');
   // to revalidate path and redirect to desired page
   revalidatePath('/admin');
