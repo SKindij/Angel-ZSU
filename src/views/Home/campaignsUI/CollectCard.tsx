@@ -80,13 +80,13 @@ const CollectCard = ( { collectData }:CollectCardProps ) => {
             {collectData.is_actual && collectData.monobanka && (
               <Link href={collectData.monobanka}
                 rel="noopener noreferrer" target="_blank" passHref >
-                <Button variant="text" size="medium" color="success">
+                <Button variant="outlined" size="medium" color="success">
                   на Mono банку
                 </Button>
               </Link>
             )}
             <Link href={'/donate'} >
-              <Button sx={{ mt:1 }} variant="text" size="medium" color="success">
+              <Button sx={{ mt:1 }} variant="outlined" size="medium" color="success">
                 за реквізитами
               </Button>
             </Link>

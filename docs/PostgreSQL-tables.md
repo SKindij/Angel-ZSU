@@ -97,6 +97,13 @@ SET
     monobanka = NULL,
     last_updated = CURRENT_TIMESTAMP
 WHERE id = 7503;
+
+
+UPDATE fund_raising_info
+SET
+  is_actual = false 
+WHERE id = 7502;
+
 ```
 
 

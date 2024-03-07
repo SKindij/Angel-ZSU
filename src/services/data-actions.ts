@@ -50,6 +50,8 @@ export async function updateRaiser(id:number, formData:FormData) {
     monobanka: formData.get('monobanka'),
   });
   // use sql query to update the database
+  console.log(`is_actual = ${isActual}`);
+
   await sql`
       UPDATE fund_raising_info
       SET is_actual = ${isActual},
@@ -61,6 +63,7 @@ export async function updateRaiser(id:number, formData:FormData) {
           last_updated = CURRENT_TIMESTAMP
       WHERE id = ${id};
     `;
+
   console.log('Raiser Info updated successfully in database');
   // to revalidate path and redirect to desired page
   revalidatePath('/admin');

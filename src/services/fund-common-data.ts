@@ -118,7 +118,7 @@ export const ourMembersData:ITeamMember[] = [
   {
     id: 8517,
     photo: StotskiyPic,
-    name: 'Стоцький Віталій',
+    name: 'Віталій',
     professional: 'волонтер',
     description: 'Бровари. Броварський район. Київська область.',
     territory: {
@@ -184,7 +184,7 @@ export const ourMembersData:ITeamMember[] = [
   {
     id: 8523,
     photo: GoidenkoPic,
-    name: 'Євгеній Гойденко',
+    name: 'Євгеній',
     professional: 'волонтер',
     description: 'Суми. Сумська область. Україна.',
     territory: {
