@@ -1,19 +1,17 @@
 // @/controllers/auth.ts
 // an object containing authentication settings
-import type { AuthOptions, User } from 'next-auth';
+import type { AuthOptions } from 'next-auth';
 // credential authentication provider
 import Credentials from 'next-auth/providers/credentials';
-import { z } from 'zod';
+
 import { sql } from '@vercel/postgres';
 import { TUser } from '@/models/types';
-import bcrypt from 'bcrypt';
-
-import { trustedUsers } from '@/services/users-data';
+// import bcrypt from 'bcrypt';
 
 // function that queries the user from the database
-async function getUser(email:string):Promise<User|undefined> {
+async function getUser(email:string):Promise<TUser|undefined> {
   try {
-    const user = await sql<User>`SELECT * FROM users WHERE email=${email}`;
+    const user = await sql<TUser>`SELECT * FROM users WHERE email=${email}`;
     return user.rows[0];
   } catch (error) {
     console.error('Failed to fetch user:', error);
@@ -35,16 +33,21 @@ export const authConfig:AuthOptions = {
       async authorize(credentials) {
         // verification of credentials
         if (!credentials?.email || !credentials.password) return null;
-        // user search by email
-        const currentUser = trustedUsers.find(user => user.email === credentials.email);
 
-        if (currentUser && currentUser.password === credentials.password) {
+        // user search by email
+        const currentUser = await getUser(credentials.email);
+        if (!currentUser) return null;
+
+        // to check if the passwords match
+        // const passwordsMatch = await bcrypt.compare(credentials.password, currentUser.password);
+
+        if (currentUser.password === credentials.password) {
           // removing password before data recovery
           const { password, ...userWithoutPass } = currentUser;
           // returning user object without password
-          return userWithoutPass as User;
+          return userWithoutPass as TUser;
         }
-        // if user is not found or password is incorrect
+        // if password is incorrect
         return null;
       }
     })
@@ -54,4 +57,3 @@ export const authConfig:AuthOptions = {
     signIn: '/auth/signin'
   }
 };
-
