@@ -3,11 +3,10 @@
 _Volunteer Project for the Charitable Fund 'Angel of the Armed Forces of Ukraine.'_
 
 ### 📒 About
-&emsp;...
-
-
-
-
+&emsp;This website - is a user-friendly platform designed to support our brave military personnel.\
+&emsp;With an inviting layout and intuitive navigation, the site offers thematic pages, seamlessly integrated YouTube videos, and informative carousels.\
+&emsp;Administrators can access a secure login form to manage fundraising content, empowering them to create, edit, and remove information pertinent to our cause.\
+&emsp;Connect with us via social media through conveniently placed buttons, and join our mission to support Ukraine's armed forces.
 
 - - -
 
