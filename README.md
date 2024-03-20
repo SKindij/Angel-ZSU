@@ -39,17 +39,28 @@ You can experience this web-app firsthand by visiting the link: 🌐 https://ang
 ├─📁 src/
 │  │
 │  ├─📁 app/
-│  │  ├─📁 auth/
-│  │  │  ├─📁 signin/
-│  │  │  └─📁 signup/
+│  │  ├─📁 api/
+│  │  │  └─📁 auth/
+│  │  │     └─📁 [...nextauth]/
 │  │  ├─📁 campaigns/
 │  │  ├─📁 donate/
 │  │  ├─📁 reports/
 │  │  ├─📁 about/
 │  │  ├─📁 contacts/
 │  │  ├─📁 candidate/
+│  │  ├─📁 auth/
+│  │  │  ├─📁 signin/
+│  │  │  └─📁 signup/
+│  │  ├─📁 admin/
+│  │  │  ├─📁 collect/
+│  │  │  │  ├─📁 [id]/
+│  │  │  │  └─📁 create/
+│  │  │  └─ page.tsx
 │  │  │
 │  │  ├─ favicon.ico
+│  │  ├─ opengraph-image.png
+│  │  ├─ sitemap.xml
+│  │  ├─ robots.txt
 │  │  ├─ globals.css
 │  │  ├─ layout.tsx
 │  │  └─ page.tsx
@@ -62,10 +73,17 @@ You can experience this web-app firsthand by visiting the link: 🌐 https://ang
 │  │  ├─📁 ThemeRegistry/
 │  │  ├─📁 RootLayout/
 │  │  ├─📁 Home/
+│  │  ├─📁 CampaignsUI/
+│  │  ├─📁 DonateUI/
+│  │  ├─📁 CandidateUI/
+│  │  ├─📁 AuthUI/
+│  │  └─📁 Admin/
 │  │
 │  └─📁 services/
 │     ├─ get-data.ts
-│     └─ data-actions.ts
+│     ├─ fund-YouTube-data.ts
+│     ├─ data-actions
+│     └─ utils.ts
 │
 ├─ package.json
 ├─ tsconfig.json
