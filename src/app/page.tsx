@@ -1,5 +1,6 @@
 // @/app/page.tsc
 // views components
+import FundFrame from '@/views/Home/FundFrame';
 import FundHero from '@/views/Home/FundHero';
 import FundFeatures from '@/views/Home/FundFeatures';
 import FundCampaigns from '@/views/Home/FundCampaigns';
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <div>
       {/* welcome content block */}
+      <FundFrame />
       <FundHero />
       {/* Angel Image block */}
       <FundFeatures />
