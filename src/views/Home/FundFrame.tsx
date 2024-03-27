@@ -62,7 +62,7 @@ const FundFrame:React.FC = () => {
                   </Link>
 			          </Grid>
                 <Grid item xs={9} >
-                  <Link href={'/'} >
+                  <Link href={'/donate'} >
                     <Button variant="outlined" size="large" color="success"
 				              sx={{px: 2, py: 1, letterSpacing: 3 }}
                     >
