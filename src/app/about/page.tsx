@@ -5,6 +5,7 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import backPic from '../../../public/images/about-angels.jpg';
 
+import JubileeVideo from '@/views/CommonUI/JubileeVideo';
 import ToVideoBButtons from '@/views/Home/campaignsUI/ToVideoButtons';
 
 export const metadata:Metadata = {
@@ -23,6 +24,9 @@ export default function AboutPage() {
         display: 'flex', flexDirection: 'column', justifyContent: 'center',
       }}
     >
+      {/* This video is dedicated to the foundation's anniversary. */}
+      <JubileeVideo />
+
       <Paper sx={{ padding: '20px', backgroundColor: 'rgba(255, 255, 255, 0.5)' }}>
         <Typography variant="h2" gutterBottom>
           Про нас

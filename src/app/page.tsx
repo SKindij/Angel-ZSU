@@ -1,6 +1,6 @@
 // @/app/page.tsc
 // views components
-import FundFrame from '@/views/Home/FundFrame';
+// import FundFrame from '@/views/Home/FundFrame';
 import FundHero from '@/views/Home/FundHero';
 import FundFeatures from '@/views/Home/FundFeatures';
 import FundCampaigns from '@/views/Home/FundCampaigns';
