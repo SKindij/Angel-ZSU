@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div>
       {/* welcome content block */}
-      <FundFrame />
+      {/* <FundFrame /> */}
       <FundHero />
       {/* Angel Image block */}
       <FundFeatures />
