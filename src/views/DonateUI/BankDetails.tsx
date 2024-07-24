@@ -1,11 +1,11 @@
 // @/views/DonateUI/BankDetails.tsx
-import Image from 'next/image';
+// import Image from 'next/image';
 // MUI components
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 
-import qrCode from '../../../public/images/donate/qr-pb-donate.webp';
+// import qrCode from '../../../public/images/donate/qr-pb-donate.webp';
 
 const BankDetails = () => {
   return (
@@ -22,26 +22,55 @@ const BankDetails = () => {
         }}
       >
         <Typography variant="h5" gutterBottom>
-          АТ КБ Приватбанк
+          БО «БФ «Янгол ЗСУ»
         </Typography>
+        <Typography paragraph>
+        💰 PayPal: zgodayulia12@gmail.com
+        </Typography>
+      </Paper>
+
+      <Paper
+        sx={{
+          padding: '20px', maxWidth: '1000px',
+          textAlign: 'center', boxShadow: 3
+        }}
+      >
+        <Typography variant="h5" gutterBottom>
+          БО «БФ «Янгол ЗСУ»
+        </Typography>
+        {/*
         <Image
           src={qrCode} alt="ПриватБанк QR Code"
           width={200} height={200}
         />
+        */}
         <Typography paragraph>
-          <strong>Отримувач:</strong> Крутоголов Юлія Сергіївна
+          Код  отримувача : 45089754
         </Typography>
         <Typography paragraph>
-          Р/р: UA243052990000026004045030722
+          Рахунок БФ : UA953004650000026003300810446
         </Typography>
         <Typography paragraph>
-          Код отримувача: 45089754
+          МФО: 300465
         </Typography>
         <Typography paragraph>
-          IBAN: UA243052990000026004045030722
+          Назва Банку АТ «Ощадбанк»
         </Typography>
         <Typography paragraph>
           Призначення платежу: Добровільні внески БО БФ ЯНГОЛ ЗСУ
+        </Typography>
+      </Paper>
+      <Paper
+        sx={{
+          padding: '20px', maxWidth: '1000px',
+          textAlign: 'center', boxShadow: 3
+        }}
+      >
+        <Typography variant="h5" gutterBottom>
+          БО «БФ «Янгол ЗСУ»
+        </Typography>
+        <Typography paragraph>
+        💲 USDT TRC20 :TBWW2WRhqum1jYTbX3nU6UMtCivuDLQWDg
         </Typography>
       </Paper>
     </Box>
