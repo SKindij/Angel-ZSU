@@ -18,7 +18,7 @@ const BankDetails = () => {
       <Paper
         sx={{
           padding: '20px', maxWidth: '1000px',
-          textAlign: 'center', boxShadow: 3
+          textAlign: 'center', boxShadow: 3, marginBottom: '15px'
         }}
       >
         <Typography variant="h5" gutterBottom>
@@ -32,7 +32,7 @@ const BankDetails = () => {
       <Paper
         sx={{
           padding: '20px', maxWidth: '1000px',
-          textAlign: 'center', boxShadow: 3
+          textAlign: 'center', boxShadow: 3, marginBottom: '15px'
         }}
       >
         <Typography variant="h5" gutterBottom>
